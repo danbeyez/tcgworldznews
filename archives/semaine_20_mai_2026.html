@@ -102,10 +102,70 @@
     .tab-ico,.tab-ico svg{width:20px;height:20px}
     .tab-dot{width:18px;height:18px}
   }
+
+  /* ============================ ARCHIVE BANNER (ajout 24/05/2026) ============================ */
+  .archive-banner{background:linear-gradient(135deg,rgba(155,48,255,0.08),rgba(0,207,255,0.05));border:1px solid rgba(155,48,255,0.25);border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .archive-banner-label{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;flex-shrink:0}
+  .archive-banner-label::before{content:"📚";font-size:18px}
+  .archive-dropdown{position:relative;flex:1;min-width:240px;max-width:380px}
+  .dropdown-btn{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(0,207,255,0.3);color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-family:inherit;letter-spacing:.2px;transition:all .2s}
+  .dropdown-btn:hover{border-color:#00CFFF;box-shadow:0 0 8px rgba(0,207,255,0.25)}
+  .dropdown-btn .arrow{font-size:11px;color:#00CFFF;transition:transform .2s}
+  .dropdown-btn.open .arrow{transform:rotate(180deg)}
+  .dropdown-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:#0A0A12;border:1px solid rgba(0,207,255,0.35);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.6),0 0 0 1px rgba(0,207,255,0.1);z-index:100;overflow:hidden;max-height:480px;overflow-y:auto}
+  .dropdown-menu.open{display:block}
+  .dropdown-section{padding:8px 0}
+  .dropdown-section + .dropdown-section{border-top:1px solid rgba(255,255,255,0.06)}
+  .dropdown-section-title{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.4);padding:8px 16px 6px}
+  .dropdown-item{display:block;padding:9px 16px;color:rgba(255,255,255,0.85);text-decoration:none;font-size:13.5px;transition:all .15s;border-left:3px solid transparent;font-weight:500}
+  .dropdown-item:hover{background:rgba(0,207,255,0.08);color:#fff;border-left-color:#00CFFF}
+  .dropdown-item.current{background:rgba(155,48,255,0.12);color:rgba(255,255,255,0.5);border-left-color:#9B30FF;cursor:default;pointer-events:none;font-style:italic}
+  .dropdown-item.current::after{content:" · actuel";font-size:11px;color:#9B30FF}
+  .dropdown-item-date{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
+  .dropdown-empty{padding:14px 16px;font-size:12px;color:rgba(255,255,255,0.35);font-style:italic;text-align:center}
+  .dropdown-footer{border-top:1px solid rgba(255,255,255,0.08);padding:10px 16px}
+  .dropdown-footer a{display:flex;align-items:center;justify-content:center;gap:6px;color:#00CFFF;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.3px}
+  .dropdown-footer a:hover{color:#9B30FF}
+  .archive-banner-current{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0}
+  .archive-banner-current .label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.4)}
+  .archive-banner-current .value{font-size:13px;font-weight:700;color:#00CFFF;letter-spacing:.3px}
+  @media (max-width:680px){
+    .archive-banner{padding:12px 14px;gap:10px}
+    .archive-banner-current{display:none}
+    .archive-dropdown{max-width:100%}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
+<!-- ============================ ARCHIVE BANNER ============================ -->
+  <div class="archive-banner">
+    <div class="archive-banner-label">Archives</div>
+    <div class="archive-dropdown">
+      <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
+        <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="dropdown-menu" id="archiveMenu">
+        <div class="dropdown-section" id="weeklySection">
+          <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
+          <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
+        </div>
+        <div class="dropdown-section" id="monthlySection">
+          <div class="dropdown-section-title">Monthly Insight</div>
+          <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
+        </div>
+        <div class="dropdown-footer">
+          <a href="../archives.html">📂 Voir toutes les archives →</a>
+        </div>
+      </div>
+    </div>
+    <div class="archive-banner-current">
+      <span class="label">Édition en cours</span>
+      <span class="value" id="currentEditionLabel">S20 · Mai 2026</span>
+    </div>
+  </div>
+
   <nav class="nav">
     <span class="tab active" onclick="go(0)">
       <span class="tab-ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#00CFFF" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="#FF4DC4" stroke-width="1.8"/><circle cx="12" cy="12" r="1.8" fill="#FF4DC4"/></svg></span>
@@ -716,6 +776,76 @@
 
   <div class="copyright">© 2026 TCGWORLD'Z. Tous droits réservés. Tous les autres noms ou logos cités appartiennent à leurs propriétaires respectifs.</div>
 </div>
+
+<script>
+  // ============================ DROPDOWN ARCHIVES ============================
+  const CURRENT_WEEK_ID = "semaine_20_mai_2026";
+
+  function toggleArchive(e){
+    e.stopPropagation();
+    const btn=document.getElementById('archiveBtn');
+    const menu=document.getElementById('archiveMenu');
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  }
+  document.addEventListener('click',e=>{
+    const dd=document.querySelector('.archive-dropdown');
+    if(dd && !dd.contains(e.target)){
+      document.getElementById('archiveBtn').classList.remove('open');
+      document.getElementById('archiveMenu').classList.remove('open');
+    }
+  });
+  function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));}
+  function escapeAttr(s){return escapeHtml(s);}
+
+  async function loadArchives(){
+    try{
+      const res=await fetch('../manifest.json',{cache:'no-cache'});
+      if(!res.ok)throw new Error('manifest.json introuvable');
+      const data=await res.json();
+
+      const latest=(data.weekly_pulses||[]).find(w=>w.id===data.latest)||(data.weekly_pulses||[])[0];
+      // Sur une page d'archive, on N'ÉCRASE PAS le label "édition en cours"
+      // (il doit rester le label de l'archive consultée, pas la dernière édition)
+
+      const weekly=(data.weekly_pulses||[])
+        .slice()
+        .sort((a,b)=>(b.date||'').localeCompare(a.date||''))
+        .slice(0,6);
+      const wList=document.getElementById('weeklyList');
+      if(weekly.length===0){
+        wList.innerHTML='<div class="dropdown-empty">Aucune édition disponible</div>';
+      }else{
+        wList.innerHTML=weekly.map(w=>{
+          const isCurrent=(w.id===CURRENT_WEEK_ID);
+          if(isCurrent){
+            return `<div class="dropdown-item current">${escapeHtml(w.label)}</div>`;
+          }
+          // On est dans archives/, on retire le préfixe archives/ du chemin
+          const f=String(w.file||'').replace(/^archives\//,'');
+          return `<a class="dropdown-item" href="${escapeAttr(f)}">${escapeHtml(w.label)}<div class="dropdown-item-date">${escapeHtml(w.date_label||'')}</div></a>`;
+        }).join('');
+      }
+
+      const monthly=(data.monthly_insights||[])
+        .slice()
+        .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      const mList=document.getElementById('monthlyList');
+      if(monthly.length===0){
+        mList.innerHTML='<div class="dropdown-empty">Bientôt disponible</div>';
+      }else{
+        mList.innerHTML=monthly.map(m=>{
+          const f=String(m.file||'').replace(/^archives\//,'');
+          return `<a class="dropdown-item" href="${escapeAttr(f)}">${escapeHtml(m.label)}<div class="dropdown-item-date">${escapeHtml(m.date_label||'')}</div></a>`;
+        }).join('');
+      }
+    }catch(err){
+      console.warn('Archive loading failed:',err);
+      document.getElementById('weeklyList').innerHTML='<div class="dropdown-empty">Manifest non disponible</div>';
+    }
+  }
+  loadArchives();
+</script>
 
 <script>
   const pages = document.querySelectorAll('.page');

@@ -147,7 +147,7 @@
   function renderArchiveList(containerId,items,kind){
     const c=document.getElementById(containerId);
     if(!items || items.length===0){
-      c.innerHTML=`<div class="empty-state"><div class="icon">${kind==='weekly'?'📅':'📊'}</div><div class="title">${kind==='weekly'?'Aucune édition pour le moment':'Bientôt disponible'}</div><div class="sub">${kind==='weekly'?'Les éditions s\\'afficheront ici une fois publiées.':'Les analyses mensuelles arriveront prochainement.'}</div></div>`;
+      c.innerHTML=`<div class="empty-state"><div class="icon">${kind==='weekly'?'📅':'📊'}</div><div class="title">${kind==='weekly'?'Aucune édition pour le moment':'Bientôt disponible'}</div><div class="sub">${kind==='weekly'?'Les éditions seront affichées ici une fois publiées.':'Les analyses mensuelles arriveront prochainement.'}</div></div>`;
       return;
     }
     const groups=groupByMonth(items);
@@ -184,7 +184,7 @@
       renderArchiveList('monthlyContent',monthly,'monthly');
     }catch(err){
       console.error('Archive loading failed:',err);
-      document.getElementById('weeklyContent').innerHTML='<div class="empty-state"><div class="icon">⚠️</div><div class="title">Manifest non disponible</div><div class="sub">Le fichier manifest.json n\\'a pas pu être chargé. Vérifie qu\\'il est bien à la racine du site.</div></div>';
+      document.getElementById('weeklyContent').innerHTML='<div class="empty-state"><div class="icon">⚠️</div><div class="title">Manifest non disponible</div><div class="sub">Le fichier manifest.json est introuvable. Vérifie qu’il est bien à la racine du site.</div></div>';
     }
   }
   loadArchives();
