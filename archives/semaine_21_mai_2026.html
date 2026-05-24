@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TW News — Weekly Pulse S21 · Mai 2026">
+<meta property="og:description" content="Votre veille TCG de la semaine : Chaos Rising, banlist YGO, B&R Magic, enquête FTC monopole gradation, fiscalité française.">
+<meta property="og:image" content="https://raw.githubusercontent.com/danbeyez/tcgworldz-logo/main/logo.png.png">
+<meta property="og:site_name" content="TCG World'z">
+<meta name="twitter:card" content="summary_large_image">
+<title>TW News — Weekly Pulse S21 Mai 2026 · TCG World'z</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter','Helvetica Neue',sans-serif;background:#050508;color:#fff;line-height:1.55;min-height:100vh;padding:20px 10px}
+  .wrap{max-width:920px;margin:0 auto}
+
+  /* ============================ ARCHIVE BANNER ============================ */
+  .archive-banner{background:linear-gradient(135deg,rgba(155,48,255,0.08),rgba(0,207,255,0.05));border:1px solid rgba(155,48,255,0.25);border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .archive-banner-label{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;flex-shrink:0}
+  .archive-banner-label::before{content:"📚";font-size:18px}
+  .archive-dropdown{position:relative;flex:1;min-width:240px;max-width:380px}
+  .dropdown-btn{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(0,207,255,0.3);color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-family:inherit;letter-spacing:.2px;transition:all .2s}
+  .dropdown-btn:hover{border-color:#00CFFF;box-shadow:0 0 8px rgba(0,207,255,0.25)}
+  .dropdown-btn .arrow{font-size:11px;color:#00CFFF;transition:transform .2s}
+  .dropdown-btn.open .arrow{transform:rotate(180deg)}
+  .dropdown-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:#0A0A12;border:1px solid rgba(0,207,255,0.35);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.6),0 0 0 1px rgba(0,207,255,0.1);z-index:100;overflow:hidden;max-height:480px;overflow-y:auto}
+  .dropdown-menu.open{display:block}
+  .dropdown-section{padding:8px 0}
+  .dropdown-section + .dropdown-section{border-top:1px solid rgba(255,255,255,0.06)}
+  .dropdown-section-title{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.4);padding:8px 16px 6px}
+  .dropdown-item{display:block;padding:9px 16px;color:rgba(255,255,255,0.85);text-decoration:none;font-size:13.5px;transition:all .15s;border-left:3px solid transparent;font-weight:500}
+  .dropdown-item:hover{background:rgba(0,207,255,0.08);color:#fff;border-left-color:#00CFFF}
+  .dropdown-item.current{background:rgba(155,48,255,0.12);color:rgba(255,255,255,0.5);border-left-color:#9B30FF;cursor:default;pointer-events:none;font-style:italic}
+  .dropdown-item.current::after{content:" · actuel";font-size:11px;color:#9B30FF}
+  .dropdown-item-date{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
+  .dropdown-empty{padding:14px 16px;font-size:12px;color:rgba(255,255,255,0.35);font-style:italic;text-align:center}
+  .dropdown-footer{border-top:1px solid rgba(255,255,255,0.08);padding:10px 16px}
+  .dropdown-footer a{display:flex;align-items:center;justify-content:center;gap:6px;color:#00CFFF;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.3px}
+  .dropdown-footer a:hover{color:#9B30FF}
+  .archive-banner-current{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0}
+  .archive-banner-current .label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.4)}
+  .archive-banner-current .value{font-size:13px;font-weight:700;color:#00CFFF;letter-spacing:.3px}
+  @media (max-width:680px){
+    .archive-banner{padding:12px 14px;gap:10px}
+    .archive-banner-current{display:none}
+    .archive-dropdown{max-width:100%}
+  }
+
+  /* Navigation — style magazine horizontal */
+  .nav{display:flex;flex-wrap:nowrap;gap:0;justify-content:flex-start;align-items:center;margin-bottom:22px;padding:0 4px;border-bottom:1px solid rgba(255,255,255,0.08);overflow-x:auto;scrollbar-width:thin;scrollbar-color:rgba(0,207,255,0.3) transparent}
+  .nav::-webkit-scrollbar{height:4px}
+  .nav::-webkit-scrollbar-track{background:transparent}
+  .nav::-webkit-scrollbar-thumb{background:rgba(0,207,255,0.3);border-radius:2px}
+  .tab{display:inline-flex;align-items:center;gap:8px;padding:14px 18px;background:transparent;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,0.55);font-size:14px;font-weight:600;letter-spacing:.2px;cursor:pointer;transition:all .2s;white-space:nowrap;font-family:inherit;margin-bottom:-1px}
+  .tab .tab-icon{font-size:16px;line-height:1;display:inline-flex;align-items:center;justify-content:center;filter:saturate(1.15)}
+  .tab:hover{color:#fff}
+  .tab.active{color:#fff;border-bottom-color:#00CFFF;box-shadow:0 2px 8px -2px rgba(0,207,255,0.5)}
+  .tab.active .tab-icon{filter:saturate(1.3) brightness(1.1)}
+
+  /* Page container */
+  .page{display:none;background:#0A0A12;border:1px solid rgba(0,207,255,0.18);border-radius:14px;padding:40px 30px 30px;position:relative;overflow:hidden;min-height:780px}
+  .page.active{display:flex;flex-direction:column}
+
+  /* Watermark */
+  .watermark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-35deg);font-size:140px;font-weight:900;color:#C97FFF;opacity:.14;pointer-events:none;white-space:nowrap;z-index:1;letter-spacing:3px;text-shadow:0 0 30px rgba(155,48,255,.3)}
+
+  /* Page content layout */
+  .page-content{position:relative;z-index:2;display:flex;flex-direction:column;flex:1}
+
+  /* Headers */
+  .program-header{text-align:center;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid rgba(155,48,255,.25)}
+  .program-title{font-size:48px;font-weight:900;letter-spacing:2px;color:#00CFFF;text-shadow:0 0 12px rgba(0,207,255,.6),0 0 24px rgba(155,48,255,.4);margin:0;line-height:1}
+  .program-tagline{font-size:14px;font-weight:500;letter-spacing:1.5px;text-transform:lowercase;color:#A0A8C0;margin:6px 0 0}
+
+  .page-header{margin-bottom:22px}
+  .page-meta{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:10px}
+  .page-num{color:#00CFFF;font-weight:700}
+  h2.page-title{font-size:28px;font-weight:800;letter-spacing:.5px;background:linear-gradient(135deg,#2255FF,#9B30FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:0}
+  h2.page-title.cyan{background:linear-gradient(135deg,#00CFFF,#2255FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  h2.page-title.pink{background:linear-gradient(135deg,#FF4DC4,#FF6A00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  h2.page-title.orange{background:linear-gradient(135deg,#FF6A00,#FFB347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  h2.page-title.blue{background:linear-gradient(135deg,#2255FF,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  h2.page-title.purple{background:linear-gradient(135deg,#9B30FF,#FF4DC4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+  h3{color:#9B30FF;font-size:18px;font-weight:700;margin:18px 0 10px;letter-spacing:.3px}
+  h3.cyan{color:#00CFFF}
+  h3.orange{color:#FF6A00}
+
+  /* Boxes */
+  .lead{font-size:15px;color:#E8E8F0;margin-bottom:14px;padding:14px 16px;background:rgba(0,207,255,0.05);border-left:3px solid #00CFFF;border-radius:0 8px 8px 0}
+  .box{background:rgba(255,255,255,.025);border:1px solid rgba(0,207,255,.18);border-radius:10px;padding:14px 16px;margin:12px 0}
+  .box.alert{border-color:rgba(255,106,0,.45);background:rgba(255,106,0,.06)}
+  .box.warn{border-color:rgba(255,77,196,.4);background:rgba(255,77,196,.05)}
+  .box p{margin:6px 0;font-size:14px;color:#D8D8E4}
+  .box strong{color:#fff}
+
+  /* Bullets */
+  ul.bullets{list-style:none;margin:10px 0;padding:0}
+  ul.bullets li{position:relative;padding:5px 0 5px 20px;font-size:14px;color:#D8D8E4}
+  ul.bullets li::before{content:"▸";position:absolute;left:0;color:#00CFFF;font-weight:700}
+  ul.bullets li.pink::before{color:#FF4DC4}
+  ul.bullets li.orange::before{color:#FF6A00}
+  ul.bullets li.purple::before{color:#9B30FF}
+
+  /* Tables */
+  table.price-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:12.5px}
+  table.price-table th{background:rgba(0,207,255,.1);color:#00CFFF;text-align:left;padding:9px 10px;font-weight:700;border-bottom:1px solid rgba(0,207,255,.3);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+  table.price-table td{padding:9px 10px;border-bottom:1px solid rgba(255,255,255,.06);color:#E8E8F0}
+  table.price-table tr:hover td{background:rgba(255,255,255,.02)}
+  .up{color:#00CFFF;font-weight:700}
+  .down{color:#FF4DC4;font-weight:700}
+  .stable{color:#A0A8C0}
+
+  /* Reliability tags */
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;letter-spacing:.5px;text-transform:uppercase;margin-left:4px}
+  .tag.confirmed{background:rgba(0,207,255,.18);color:#00CFFF;border:1px solid rgba(0,207,255,.4)}
+  .tag.estim{background:rgba(155,48,255,.18);color:#C97FFF;border:1px solid rgba(155,48,255,.4)}
+  .tag.verify{background:rgba(255,106,0,.18);color:#FF6A00;border:1px solid rgba(255,106,0,.4)}
+  .tag.leak{background:rgba(255,77,196,.18);color:#FF4DC4;border:1px solid rgba(255,77,196,.4)}
+
+  /* Sources */
+  .sources{background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.07);padding:12px 14px;border-radius:8px;margin-top:18px}
+  .sources-title{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.3);margin-bottom:8px}
+  .sources table{width:100%;border-collapse:collapse;font-size:11px}
+  .sources td{padding:4px 8px 4px 0;color:rgba(255,255,255,.45);vertical-align:top}
+  .sources td:first-child{width:24px;color:rgba(255,255,255,.3)}
+  .sources a{color:#00CFFF;text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+  .disclaimer{font-size:10px;color:rgba(255,255,255,.3);margin-top:8px;line-height:1.5;font-style:italic}
+
+  /* Footer */
+  .page-footer{margin-top:24px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:2}
+  .logo-block{display:flex;align-items:center;gap:10px}
+  .logo-circle{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0A0A12,#050508);border:1.5px solid #00CFFF;box-shadow:0 0 8px rgba(0,207,255,.5);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:13px;letter-spacing:.5px}
+  .logo-text{display:flex;flex-direction:column}
+  .logo-text .name{color:#00CFFF;font-size:13px;font-weight:700;letter-spacing:.3px}
+  .logo-text .sub{color:#A0A8C0;font-size:10px}
+  .page-counter{color:#A0A8C0;font-size:11px;letter-spacing:.5px}
+
+  /* Copyright */
+  .copyright{text-align:center;padding:14px 16px 6px;font-size:10px;color:rgba(255,255,255,.2);font-style:italic;letter-spacing:.3px}
+
+  /* Responsive */
+  @media (max-width:680px){
+    .page{padding:28px 18px 20px;min-height:auto}
+    .program-title{font-size:36px}
+    h2.page-title{font-size:22px}
+    .watermark{font-size:90px}
+    table.price-table{font-size:11px}
+    table.price-table th,table.price-table td{padding:7px 6px}
+    .tab{font-size:13px;padding:12px 14px;gap:6px}
+    .tab .tab-icon{font-size:14px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============================ ARCHIVE BANNER ============================ -->
+<div class="archive-banner">
+  <div class="archive-banner-label">Archives</div>
+  <div class="archive-dropdown">
+    <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
+      <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="dropdown-menu" id="archiveMenu">
+      <div class="dropdown-section" id="weeklySection">
+        <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
+        <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
+      </div>
+      <div class="dropdown-section" id="monthlySection">
+        <div class="dropdown-section-title">Monthly Insight</div>
+        <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
+      </div>
+      <div class="dropdown-footer">
+        <a href="../archives.html">📂 Voir toutes les archives →</a>
+      </div>
+    </div>
+  </div>
+  <div class="archive-banner-current">
+    <span class="label">Édition en cours</span>
+    <span class="value" id="currentEditionLabel">S21 · Mai 2026</span>
+  </div>
+</div>
+
+<!-- ============================ NAVIGATION ============================ -->
+<div class="nav">
+  <button class="tab active" onclick="go(0)"><span class="tab-icon">🎯</span>Éditorial</button>
+  <button class="tab" onclick="go(1)"><span class="tab-icon">🔴</span>Pokémon</button>
+  <button class="tab" onclick="go(2)"><span class="tab-icon">⚫</span>Yu-Gi-Oh!</button>
+  <button class="tab" onclick="go(3)"><span class="tab-icon">🔵</span>One Piece</button>
+  <button class="tab" onclick="go(4)"><span class="tab-icon">🟣</span>Magic</button>
+  <button class="tab" onclick="go(5)"><span class="tab-icon">🏅</span>Gradation</button>
+  <button class="tab" onclick="go(6)"><span class="tab-icon">💡</span>Tech</button>
+  <button class="tab" onclick="go(7)"><span class="tab-icon">⚖️</span>Droit</button>
+  <button class="tab" onclick="go(8)"><span class="tab-icon">🏛️</span>Archive</button>
+</div>
+
+<!-- ============================ PAGE 1 — FAIT MARQUANT ============================ -->
+<div class="page active">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="program-header">
+      <h1 class="program-title">TW News</h1>
+      <p class="program-tagline">l'actu TCG &amp; son environnement</p>
+    </div>
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 1 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title cyan">🎯 Actu de la semaine — Le Fait Marquant</h2>
+    </div>
+
+    <p class="lead"><strong>Chaos Rising frappe le 22 mai et fait exploser le marché Pokémon.</strong> Mega Greninja ex SIR clôture la première journée à <span class="up">594 $</span> sur TCGPlayer — plus cher que sa version Mega Hyper Rare gold (400 $). Le set redessine la hiérarchie de l'ère Mega Evolution avant même que les boîtes scellées ne refroidissent.</p>
+
+    <h3 class="cyan">Pourquoi c'est l'événement de la semaine</h3>
+    <p style="font-size:14px;color:#D8D8E4;margin-bottom:10px">Mega Evolution — Chaos Rising (ME04) est la 4ᵉ extension du bloc Mega Evolution, sortie mondialement le 22 mai 2026 après une période de pré-release du 9 au 17 mai. Le set compte 122 cartes, dont 5 Mega Evolution Pokémon ex (Greninja, Floette, Pyroar, Dragalge + Gallade en exclusivité anglaise) et 6 Special Illustration Rares. Le résultat day-one TCGPlayer a renversé toutes les prédictions issues du marché japonais Ninja Spinner : la communauté a voté pour l'illustration au lieu du gold.</p>
+
+    <div class="box alert">
+      <p><strong>Le chiffre qui change tout :</strong> Mega Greninja ex SIR (#116) à <span class="up">594 $</span> day-one. La version Mega Hyper Rare gold (#122) est restée à <span class="up">400 $</span>. C'est la première fois depuis Crown Zenith qu'une SIR dépasse une MHR gold sur un même set en jour 1.</p>
+    </div>
+
+    <h3 class="cyan">Le contexte économique</h3>
+    <ul class="bullets">
+      <li>Pull rate Mega Greninja ex SIR : 1 booster sur ~620 — la version la plus rare jamais imprimée dans le bloc Mega Evolution</li>
+      <li>Comparaison : Perfect Order (set précédent) plafonnait à 187 $ pour Mega Zygarde MHR — Chaos Rising triple le ceiling chase</li>
+      <li>Mega Floette, Mega Pyroar, Mega Dragalge SIR : 63 à 114 $ — déjà au-dessus du tier équivalent de Perfect Order</li>
+      <li>Booster boxes scellées projetées à +30 à +60 % de premium dans les mois suivants la sortie</li>
+    </ul>
+
+    <h3 class="cyan">Pourquoi Greninja écrase tout</h3>
+    <p style="font-size:14px;color:#D8D8E4;margin-bottom:10px">Greninja est constamment dans le top 3 des Pokémon les plus populaires au monde — Smash Bros. l'a propulsé hors du noyau Pokémon. Sa forme Mega faisait partie des designs les plus demandés depuis 10 ans. Le précédent comparable est Mega Charizard X (400 à 1000 $+ en PSA 10 sur les sets passés). Plusieurs analystes anticipent que Greninja dépasse ce plafond avant fin 2026.</p>
+
+    <div class="box warn">
+      <p><strong>Mention spéciale :</strong> Crobat #093/086 confirmée Illustration Rare en version anglaise (rétrogradée en Holo Rare dans le japonais Ninja Spinner). Day-one à 14 $. Mega Gallade ex #048/086 est une exclusivité anglaise issue du JP Mega Gallade ex Special Set de janvier 2026.</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 1</div>
+      <table>
+        <tr><td>1</td><td><a href="https://www.cardrake.com/expansions/me04">cardrake.com — ME04 Master Set Guide</a></td><td>Prix day-one TCGPlayer Mega Greninja SIR/MHR · 23 mai 2026</td></tr>
+        <tr><td>2</td><td><a href="https://athlonsports.com/collectibles/collectibles-pokemon-chaos-rising-mega-ex-cards">athlonsports.com</a></td><td>Chase cards Chaos Rising · 22 mai 2026</td></tr>
+        <tr><td>3</td><td><a href="https://www.thecardboardchronicles.com/post/mega-greninja-ex-in-chaos-rising-why-this-card-is-breaking-wallets">thecardboardchronicles.com</a></td><td>Pricing JP Ninja Spinner · mai 2026</td></tr>
+        <tr><td>4</td><td><a href="https://bulbapedia.bulbagarden.net/wiki/Mega_Greninja_ex_(Chaos_Rising_22)">bulbapedia</a></td><td>Détails techniques carte · 23 mai 2026</td></tr>
+      </table>
+      <p class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Les informations juridiques et fiscales sont données à titre indicatif et ne constituent pas un conseil professionnel. Article produit pour la communauté TCG World'z — Discord TCG francophone.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 1/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PAGE 2 — POKÉMON ============================ -->
+<div class="page">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 2 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title pink">🔴 Pokémon</h2>
+    </div>
+
+    <p class="lead">Sortie mondiale de <strong>Chaos Rising (ME04)</strong> le 22 mai. 122 cartes, 5 Mega Evolution ex, 6 Special Illustration Rares, et le retour très attendu de la mécanique Mega Evolution issue de Pokémon Legends: Z-A. Calendrier confirmé pour la suite : <strong>Pitch Black</strong> (Mega Darkrai ex) le 17 juillet.</p>
+
+    <h3>Sorties & actualités officielles</h3>
+    <ul class="bullets">
+      <li class="pink">22 mai — Chaos Rising sort mondialement (Booster, ETB, Booster Bundle, 3-Pack, Single Pack)</li>
+      <li class="pink">22 mai — League Battle Deck Mega Lucario ex + Mega Zygarde ex Premium Collection</li>
+      <li class="pink">19 juin — First Partner Illustration Collection Series 2 (Johto, Unova, Galar)</li>
+      <li class="pink">17 juillet — Pitch Black confirmé : Mega Darkrai ex, Mega Zeraora ex, Mega Chandelure ex, Mega Excadrill ex</li>
+      <li class="pink">18 septembre — 30th Celebration : premier lancement mondial simultané all-foil de l'histoire</li>
+    </ul>
+
+    <h3>Prix des cartes notables — Chaos Rising day-one</h3>
+    <table class="price-table">
+      <thead><tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Var S-1</th><th>Fiabilité</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Chaos Rising</td><td>Mega Greninja ex SIR #116</td><td class="up">594 $</td><td class="up">+∞ (sortie)</td><td><span class="tag confirmed">Confirmé</span></td><td>TCGPlayer</td></tr>
+        <tr><td>Chaos Rising</td><td>Mega Greninja ex MHR Gold #122</td><td class="up">400 $</td><td class="up">+∞ (sortie)</td><td><span class="tag confirmed">Confirmé</span></td><td>TCGPlayer</td></tr>
+        <tr><td>Chaos Rising</td><td>Mega Greninja ex Full Art</td><td class="up">~20 $</td><td>—</td><td><span class="tag estim">Estimé JP</span></td><td>Ninja Spinner pricing</td></tr>
+        <tr><td>Chaos Rising</td><td>Cluster SIR (Floette/Pyroar/Dragalge/Gallade)</td><td class="up">63–114 $</td><td>—</td><td><span class="tag confirmed">Confirmé</span></td><td>TCGPlayer</td></tr>
+        <tr><td>Chaos Rising</td><td>Crobat IR #093/086</td><td class="up">14 $</td><td>—</td><td><span class="tag confirmed">Confirmé</span></td><td>TCGPlayer</td></tr>
+        <tr><td>Chaos Rising</td><td>Frogadier IR #089/086</td><td class="up">31,32 $</td><td>—</td><td><span class="tag confirmed">Confirmé</span></td><td>The Hobby Bin</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box warn">
+      <p><strong>Lecture de marché :</strong> le gap entre Mega Greninja et le reste du set est énorme. Mega Pyroar, Floette et Dragalge SIR restent intéressantes mais sans la même hype. Si ton ouverture de booster sort autre chose que Greninja, tu es dans l'expected loss. Les boîtes scellées sont déjà tradées au-dessus du MSRP partout aux États-Unis.</p>
+    </div>
+
+    <div class="box alert">
+      <p><strong>Pré-vente vs. réalité :</strong> les premières prédictions tablaient sur un MHR gold > SIR. Le marché a inversé l'ordre dès le jour 1. Leçon : l'illustration full-art bat le gold pur quand la base de fans dépasse les pricers spécialisés.</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 2</div>
+      <table>
+        <tr><td>1</td><td><a href="https://www.cardrake.com/expansions/me04">cardrake.com</a></td><td>Tous les prix day-one cités</td></tr>
+        <tr><td>2</td><td><a href="https://tcgradar.eu/guides/pokemon-tcg-set-release-calendar-2026">tcgradar.eu</a></td><td>Calendrier sorties 2026</td></tr>
+        <tr><td>3</td><td><a href="https://thehobbybin.com/blogs/pokemonpriceguides/chaos-rising-chase-cards">thehobbybin.com</a></td><td>Top chase Chaos Rising</td></tr>
+        <tr><td>4</td><td><a href="https://www.tcgplayer.com">tcgplayer.com</a></td><td>Marché secondaire USD</td></tr>
+      </table>
+      <p class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision. Article produit pour la communauté TCG World'z — Discord TCG francophone.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 2/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PAGE 3 — YU-GI-OH! ============================ -->
+<div class="page">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 3 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title orange">⚫ Yu-Gi-Oh!</h2>
+    </div>
+
+    <p class="lead">Konami a sorti une <strong>banlist surprise</strong> en parallèle de la sortie de Blazing Dominion. Effective depuis le <strong>18 mai 2026</strong>, elle frappe directement le deck dominant Kewl Tune et purge les restes du méta Justice Hunters (Yummy, K9, Dracotail). Lecture : Konami fait de la "rotation déguisée".</p>
+
+    <h3 class="orange">Changements majeurs Forbidden & Limited — 18 mai 2026</h3>
+    <ul class="bullets">
+      <li class="orange"><strong>Bannis :</strong> CXyz Gimmick Puppet Fanatix Machinix · K9-04 Noroi · Naturia Rosewhip</li>
+      <li class="orange"><strong>Limités :</strong> Synchro Overtake (hit ciblé Kewl Tune)</li>
+      <li class="orange"><strong>Semi-limités / variations :</strong> Arthalion à 2 copies, Lukias en baisse, Cupsy★Yummy Way</li>
+      <li class="orange">Méta prévu post-banlist : Kewl Tune toujours Tier 1, Tier 2 large (Fairy Tail, Power Patron, DoomZ, Sky Striker)</li>
+    </ul>
+
+    <div class="box alert">
+      <p><strong>Pourquoi cette banlist est inhabituelle :</strong> elle coïncide avec la sortie de Blazing Dominion (4ᵉ set OCG série 13, après Burst Protocol). Konami a fait d'une pierre deux coups — fermer définitivement les decks de Justice Hunters tout en libérant l'espace pour les archetypes de Blazing Dominion, dont la nouvelle "Clown Crew". Anomalie : K9 Ripper (-17) attendu sur la liste a survécu — c'est K9-04 Noroi qui prend, ce qui surprend la communauté compétitive.</p>
+    </div>
+
+    <h3 class="orange">Prix des cartes notables</h3>
+    <table class="price-table">
+      <thead><tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Var S-1</th><th>Fiabilité</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Blazing Dominion</td><td>Cartes Clown Crew (nouveau)</td><td>N/D</td><td>—</td><td><span class="tag verify">À vérifier</span></td><td>Yugipedia</td></tr>
+        <tr><td>Justice Hunters</td><td>K9-04 Noroi (banni)</td><td class="down">−40 à −60 %</td><td class="down">↓↓</td><td><span class="tag estim">Estimé post-ban</span></td><td>Cardmarket</td></tr>
+        <tr><td>Justice Hunters</td><td>CXyz GP Fanatix Machinix (banni)</td><td class="down">Effondrement</td><td class="down">↓↓↓</td><td><span class="tag estim">Estimé</span></td><td>TCGPlayer</td></tr>
+        <tr><td>Kewl Tune</td><td>Synchro Overtake (limité)</td><td class="down">↓</td><td class="down">−15 à −25 %</td><td><span class="tag estim">Estimé</span></td><td>Cardmarket</td></tr>
+        <tr><td>Kewl Tune</td><td>Kewl Tune Cue (hub deck)</td><td class="up">↑</td><td class="up">+10 %</td><td><span class="tag estim">Estimé</span></td><td>Cardmarket</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box warn">
+      <p><strong>Effet collatéral :</strong> Naturia Rosewhip était un floodgate side-deck très utilisé contre les decks lents. Son interdiction allège le format mais profite aux stratégies combo. La communauté n'avait pas réclamé ce hit — Konami pousse vers un format combo-friendly avant Blazing Dominion.</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 3</div>
+      <table>
+        <tr><td>1</td><td><a href="https://www.yugioh-card.com/en/limited/list_2026-05-18/">yugioh-card.com — F&L List officielle</a></td><td>Banlist 18 mai 2026 · officielle Konami</td></tr>
+        <tr><td>2</td><td><a href="https://yugioh.cardsrealm.com/en-jm/articles/yu-gi-oh-tcg-review-banlist-update-may-2026">cardsrealm.com</a></td><td>Analyse banlist · 16 mai 2026</td></tr>
+        <tr><td>3</td><td><a href="https://flipsidegaming.com/blogs/yu-gi-oh-articles/the-may-2026-yugioh-banlist-in-review">flipsidegaming.com</a></td><td>Analyse méta post-banlist</td></tr>
+        <tr><td>4</td><td><a href="https://yugipedia.com/wiki/Blazing_Dominion">yugipedia.com — Blazing Dominion</a></td><td>Détails set · 12 mai 2026</td></tr>
+      </table>
+      <p class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision. Article produit pour la communauté TCG World'z — Discord TCG francophone.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 3/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PAGE 4 — ONE PIECE ============================ -->
+<div class="page">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 4 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title blue">🔵 One Piece TCG</h2>
+    </div>
+
+    <p class="lead"><strong>Semaine de transition.</strong> Pas de sortie majeure en S21. Bandai prépare <strong>OP-16 "The Time of Battle"</strong> qui sort au Japon le <strong>30 mai 2026</strong> (12 juin en anglais). Le set actuel OP-15 "Adventure on Kami's Island" — sorti le 3 avril — continue d'alimenter le marché. Le calendrier OPCG 2026 reste dense.</p>
+
+    <h3 class="cyan">Roadmap & calendrier</h3>
+    <ul class="bullets">
+      <li>30 mai 2026 (JP) — <strong>OP-16 "The Time of Battle"</strong> : Booster Pack + Display</li>
+      <li>12 juin 2026 (EN) — OP-16 sortie occidentale + Double Pack DP-11 + Starter ST-30 Luffy &amp; Ace</li>
+      <li>31 juillet 2026 (EN) — 6 Starter Decks ST-31 à ST-36 + Illustration Box Vol. 7 & 8 + Best Selection Vol. 6</li>
+      <li>28 août 2026 (EN) — OP-17 Booster + 3rd Anniversary Set anglais</li>
+      <li>Tendance 2026 : Bandai maintient le rythme des releases simultanées Japon/Occident, lancées en début d'année</li>
+    </ul>
+
+    <h3 class="cyan">Marché secondaire — cartes notables</h3>
+    <table class="price-table">
+      <thead><tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Var S-1</th><th>Fiabilité</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>OP-15 Adventure on Kami's Island</td><td>Nami Super Rare Alt Art #OP15-086</td><td class="up">Trending</td><td class="up">↑</td><td><span class="tag estim">Estimé</span></td><td>Sports Card Investor</td></tr>
+        <tr><td>OP-13 Carrying On His Will</td><td>Luffy Super Alt Art (non-red)</td><td class="up">~2 000 $</td><td class="stable">Stable</td><td><span class="tag confirmed">Confirmé</span></td><td>onmantel.com</td></tr>
+        <tr><td>OP-11 A Fist of Divine Speed</td><td>Gear Two Luffy SP #OP11-080</td><td class="up">~2 000 $+</td><td class="stable">Stable</td><td><span class="tag confirmed">Confirmé</span></td><td>Marché US</td></tr>
+        <tr><td>OP-09 Emperors in the New World</td><td>Gol D. Roger Secret Rare #OP09-118</td><td class="up">Trending</td><td class="up">↑</td><td><span class="tag estim">Estimé</span></td><td>Sports Card Investor</td></tr>
+        <tr><td>OP-07 500 Years in the Future</td><td>Luffy SR #OP07-109</td><td class="up">Top trending</td><td class="up">↑</td><td><span class="tag estim">Estimé</span></td><td>Sports Card Investor</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box">
+      <p><strong>Tendance lourde :</strong> Monkey D. Luffy concentre <strong>60 % du Top 10 des prix One Piece</strong>. Le marché OPCG est devenu un marché Luffy-driven. Les Super Alternate Art rouges d'OP-13 ont relevé le ceiling à 8 400 $ pour les versions premium. L'arc Egghead / Elbaf en cours dans le manga continue de driver les valorisations character-based.</p>
+    </div>
+
+    <div class="box alert">
+      <p><strong>Signal de marché :</strong> en février 2026, Monkey D. Luffy a pris la 3ᵉ place du Top 10 PSA TCG mensuel — premier non-Pokémon à entrer dans le top global. La gradation One Piece n'est plus une niche.</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 4</div>
+      <table>
+        <tr><td>1</td><td><a href="https://www.man-of-games.de/en/c/one-piece/product-calendar-one-piece-card-game">man-of-games.de</a></td><td>Calendrier OPCG 2026</td></tr>
+        <tr><td>2</td><td><a href="https://www.sportscardinvestor.com/categories/one-piece">sportscardinvestor.com</a></td><td>Top trending cards · 20 mai 2026</td></tr>
+        <tr><td>3</td><td><a href="https://news.onmantel.com/the-king-of-the-pirates-and-tcg-the-top-10-most-expensive-one-piece-cards-on-the-market/">onmantel.com</a></td><td>Top 10 prix One Piece</td></tr>
+        <tr><td>4</td><td><a href="https://orbsportscards.com/one-piece-card-game-guide-2026/">orbsportscards.com</a></td><td>OP-15 release context</td></tr>
+      </table>
+      <p class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision. Article produit pour la communauté TCG World'z — Discord TCG francophone.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 4/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PAGE 5 — MAGIC ============================ -->
+<div class="page">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 5 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title purple">🟣 Magic: The Gathering</h2>
+    </div>
+
+    <p class="lead">Le <strong>18 mai 2026</strong> a déclenché une cascade d'annonces officielles WotC : <strong>Banned & Restricted</strong> (Pioneer prend Cori-Steel Cutter), <strong>Pauper Format Check-In</strong> (unban en test de Bonder's Ornament), et <strong>MTG Arena Announcements</strong>. En parallèle, Secrets of Strixhaven et ses Commander Precons dominent le marché secondaire pour la 5ᵉ semaine consécutive.</p>
+
+    <h3>Annonces officielles WotC du 18 mai</h3>
+    <ul class="bullets">
+      <li class="purple"><strong>Pioneer :</strong> Cori-Steel Cutter banni — annoncé comme nécessaire malgré la diversité du métagame</li>
+      <li class="purple"><strong>Standard :</strong> aucune modification. Prochaine review : 30 juin après Marvel Super Heroes</li>
+      <li class="purple"><strong>Pauper :</strong> Bonder's Ornament unban en test (effet immédiat Paper, MTGO bientôt)</li>
+      <li class="purple"><strong>Vintage :</strong> Flow State et Raph & Mikey Troublemakers (TMNT) émergent — pas de hit immédiat</li>
+      <li class="purple">Arena Championship 12 ce week-end 23-24 mai en format Historic — &gt;100 compétiteurs</li>
+    </ul>
+
+    <h3>Marché secondaire — Hot/Cold semaine du 18 mai</h3>
+    <table class="price-table">
+      <thead><tr><th>Set</th><th>Carte</th><th>Prix actuel</th><th>Var S-1</th><th>Fiabilité</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Commander 2015</td><td>Daxos, the Returned (Silverquill spike)</td><td class="up">16 $</td><td class="up">+33 %</td><td><span class="tag confirmed">Confirmé</span></td><td>Beckett News</td></tr>
+        <tr><td>Secrets of Strixhaven</td><td>Boosters Display</td><td class="up">Hot</td><td class="up">↑</td><td><span class="tag confirmed">Confirmé</span></td><td>TCGPlayer</td></tr>
+        <tr><td>Vintage staples</td><td>Flow State (draw blue)</td><td class="up">↑</td><td class="up">+15 à +25 %</td><td><span class="tag estim">Estimé</span></td><td>Beckett</td></tr>
+        <tr><td>TMNT crossover</td><td>Raph & Mikey, Troublemakers</td><td class="up">↑</td><td class="up">↑</td><td><span class="tag estim">Estimé</span></td><td>WotC announcement</td></tr>
+        <tr><td>Pioneer staple</td><td>Cori-Steel Cutter (banni)</td><td class="down">↓↓</td><td class="down">−30 à −50 %</td><td><span class="tag estim">Estimé post-ban</span></td><td>Cardmarket</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box">
+      <p><strong>Calendrier 2026 à venir :</strong> Marvel Super Heroes (juin), The Hobbit (août), Star Trek (novembre). Sept sets Standard-legal cette année — record absolu pour MTG. Secret Lair "Cats Are the Best" Superdrop le 15 juin. Magic Arena reçoit Marvel Super Heroes en parallèle.</p>
+    </div>
+
+    <div class="box warn">
+      <p><strong>Lecture critique :</strong> WotC pousse une banlist plus active sur Pioneer pour maintenir un meta sain — c'est la troisième intervention sur Pioneer en 2026. Standard reste laissé "à respirer" sans ajustement avant Marvel Super Heroes. La question Universes Beyond commence à diviser : 7 sets/an dont la moitié en crossover IP, est-ce encore Magic ?</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 5</div>
+      <table>
+        <tr><td>1</td><td><a href="https://magic.wizards.com/en/news/announcements/banned-and-restricted-may-18-2026">magic.wizards.com — B&R</a></td><td>Annonce officielle 18 mai 2026</td></tr>
+        <tr><td>2</td><td><a href="https://magic.wizards.com/en/news/announcements/pauper-format-check-in-may-18-2026">magic.wizards.com — Pauper</a></td><td>Unban Bonder's Ornament</td></tr>
+        <tr><td>3</td><td><a href="https://www.beckett.com/news/magic-the-gathering-hot-cold-list-for-the-week-of-may-18-2026/">beckett.com — Hot/Cold</a></td><td>Secondary market semaine 21</td></tr>
+        <tr><td>4</td><td><a href="https://magic.wizards.com/en/news/mtg-arena/announcements-may-18-2026">magic.wizards.com — Arena</a></td><td>MTG Arena Championship 12</td></tr>
+      </table>
+      <p class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision. Article produit pour la communauté TCG World'z — Discord TCG francophone.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 5/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PAGE 6 — GRADATION ============================ -->
+<div class="page">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 6 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title cyan">🏅 Gradation & Marché</h2>
+    </div>
+
+    <p class="lead">Deux signaux forts cette semaine : <strong>PSA a discrètement révisé ses délais</strong> à la mi-mai (article public le 14), et l'<strong>enquête anti-trust sur Collectors Holdings</strong> (PSA + SGC + BGS) continue d'agiter le marché. Pendant ce temps, Mega Greninja ex va alimenter une vague massive de soumissions PSA dans les semaines à venir.</p>
+
+    <h3 class="cyan">PSA — délais &amp; tarifs actuels 2026</h3>
+    <table class="price-table">
+      <thead><tr><th>Service</th><th>Tarif</th><th>Délai estimé</th><th>Valeur max</th></tr></thead>
+      <tbody>
+        <tr><td>Value Bulk (Club uniquement)</td><td>24,99 $</td><td>140-160 j</td><td>500 $</td></tr>
+        <tr><td>Value</td><td>32,99 $</td><td>~95 j ouvrés</td><td>500 $</td></tr>
+        <tr><td>Value Plus</td><td>49,99 $</td><td>25 j ouvrés</td><td>500 $</td></tr>
+        <tr><td>Value Max</td><td>64,99 $</td><td>20 j ouvrés</td><td>1 000 $</td></tr>
+        <tr><td>Regular</td><td>79,99 $</td><td>15 j ouvrés</td><td>1 500 $</td></tr>
+        <tr><td>Express</td><td>~150 $</td><td>10 j ouvrés</td><td>—</td></tr>
+        <tr><td>Walk-Through / Premium</td><td>300 $+</td><td>5-7 j ouvrés</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box alert">
+      <p><strong>PSA — Fait marquant :</strong> les délais ont été révisés silencieusement entre fin avril et mi-mai 2026. Aucune annonce formelle. Le passage de 95 jours à 140-160 jours sur Value Bulk reflète une saturation post-Chaos Rising attendue. PSA grade ~90 000 cartes par jour mondialement en 2026 (vs. 15 000/jour en 2021).</p>
+    </div>
+
+    <h3 class="cyan">BGS — Beckett Grading Services</h3>
+    <div class="box">
+      <p><strong>Fait marquant :</strong> rachat finalisé par Collectors Holdings (groupe PSA/SGC) en décembre 2025. BGS conserve sa marque et ses standards "officiellement indépendants" — mais opère sous la même maison-mère. Volumes : 88 000 cartes gradées en février 2026 (+65 % YoY). Le Black Label reste le seul niveau premium absolu visible sur le marché.</p>
+    </div>
+
+    <h3 class="cyan">CGC — Certified Guaranty Company</h3>
+    <div class="box">
+      <p><strong>Fait marquant :</strong> CGC graduait 451 000 cartes en février 2026 (+57 % YoY). Seul concurrent majeur indépendant de Collectors Holdings — la communauté collectionneur commence à voter avec ses soumissions pour préserver la concurrence. CGC a particulièrement progressé sur le segment TCG (393 000 cartes TCG en mai 2025, +146 % YoY).</p>
+    </div>
+
+    <h3 class="cyan">PCA, HGA &amp; SGC</h3>
+    <div class="box">
+      <p><strong>PCA :</strong> Aucune annonce officielle cette semaine. <strong>HGA :</strong> activité limitée, niche label coloré toujours présente sur quelques sets. <strong>SGC :</strong> 41 000 cartes gradées en février (−72 % YoY) — déclin marqué depuis l'acquisition par Collectors Holdings.</p>
+    </div>
+
+    <div class="box warn">
+      <p><strong>⚖️ Affaire Collectors Holdings (rappel ouverture janvier 2026) :</strong> le représentant Pat Ryan (New York) a demandé à la FTC d'enquêter sur un monopole potentiel. Collectors contrôle PSA + SGC + BGS, soit ~80 % du marché de la gradation. Seul CGC reste indépendant. L'enquête est ouverte sur 4 axes : évasion réglementaire, marginalisation post-acquisition de SGC, érosion de la concurrence, coordination tarifaire. À suivre dans les prochains mois.</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 6</div>
+      <table>
+        <tr><td>1</td><td><a href="https://dknetwork.draftkings.com/2026/05/14/psa-turnaround-times-2026/">dknetwork.draftkings.com</a></td><td>PSA délais révisés · 14 mai 2026</td></tr>
+        <tr><td>2</td><td><a href="https://www.psacard.com/info/submission-updates">psacard.com</a></td><td>Tarifs PSA officiels 2026</td></tr>
+        <tr><td>3</td><td><a href="https://www.ky3.com/2026/01/02/new-york-congressman-asks-investigation-into-potential-monopoly-trading-card-grading/">ky3.com</a></td><td>Enquête FTC Collectors Holdings</td></tr>
+        <tr><td>4</td><td><a href="https://www.si.com/collectibles/new-gemrate-report-reflects-card-grading-strength-for-february">si.com / GemRate</a></td><td>Volumes gradation février 2026</td></tr>
+        <tr><td>5</td><td><a href="https://phantomdisplay.com/blogs/blog/bgs-vs-psa">phantomdisplay.com</a></td><td>Contexte BGS post-acquisition</td></tr>
+      </table>
+      <p class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision. Les informations juridiques sont données à titre indicatif. Article produit pour la communauté TCG World'z — Discord TCG francophone.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 6/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PAGE 7 — INNOVATION & TECH ============================ -->
+<div class="page">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 7 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title cyan">💡 Innovation & Tech</h2>
+    </div>
+
+    <p class="lead">L'écosystème des outils prédictifs s'industrialise. La <strong>pré-évaluation IA des cartes avant soumission</strong> devient un standard du marché à mesure que les délais PSA explosent et que les tarifs continuent leur ascension. Les collectionneurs s'arment d'outils numériques pour limiter les soumissions perdantes.</p>
+
+    <h3 class="cyan">Outils de pré-scoring IA — état du marché</h3>
+    <ul class="bullets">
+      <li><strong>CardGrade.io</strong> : CGI Vision AI, 47 points d'inspection en 29 secondes, précision 92,8 %. Prédit grades PSA, BGS et CGC simultanément.</li>
+      <li><strong>Grader's Choice</strong> : kit de soumission + comparateur de companies de gradation, popularisé sur le marché US.</li>
+      <li><strong>Phantom Display</strong> : étuis premium PSA/BGS/CGC/SGC, écosystème accessoire complet avec aimants magnétiques.</li>
+      <li>Les comparateurs anti-monopole gagnent du terrain : les collectionneurs cherchent à éviter Collectors Holdings et à comparer plusieurs grading companies avant de soumettre.</li>
+    </ul>
+
+    <h3 class="cyan">Plateformes de marché — évolution</h3>
+    <table class="price-table">
+      <thead><tr><th>Plateforme</th><th>Zone</th><th>Spécialité</th><th>Tendance 2026</th></tr></thead>
+      <tbody>
+        <tr><td>Cardmarket</td><td>EU</td><td>Singles & sealed €</td><td class="stable">Référence stable</td></tr>
+        <tr><td>TCGPlayer</td><td>US</td><td>Singles & sealed $</td><td class="up">↑ Marketplace dominant</td></tr>
+        <tr><td>eBay (sold listings)</td><td>Global</td><td>Enchères, vintage</td><td class="stable">Référence pour records</td></tr>
+        <tr><td>Mercari Japan</td><td>JP</td><td>Marché japonais</td><td class="up">↑ Hausse activité OPCG/Pokémon</td></tr>
+        <tr><td>Goldin Auctions</td><td>US</td><td>Cartes haut de gamme</td><td class="up">↑ Cartes premium gradées</td></tr>
+        <tr><td>SNKRDUNK</td><td>JP</td><td>One Piece TCG JP</td><td class="up">↑ Promos & rare cards</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="cyan">Tendance lourde</h3>
+    <div class="box">
+      <p><strong>L'IA prédictive devient une assurance.</strong> Avec PSA à 32,99 $ minimum + frais d'expédition, soumettre une carte qui ressort en 8 ne se rentabilise plus que sur les cards à haute valeur intrinsèque. Le pre-screening AI réduit le risque de soumission perdante. Adoption concrète : les outils de pre-grading sont passés de "gadget" en 2024 à "standard" en 2026 pour les collectionneurs sérieux.</p>
+    </div>
+
+    <div class="box alert">
+      <p><strong>Limite à ne pas oublier :</strong> aucun outil IA n'a accès aux exigences exactes des graders humains de PSA/BGS/CGC. La précision annoncée (92,8 % CardGrade.io) reste à vérifier par des études indépendantes — la marge d'erreur sur le diff entre PSA 9 et PSA 10 fait passer la rentabilité d'une carte de positive à négative.</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 7</div>
+      <table>
+        <tr><td>1</td><td><a href="https://cardgrade.io/blog/card-grading-companies-compared">cardgrade.io</a></td><td>Comparatif gradation 2026 + IA</td></tr>
+        <tr><td>2</td><td><a href="https://graderschoice.com/psa-turnaround-time-changes/">graderschoice.com</a></td><td>PSA délais et stratégie soumission</td></tr>
+        <tr><td>3</td><td><a href="https://cardgrading.app/psa-grading">cardgrading.app</a></td><td>Pré-screening IA Pokémon</td></tr>
+        <tr><td>4</td><td><a href="https://snkrdunk.com/en/magazine/2026/02/21/the-ultimate-guide-to-one-piece-tcg-promos-top-traded-cards-market-trends-in-2026/">snkrdunk.com</a></td><td>Marché japonais OPCG</td></tr>
+      </table>
+      <p class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision. Article produit pour la communauté TCG World'z — Discord TCG francophone.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 7/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PAGE 8 — DROIT & FISCALITÉ ============================ -->
+<div class="page">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 8 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title orange">⚖️ Droit & Fiscalité</h2>
+    </div>
+
+    <p class="lead"><strong>La campagne de déclaration 2026 entre dans sa phase critique pour les collectionneurs français.</strong> Échéance du <strong>21 mai 2026</strong> (jeudi) pour les premiers départements. La revente de cartes à collectionner reste imposable au-delà de <strong>5 000 €</strong> par cession — et la désinformation virale du printemps 2026 sur un "nouvel impôt à 36,2 %" a été démentie officiellement par Bercy.</p>
+
+    <h3 class="orange">France — règles 2026 (confirmées officiellement par Bercy)</h3>
+    <ul class="bullets">
+      <li class="orange"><strong>En dessous de 5 000 €/cession :</strong> aucune déclaration ni imposition exigée.</li>
+      <li class="orange"><strong>Au-dessus de 5 000 €/cession :</strong> Taxe Forfaitaire sur les Objets de Collection (TFOP) — taux <strong>6 % + 0,5 % CRDS = 6,5 %</strong> du prix de cession.</li>
+      <li class="orange">Possibilité d'opter pour le régime des plus-values mobilières (taxe 36,2 %) UNIQUEMENT si l'on peut prouver durée de détention + statut "objet de collection" — procédure incertaine selon Bercy.</li>
+      <li class="orange">Critère "objet de collection" au sens fiscal : pas automatique pour les cartes Pokémon/MTG/YGO/Lorcana — apprécié au cas par cas.</li>
+      <li class="orange">Vinted, eBay, Cardmarket : transmettent automatiquement les transactions au fisc au-delà de certains seuils (DAC7).</li>
+    </ul>
+
+    <div class="box alert">
+      <p><strong>🚨 Démenti officiel Bercy (mars 2026) :</strong> l'information virale "Les cartes Pokémon sont désormais imposables à 36,2 %" est <strong>FAUSSE</strong>. Il n'y a aucune évolution fiscale en 2026. La règle des 5 000 € + TFOP 6,5 % existe depuis des années. Source : economie.gouv.fr / DGFiP — "Bercy Décode".</p>
+    </div>
+
+    <h3 class="orange">Calendrier déclaration 2026</h3>
+    <div class="box">
+      <p><strong>Date d'ouverture :</strong> 9 avril 2026. <strong>Échéances :</strong> 21 mai (jeudi) pour les premiers départements (zone 1, départements 01-19), 28 mai pour la zone 2 (20-54), 5 juin pour la zone 3 (55-976). Déclaration papier : 21 mai 2026. Le risque principal pour les collectionneurs est la <strong>requalification en activité professionnelle (BIC)</strong> si les ventes sont régulières — soumission aux cotisations sociales et à l'impôt sur les bénéfices.</p>
+    </div>
+
+    <h3 class="orange">USA &amp; international</h3>
+    <ul class="bullets">
+      <li>USA : tickets de vente &gt; 600 $ déclarables via IRS Form 1099-K (eBay, TCGPlayer). Plus-values long terme (&gt;1 an) à 0/15/20 % selon revenu, plus-values court terme assimilées au revenu ordinaire.</li>
+      <li>Japon : Mercari et autres plateformes domestiques sont sous régime déclaratif au-delà de 200 000 ¥/an de gains.</li>
+      <li>EU : DAC7 (directive transmissive plateformes) effective depuis 2023 — données croisées entre administrations fiscales.</li>
+    </ul>
+
+    <div class="box warn">
+      <p><strong>Conseil :</strong> tenir un journal de cession (date, prix d'achat, prix de revente, plateforme) est devenu pratiquement obligatoire pour tout collectionneur qui revend &gt; 1 000 €/an. En cas de contrôle, l'absence de justificatif d'acquisition entraîne taxation sur 100 % du prix de cession.</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 8</div>
+      <table>
+        <tr><td>1</td><td><a href="https://www.economie.gouv.fr/bercy-decode/les-cartes-pokemon-sont-elles-desormais-dans-le-viseur-du-fisc">economie.gouv.fr — Bercy Décode</a></td><td>Démenti officiel TFOP 6,5 %</td></tr>
+        <tr><td>2</td><td><a href="https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mes-autres-impots-et-taxes/cartes-collectionner-quels-impots">economie.gouv.fr — Cartes à collectionner</a></td><td>Cadre fiscal complet</td></tr>
+        <tr><td>3</td><td><a href="https://www.corrigetonimpot.fr/quel-impot-sur-la-vente-de-cartes-a-collectionner-pokemon-magic-lorcana-yu-gi-oh/">corrigetonimpot.fr</a></td><td>Analyse fiscale détaillée</td></tr>
+        <tr><td>4</td><td><a href="https://www.boursorama.com/impots/actualites/les-cartes-pokemon-dans-le-viseur-du-fisc-les-reventes-sont-desormais-taxees-a-36-2-bda2b40457d5b3d7d2eb4b95ac69986b">boursorama.com</a></td><td>Article diffusant info à corriger</td></tr>
+      </table>
+      <p class="disclaimer">Les informations juridiques et fiscales sont données à titre indicatif et ne constituent pas un conseil professionnel. Consulter un conseiller fiscal pour toute décision personnelle. Article produit pour la communauté TCG World'z — Discord TCG francophone.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 8/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PAGE 9 — LA MINUTE ARCHIVE ============================ -->
+<div class="page">
+  <div class="watermark">TCG World'z</div>
+  <div class="page-content">
+    <div class="page-header">
+      <div class="page-meta"><span class="page-num">Page 9 / 9</span><span>Semaine 21 · Mai 2026</span></div>
+      <h2 class="page-title purple">🏛️ La Minute Archive</h2>
+    </div>
+
+    <p class="lead">À l'heure où Mega Greninja ex SIR signe son entrée à 594 $ day-one, prenons cinq minutes pour remonter à l'origine absolue. La carte la plus mythique du Pokémon TCG ne s'achetait pas. Elle se gagnait. Et un seul exemplaire vient de réécrire l'histoire en février 2026.</p>
+
+    <h3>Le Pikachu Illustrator — la genèse</h3>
+    <p style="font-size:14px;color:#D8D8E4;margin-bottom:12px">Nous sommes en novembre 1997. Le Pokémon TCG vient de sortir au Japon depuis quelques mois. Media Factory, l'éditeur du jeu, s'associe au magazine <em>CoroCoro Comic</em> de Shogakukan pour lancer un concours d'illustration : les jeunes lecteurs sont invités à dessiner leur propre carte Pokémon. Le prix ? Une carte exclusive, dessinée par <strong>Atsuko Nishida</strong> elle-même — la créatrice originale de Pikachu. Sur la carte, Pikachu tient un crayon. Au-dessus, à la place du mot "TRAINER" qui orne toutes les cartes du Base Set, un mot inédit : <strong>"ILLUSTRATOR"</strong>. Et dans le coin inférieur droit, à la place du symbole de rareté habituel : un stylo. Une seule carte au monde porte ces deux marqueurs.</p>
+
+    <h3>Trois concours, 39 lauréats, 41 exemplaires connus</h3>
+    <p style="font-size:14px;color:#D8D8E4;margin-bottom:12px">Le premier concours, annoncé en novembre 1997, distribue ses cartes en janvier 1998 : 3 lauréats "Best Award" et 20 lauréats "Excellence Award". Deux autres concours suivent en 1998 — le Mewtwo's Counterattack Commemoration Illust Artist Contest (annoncé en mai, lauréats en juillet) et le Pikachu's Summer Vacation Commemoration (annoncé en juin, lauréats en août). Au total officiel : <strong>39 cartes distribuées</strong>. Deux exemplaires supplémentaires ont été vendus en 2017 par Yuichi Konno (l'un des designers du ruleset original) sur Yahoo! Japan Auctions. Au final, on estime à <strong>41 exemplaires</strong> le nombre de Pikachu Illustrator légitimes en circulation aujourd'hui.</p>
+
+    <h3>Le record absolu — février 2026</h3>
+    <div class="box alert">
+      <p><strong>16 492 000 $.</strong> Soit environ <strong>15,1 millions d'euros</strong>. C'est le prix payé en février 2026 chez Goldin Auctions pour un Pikachu Illustrator gradé PSA 10 — ancien exemplaire de Logan Paul. La vente bat le précédent record de 5,275 millions $ (la même carte vendue en 2022). Plus important : cette transaction fait du Pikachu Illustrator <strong>la carte à collectionner la plus chère jamais vendue</strong>, tous TCG et sports cards confondus. Devant le Honus Wagner T206 baseball card, devant la Mickey Mantle 1952 Topps, devant la Black Lotus Alpha signée Christopher Rush.</p>
+    </div>
+
+    <h3>Pourquoi cette carte fascine encore en 2026</h3>
+    <ul class="bullets">
+      <li class="purple">Première carte de l'histoire du TCG à porter le mot "Illustrator" — symbolique culturelle inégalée</li>
+      <li class="purple">Création signée Atsuko Nishida, designer originale de Pikachu (rare overlap artiste/personnage)</li>
+      <li class="purple">Symbole "stylo" unique — n'apparaît sur aucune autre carte Pokémon de toutes les ères confondues</li>
+      <li class="purple">Provenance documentée pour chaque exemplaire connu — chaque vente devient un événement traçable</li>
+      <li class="purple">Le marché des cartes a explosé de +18 %/an depuis 2022 — la rareté absolue + provenance valorise ces objets comme des œuvres d'art</li>
+    </ul>
+
+    <div class="box">
+      <p><strong>L'héritage :</strong> à chaque fois qu'une nouvelle Mega ex sort à 594 $ comme cette semaine, on oublie facilement que les cartes Pokémon ont commencé par être <em>offertes</em>. Le Pikachu Illustrator, c'était un prix de concours, pas un produit commercial. C'est exactement ce qui en fait aujourd'hui la pièce la plus rare et la plus chère du marché — une carte que personne n'a jamais pu acheter dans un booster, mais que tout collectionneur rêve d'avoir un jour.</p>
+    </div>
+
+    <div class="sources">
+      <div class="sources-title">Sources · Page 9</div>
+      <table>
+        <tr><td>1</td><td><a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Illustrator_(CoroCoro_promo)">bulbapedia.bulbagarden.net</a></td><td>Historique 3 concours 1997-1998</td></tr>
+        <tr><td>2</td><td><a href="https://kantoshark.com/blog/the-story-of-the-pikachu-illustrator-the-holy-grail-of-pokemon-cards/">kantoshark.com</a></td><td>Vente record Goldin février 2026</td></tr>
+        <tr><td>3</td><td><a href="https://rarecandy.com/blog/spotlight-pokemon-illustrator">rarecandy.com</a></td><td>Détails 23 + 16 exemplaires distribués</td></tr>
+        <tr><td>4</td><td><a href="https://pokemonpricing.com/the-history-behind-the-pikachu-illustrator-card/">pokemonpricing.com</a></td><td>Origine CoroCoro Comic</td></tr>
+        <tr><td>5</td><td><a href="https://phantomdisplay.com/blogs/blog/pikachu-illustrator-card-legend">phantomdisplay.com</a></td><td>Design unique de la carte</td></tr>
+      </table>
+      <p class="disclaimer">Article produit pour la communauté TCG World'z — Discord TCG francophone. Sources historiques recoupées entre plusieurs encyclopédies communautaires et maisons d'enchères.</p>
+    </div>
+
+    <div class="page-footer">
+      <div class="logo-block">
+        <div class="logo-circle">TW</div>
+        <div class="logo-text"><span class="name">TCG World'z</span><span class="sub">Discord TCG francophone</span></div>
+      </div>
+      <div class="page-counter">Page 9/9 · Semaine S21 · Mai 2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="copyright">
+  © 2026 TCGWORLD'Z. Tous droits réservés. Tous les autres noms ou logos cités appartiennent à leurs propriétaires respectifs.
+</div>
+
+</div>
+
+<script>
+  // ============================ DROPDOWN ARCHIVES ============================
+  // Identifiant de la semaine courante — à mettre à jour à chaque publication
+  const CURRENT_WEEK_ID = "semaine_21_mai_2026";
+
+  function toggleArchive(e){
+    e.stopPropagation();
+    const btn=document.getElementById('archiveBtn');
+    const menu=document.getElementById('archiveMenu');
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  }
+  document.addEventListener('click',e=>{
+    const dd=document.querySelector('.archive-dropdown');
+    if(dd && !dd.contains(e.target)){
+      document.getElementById('archiveBtn').classList.remove('open');
+      document.getElementById('archiveMenu').classList.remove('open');
+    }
+  });
+
+  async function loadArchives(){
+    try{
+      const res=await fetch('../manifest.json',{cache:'no-cache'});
+      if(!res.ok)throw new Error('manifest.json introuvable');
+      const data=await res.json();
+
+      // Met à jour le label "édition en cours" depuis le manifest si dispo
+      const latest=(data.weekly_pulses||[]).find(w=>w.id===data.latest)||(data.weekly_pulses||[])[0];
+      if(latest){
+        const el=document.getElementById('currentEditionLabel');
+        if(el)el.textContent=latest.label;
+      }
+
+      // Weekly Pulse — 6 plus récents
+      const weekly=(data.weekly_pulses||[])
+        .slice() // copie pour ne pas muter
+        .sort((a,b)=>(b.date||'').localeCompare(a.date||''))
+        .slice(0,6);
+      const wList=document.getElementById('weeklyList');
+      if(weekly.length===0){
+        wList.innerHTML='<div class="dropdown-empty">Aucune édition disponible</div>';
+      }else{
+        wList.innerHTML=weekly.map(w=>{
+          const isCurrent=(w.id===CURRENT_WEEK_ID);
+          if(isCurrent){
+            return `<div class="dropdown-item current">${escapeHtml(w.label)}</div>`;
+          }
+          // On est dans archives/, donc on retire le préfixe archives/ du chemin
+          const f=String(w.file||'').replace(/^archives\//,'');
+          return `<a class="dropdown-item" href="${escapeAttr(f)}">${escapeHtml(w.label)}<div class="dropdown-item-date">${escapeHtml(w.date_label||'')}</div></a>`;
+        }).join('');
+      }
+
+      // Monthly Insight
+      const monthly=(data.monthly_insights||[])
+        .slice()
+        .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      const mList=document.getElementById('monthlyList');
+      if(monthly.length===0){
+        mList.innerHTML='<div class="dropdown-empty">Bientôt disponible</div>';
+      }else{
+        mList.innerHTML=monthly.map(m=>{
+          const f=String(m.file||'').replace(/^archives\//,'');
+          return `<a class="dropdown-item" href="${escapeAttr(f)}">${escapeHtml(m.label)}<div class="dropdown-item-date">${escapeHtml(m.date_label||'')}</div></a>`;
+        }).join('');
+      }
+    }catch(err){
+      console.warn('Archive loading failed:',err);
+      document.getElementById('weeklyList').innerHTML='<div class="dropdown-empty">Manifest non disponible</div>';
+    }
+  }
+  function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));}
+  function escapeAttr(s){return escapeHtml(s);}
+  loadArchives();
+</script>
+
+<script>
+  function go(i){
+    const pages=document.querySelectorAll('.page');
+    const tabs=document.querySelectorAll('.tab');
+    pages.forEach(p=>p.classList.remove('active'));
+    tabs.forEach(t=>t.classList.remove('active'));
+    pages[i].classList.add('active');
+    tabs[i].classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  document.addEventListener('keydown',e=>{
+    const active=document.querySelector('.page.active');
+    const pages=document.querySelectorAll('.page');
+    const idx=Array.from(pages).indexOf(active);
+    if(e.key==='ArrowRight'&&idx<pages.length-1)go(idx+1);
+    if(e.key==='ArrowLeft'&&idx>0)go(idx-1);
+  });
+</script>
+
+</body>
+</html>

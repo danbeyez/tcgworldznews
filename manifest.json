@@ -1,0 +1,20 @@
+{
+  "site": {
+    "name": "TCG World'z — Weekly Pulse",
+    "description": "Veille hebdomadaire TCG francophone : Pokémon, Yu-Gi-Oh!, One Piece, Magic, gradation, marché.",
+    "generator_version": "1.0",
+    "schema_version": 1
+  },
+  "latest": "semaine_21_mai_2026",
+  "weekly_pulses": [
+    {
+      "id": "semaine_21_mai_2026",
+      "label": "S21 · Mai 2026",
+      "date": "2026-05-24",
+      "date_label": "Semaine du 18 au 24 mai 2026",
+      "file": "archives/semaine_21_mai_2026.html",
+      "highlight": "Chaos Rising fait exploser le marché Pokémon : Mega Greninja ex SIR à 594 $ day-one."
+    }
+  ],
+  "monthly_insights": []
+}

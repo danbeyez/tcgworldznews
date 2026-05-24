@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Archives — TCG World'z Weekly Pulse">
+<meta property="og:description" content="Toutes les éditions hebdomadaires de la veille TCG francophone, classées par mois.">
+<meta property="og:site_name" content="TCG World'z">
+<meta name="twitter:card" content="summary">
+<title>Archives · TCG World'z Weekly Pulse</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter','Helvetica Neue',sans-serif;background:#050508;color:#fff;line-height:1.55;min-height:100vh;padding:20px 10px}
+  .wrap{max-width:920px;margin:0 auto}
+
+  /* Header */
+  header.page-head{text-align:center;padding:40px 20px 30px;border-bottom:1px solid rgba(155,48,255,0.25);margin-bottom:30px;position:relative}
+  .back-link{position:absolute;top:20px;left:0;color:rgba(255,255,255,0.55);font-size:13px;text-decoration:none;font-weight:600;letter-spacing:.3px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:8px;transition:all .2s}
+  .back-link:hover{color:#00CFFF;border-color:#00CFFF;background:rgba(0,207,255,0.05)}
+  h1.page-title{font-size:42px;font-weight:900;letter-spacing:1px;background:linear-gradient(135deg,#9B30FF,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+  .subtitle{font-size:14px;color:rgba(255,255,255,0.5);letter-spacing:.5px}
+
+  /* Tabs */
+  .archive-tabs{display:flex;justify-content:center;gap:0;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:30px}
+  .archive-tab{padding:14px 22px;background:transparent;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,0.55);font-size:14px;font-weight:600;letter-spacing:.5px;cursor:pointer;transition:all .2s;font-family:inherit;margin-bottom:-1px}
+  .archive-tab:hover{color:#fff}
+  .archive-tab.active{color:#fff;border-bottom-color:#00CFFF}
+  .archive-tab .count{display:inline-block;background:rgba(0,207,255,0.15);color:#00CFFF;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px}
+
+  /* Sections */
+  .archive-section{display:none}
+  .archive-section.active{display:block}
+
+  /* Month group */
+  .month-group{margin-bottom:36px}
+  .month-title{font-size:18px;font-weight:700;color:#00CFFF;letter-spacing:.8px;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid rgba(0,207,255,0.2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .month-title .count{font-size:12px;color:rgba(255,255,255,0.4);font-weight:500;letter-spacing:.5px;text-transform:none}
+
+  /* Archive items list */
+  .archive-list{display:flex;flex-direction:column;gap:8px}
+  .archive-item{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.08);border-radius:10px;text-decoration:none;color:inherit;transition:all .2s;gap:14px}
+  .archive-item:hover{background:rgba(0,207,255,0.06);border-color:rgba(0,207,255,0.4);transform:translateX(3px)}
+  .archive-item-left{flex:1;min-width:0}
+  .archive-item-label{font-size:15px;font-weight:700;color:#fff;letter-spacing:.2px;margin-bottom:4px}
+  .archive-item-date{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:.2px}
+  .archive-item-highlight{font-size:13px;color:rgba(255,255,255,0.7);margin-top:6px;line-height:1.5;font-style:italic}
+  .archive-item-arrow{color:#00CFFF;font-size:18px;flex-shrink:0;transition:transform .2s}
+  .archive-item:hover .archive-item-arrow{transform:translateX(4px)}
+
+  /* Empty state */
+  .empty-state{padding:60px 30px;text-align:center;border:1px dashed rgba(255,255,255,0.15);border-radius:12px;background:rgba(255,255,255,0.02)}
+  .empty-state .icon{font-size:42px;margin-bottom:14px;opacity:0.5}
+  .empty-state .title{font-size:16px;font-weight:700;color:rgba(255,255,255,0.7);margin-bottom:6px}
+  .empty-state .sub{font-size:13px;color:rgba(255,255,255,0.4)}
+
+  /* Footer */
+  footer.page-foot{text-align:center;padding:30px 20px;border-top:1px solid rgba(255,255,255,0.06);margin-top:50px;color:rgba(255,255,255,0.3);font-size:11px;letter-spacing:.5px;font-style:italic}
+
+  @media (max-width:680px){
+    h1.page-title{font-size:30px}
+    .back-link{position:static;display:inline-block;margin-bottom:20px}
+    header.page-head{text-align:left;padding:20px 0 24px}
+    .archive-tab{padding:12px 14px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-head">
+    <a href="index.html" class="back-link">← Retour à l'édition actuelle</a>
+    <h1 class="page-title">📂 Archives</h1>
+    <p class="subtitle">Toutes les éditions du Weekly Pulse TCG World'z</p>
+  </header>
+
+  <div class="archive-tabs">
+    <button class="archive-tab active" onclick="switchTab('weekly',this)">
+      🃏 Weekly Pulse<span class="count" id="weeklyCount">0</span>
+    </button>
+    <button class="archive-tab" onclick="switchTab('monthly',this)">
+      📊 Monthly Insight<span class="count" id="monthlyCount">0</span>
+    </button>
+  </div>
+
+  <section class="archive-section active" id="weeklySection">
+    <div id="weeklyContent">
+      <div class="empty-state">
+        <div class="icon">⏳</div>
+        <div class="title">Chargement…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="archive-section" id="monthlySection">
+    <div id="monthlyContent">
+      <div class="empty-state">
+        <div class="icon">📊</div>
+        <div class="title">Bientôt disponible</div>
+        <div class="sub">Les analyses mensuelles arriveront prochainement.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-foot">
+    TCG World'z — Discord TCG francophone · Veille indépendante.
+  </footer>
+
+</div>
+
+<script>
+  const MONTHS_FR=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+
+  function switchTab(name,btn){
+    document.querySelectorAll('.archive-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.archive-section').forEach(s=>s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(name+'Section').classList.add('active');
+  }
+
+  function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));}
+  function escapeAttr(s){return escapeHtml(s);}
+
+  function groupByMonth(items){
+    const groups={};
+    items.forEach(it=>{
+      const d=it.date||'';
+      // attend format YYYY-MM-DD
+      const m=d.match(/^(\d{4})-(\d{2})/);
+      if(!m){
+        (groups['__autres__']=groups['__autres__']||[]).push(it);
+        return;
+      }
+      const key=`${m[1]}-${m[2]}`;
+      (groups[key]=groups[key]||[]).push(it);
+    });
+    // Trier les clés desc
+    const sortedKeys=Object.keys(groups).sort((a,b)=>b.localeCompare(a));
+    return sortedKeys.map(k=>{
+      const [year,month]=k.split('-');
+      const label=k==='__autres__'?'Autres':`${MONTHS_FR[parseInt(month,10)-1]} ${year}`;
+      const list=groups[k].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      return {key:k,label,items:list};
+    });
+  }
+
+  function renderArchiveList(containerId,items,kind){
+    const c=document.getElementById(containerId);
+    if(!items || items.length===0){
+      c.innerHTML=`<div class="empty-state"><div class="icon">${kind==='weekly'?'📅':'📊'}</div><div class="title">${kind==='weekly'?'Aucune édition pour le moment':'Bientôt disponible'}</div><div class="sub">${kind==='weekly'?'Les éditions s\\'afficheront ici une fois publiées.':'Les analyses mensuelles arriveront prochainement.'}</div></div>`;
+      return;
+    }
+    const groups=groupByMonth(items);
+    c.innerHTML=groups.map(g=>{
+      const itemsHtml=g.items.map(it=>`
+        <a class="archive-item" href="${escapeAttr(it.file)}">
+          <div class="archive-item-left">
+            <div class="archive-item-label">${escapeHtml(it.label)}</div>
+            <div class="archive-item-date">${escapeHtml(it.date_label||it.date||'')}</div>
+            ${it.highlight?`<div class="archive-item-highlight">${escapeHtml(it.highlight)}</div>`:''}
+          </div>
+          <span class="archive-item-arrow">→</span>
+        </a>`).join('');
+      return `
+        <div class="month-group">
+          <h2 class="month-title">${escapeHtml(g.label)}<span class="count">${g.items.length} édition${g.items.length>1?'s':''}</span></h2>
+          <div class="archive-list">${itemsHtml}</div>
+        </div>`;
+    }).join('');
+  }
+
+  async function loadArchives(){
+    try{
+      const res=await fetch('manifest.json',{cache:'no-cache'});
+      if(!res.ok)throw new Error('manifest.json introuvable');
+      const data=await res.json();
+
+      const weekly=data.weekly_pulses||[];
+      const monthly=data.monthly_insights||[];
+      document.getElementById('weeklyCount').textContent=weekly.length;
+      document.getElementById('monthlyCount').textContent=monthly.length;
+
+      renderArchiveList('weeklyContent',weekly,'weekly');
+      renderArchiveList('monthlyContent',monthly,'monthly');
+    }catch(err){
+      console.error('Archive loading failed:',err);
+      document.getElementById('weeklyContent').innerHTML='<div class="empty-state"><div class="icon">⚠️</div><div class="title">Manifest non disponible</div><div class="sub">Le fichier manifest.json n\\'a pas pu être chargé. Vérifie qu\\'il est bien à la racine du site.</div></div>';
+    }
+  }
+  loadArchives();
+</script>
+
+</body>
+</html>
