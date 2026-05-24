@@ -182,6 +182,7 @@ def update_index_html(index_path: Path, archive_html: str, new_week_id: str,
         content,
         count=1,
     )
+    
 
     # 2. <title>
     content = re.sub(
