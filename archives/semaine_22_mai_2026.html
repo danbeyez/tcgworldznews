@@ -21,38 +21,6 @@
   }
   .wrap { max-width:920px; margin:0 auto; padding:18px 14px 40px; }
 
-  /* ============================ ARCHIVE BANNER ============================ */
-  .archive-banner{background:linear-gradient(135deg,rgba(155,48,255,0.08),rgba(0,207,255,0.05));border:1px solid rgba(155,48,255,0.25);border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-  .archive-banner-label{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;flex-shrink:0}
-  .archive-banner-label::before{content:"📚";font-size:18px}
-  .archive-dropdown{position:relative;flex:1;min-width:240px;max-width:380px}
-  .dropdown-btn{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(0,207,255,0.3);color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-family:inherit;letter-spacing:.2px;transition:all .2s}
-  .dropdown-btn:hover{border-color:#00CFFF;box-shadow:0 0 8px rgba(0,207,255,0.25)}
-  .dropdown-btn .arrow{font-size:11px;color:#00CFFF;transition:transform .2s}
-  .dropdown-btn.open .arrow{transform:rotate(180deg)}
-  .dropdown-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:#0A0A12;border:1px solid rgba(0,207,255,0.35);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.6),0 0 0 1px rgba(0,207,255,0.1);z-index:100;overflow:hidden;max-height:480px;overflow-y:auto}
-  .dropdown-menu.open{display:block}
-  .dropdown-section{padding:8px 0}
-  .dropdown-section + .dropdown-section{border-top:1px solid rgba(255,255,255,0.06)}
-  .dropdown-section-title{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.4);padding:8px 16px 6px}
-  .dropdown-item{display:block;padding:9px 16px;color:rgba(255,255,255,0.85);text-decoration:none;font-size:13.5px;transition:all .15s;border-left:3px solid transparent;font-weight:500}
-  .dropdown-item:hover{background:rgba(0,207,255,0.08);color:#fff;border-left-color:#00CFFF}
-  .dropdown-item.current{background:rgba(155,48,255,0.12);color:rgba(255,255,255,0.5);border-left-color:#9B30FF;cursor:default;pointer-events:none;font-style:italic}
-  .dropdown-item.current::after{content:" · actuel";font-size:11px;color:#9B30FF}
-  .dropdown-item-date{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
-  .dropdown-empty{padding:14px 16px;font-size:12px;color:rgba(255,255,255,0.35);font-style:italic;text-align:center}
-  .dropdown-footer{border-top:1px solid rgba(255,255,255,0.08);padding:10px 16px}
-  .dropdown-footer a{display:flex;align-items:center;justify-content:center;gap:6px;color:#00CFFF;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.3px}
-  .dropdown-footer a:hover{color:#9B30FF}
-  .archive-banner-current{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0}
-  .archive-banner-current .label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.4)}
-  .archive-banner-current .value{font-size:13px;font-weight:700;color:#00CFFF;letter-spacing:.3px}
-  @media (max-width:680px){
-    .archive-banner{padding:12px 14px;gap:10px}
-    .archive-banner-current{display:none}
-    .archive-dropdown{max-width:100%}
-  }
-
   /* Navigation */
   .nav {
     display:flex; flex-wrap:wrap; gap:6px;
@@ -213,34 +181,6 @@
 </head>
 <body>
 <div class="wrap">
-
-  <!-- ============================ ARCHIVE BANNER ============================ -->
-  <div class="archive-banner">
-    <div class="archive-banner-label">Archives</div>
-    <div class="archive-dropdown">
-      <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
-        <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
-        <span class="arrow">▼</span>
-      </button>
-      <div class="dropdown-menu" id="archiveMenu">
-        <div class="dropdown-section" id="weeklySection">
-          <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
-          <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
-        </div>
-        <div class="dropdown-section" id="monthlySection">
-          <div class="dropdown-section-title">Monthly Insight</div>
-          <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
-        </div>
-        <div class="dropdown-footer">
-          <a href="../archives.html">📂 Voir toutes les archives →</a>
-        </div>
-      </div>
-    </div>
-    <div class="archive-banner-current">
-      <span class="label">Édition en cours</span>
-      <span class="value" id="currentEditionLabel">S22 · Mai 2026</span>
-    </div>
-  </div>
 
   <!-- NAVIGATION -->
   <nav class="nav">
@@ -552,9 +492,9 @@
         <div class="src-title">Sources</div>
         <table>
           <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://www.sportscollectorsdaily.com/psa-shuts-down-some-services-as-backlog-reaches-10-million-cards/" target="_blank">Sports Collectors Daily</a></td><td>Volume de gradation, annonce PSA</td><td>28/05/2026</td></tr>
+          <tr><td>1</td><td><a href="https://www.sportscollectorsdaily.com/psa-shuts-down-some-services-as-backlog-reaches-10-million-cards/" target="_blank">Sports Collectors Daily</a></td><td>Pause Value PSA, backlog, volumes Gem Rate</td><td>28/05/2026</td></tr>
         </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision. Les informations juridiques sont données à titre indicatif. Article produit pour la communauté TCG World'z.</div>
+        <div class="disclaimer">Les informations sont données à titre indicatif. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
       </div>
 
       <div class="page-footer">
@@ -567,6 +507,126 @@
     </div>
   </section>
 
+  <!-- ============ PAGE 7 — INNOVATION ============ -->
+  <section class="page" style="--accent:#00CFFF;--glow:rgba(0,207,255,0.45);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 7/9 · Semaine S22 · 25–31 mai 2026</div>
+        <h2><span class="icon">💡</span>Innovation &amp; Tech</h2>
+      </div>
+
+      <p class="lead">L'innovation de la semaine vient, ironiquement, d'une crise : PSA mise sur la <strong>transparence et le machine learning</strong> pour sortir de l'embouteillage.</p>
+
+      <h3>Le tracker public d'arriéré</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> PSA déploie un tracker public de son arriéré de gradation. C'est une vraie nouveauté d'usage : plutôt que de laisser le collectionneur deviner, l'entreprise affiche l'état réel de la file. Sur le papier, c'est un pas vers la confiance ; reste à voir si l'outil sera tenu à jour honnêtement.</p>
+
+      <h3>200 M$ orientés logistique et ML</h3>
+      <p>Une partie de l'investissement annoncé porte explicitement sur la <span class="accent-c">logistique pilotée par machine learning</span> et le recrutement (objectif ~1 000 personnes d'ici fin 2026). L'enjeu : industrialiser l'intake et le tri sans sacrifier la qualité de grade. <span class="tag verif">À VÉRIFIER</span> — l'efficacité réelle ne se jugera que sur les délais des prochains mois.</p>
+
+      <div class="box calm">
+        <h4>Le reste de la tech cette semaine</h4>
+        <p style="margin:0;font-size:13.5px;">Pas d'autre annonce tech vérifiable (apps de scan, NFC, blockchain) dans la fenêtre 25–31 mai. Je préfère le signaler plutôt que de meubler.</p>
+      </div>
+
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://www.sportscollectorsdaily.com/psa-shuts-down-some-services-as-backlog-reaches-10-million-cards/" target="_blank">Sports Collectors Daily</a></td><td>Tracker public, investissement ML, embauches</td><td>28/05/2026</td></tr>
+        </table>
+        <div class="disclaimer">Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
+      </div>
+
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 7/9 · Semaine S22 · Mai 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 8 — DROIT & FISCALITÉ ============ -->
+  <section class="page" style="--accent:#FF6A00;--glow:rgba(255,106,0,0.4);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 8/9 · Semaine S22 · 25–31 mai 2026</div>
+        <h2><span class="icon">⚖️</span>Droit &amp; Fiscalité</h2>
+      </div>
+
+      <p class="lead">Aucune actualité réglementaire majeure et datée cette semaine. Petit point de contexte, sans alarmisme.</p>
+
+      <div class="box calm">
+        <h4>Statut de la semaine</h4>
+        <p style="margin:0;font-size:13.5px;">Semaine calme — pas de loi, décret ou décision spécifique au TCG/collection identifié dans la fenêtre 25–31 mai 2026.</p>
+      </div>
+
+      <h3>Rappel de contexte (non daté, à vérifier selon votre situation)</h3>
+      <ul class="clean">
+        <li><strong>Plateformes &amp; déclaration UE :</strong> les places de marché (eBay, Vinted, Cardmarket) restent soumises au reporting automatique des revenus des vendeurs dans le cadre européen DAC7. Au-delà de certains seuils de ventes, vos opérations sont transmises à l'administration. <span class="tag verif">À VÉRIFIER</span></li>
+        <li><strong>Plus-values particuliers (France) :</strong> la revente de biens meubles peut être imposable au-delà d'un seuil par cession ; la frontière entre vente occasionnelle et activité habituelle dépend de votre volume et de votre intention. <span class="tag verif">À VÉRIFIER</span></li>
+        <li><strong>Import/douane :</strong> les achats hors UE peuvent générer TVA et droits à l'import selon la valeur déclarée. <span class="tag verif">À VÉRIFIER</span></li>
+      </ul>
+      <p style="font-size:13px;color:#A0A8C0;">Ces points sont des repères de contexte, pas une actualité de la semaine, et ne constituent pas un conseil professionnel.</p>
+
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>—</td><td>Aucune source externe nouvelle consultée pour cette page (semaine calme)</td><td>Contexte général, à vérifier auprès de bofip.impots.gouv.fr</td><td>—</td></tr>
+        </table>
+        <div class="disclaimer">Les informations juridiques et fiscales sont données à titre indicatif et ne constituent pas un conseil professionnel. Article produit pour la communauté TCG World'z.</div>
+      </div>
+
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 8/9 · Semaine S22 · Mai 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 9 — MINUTE ARCHIVE ============ -->
+  <section class="page" style="--accent:#9B30FF;--glow:rgba(155,48,255,0.4);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 9/9 · Semaine S22 · 25–31 mai 2026</div>
+        <h2><span class="icon">🏛️</span>La Minute Archive</h2>
+      </div>
+
+      <p class="lead">Mars 2021 : déjà, PSA disait stop. L'histoire de la semaine a un précédent — et il était encore plus gros.</p>
+
+      <p>Remontons cinq ans en arrière. Le hobby est en pleine fièvre. Confinements, retour nostalgique de toute une génération vers les cartes de son enfance, explosion des ventes records relayées partout : en quelques mois, la demande de gradation devient incontrôlable. Les cartons s'empilent dans les locaux de Collectors, à Santa Ana, en Californie. L'arriéré gonfle, gonfle encore — jusqu'à atteindre environ <span class="accent-v">12 millions de cartes</span>.</p>
+
+      <p>En mars 2021, PSA prend une décision qui fait l'effet d'un coup de tonnerre : suspendre ses services d'entrée de gamme, les fameux niveaux Value, pour se concentrer sur le désengorgement. À l'époque déjà, des rumeurs de hausse de tarifs avaient provoqué une ruée de dernière minute, aggravant l'embouteillage. La maison avait dû prioriser les objets de grande valeur et prolonger gratuitement les adhésions de ses membres — exactement le même scénario qu'aujourd'hui.</p>
+
+      <p>La leçon est presque devenue un cycle. Chaque fois que PSA muscle sa capacité ou annonce un changement de prix, la confiance retrouvée déclenche une vague de soumissions qui finit par dépasser l'outil. En 2021 comme en 2026, le message de l'entreprise est le même : mieux vaut une file honnête qu'une promesse intenable. Entre les deux épisodes, la différence tient en un mot — le moteur n'est plus le sport, mais le moderne, Pokémon en première ligne. La boucle de l'histoire, elle, reste fidèle à elle-même.</p>
+
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://www.sportscollectorsdaily.com/psa-shuts-down-some-services-as-backlog-reaches-10-million-cards/" target="_blank">Sports Collectors Daily</a></td><td>Précédent 2021 (~12M backlog), parallèle 2026</td><td>28/05/2026</td></tr>
+        </table>
+        <div class="disclaimer">Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
+      </div>
+
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 9/9 · Semaine S22 · Mai 2026</div>
+      </div>
+    </div>
+  </section>
+
   <div class="copyright">
     © 2026 TCGWORLD'Z. Tous droits réservés. Tous les autres noms ou logos cités appartiennent à leurs propriétaires respectifs.
   </div>
@@ -574,106 +634,20 @@
 </div>
 
 <script>
-  // ============================ DROPDOWN ARCHIVES ============================
-  // Identifiant de la semaine courante — à mettre à jour à chaque publication
-  const CURRENT_WEEK_ID = "semaine_22_mai_2026";
-
-  function toggleArchive(e){
-    e.stopPropagation();
-    const btn=document.getElementById('archiveBtn');
-    const menu=document.getElementById('archiveMenu');
-    btn.classList.toggle('open');
-    menu.classList.toggle('open');
-  }
-  
-  document.addEventListener('click',e=>{
-    const dd=document.querySelector('.archive-dropdown');
-    if(dd && !dd.contains(e.target)){
-      document.getElementById('archiveBtn').classList.remove('open');
-      document.getElementById('archiveMenu').classList.remove('open');
-    }
-  });
-
-  async function loadArchives(){
-    try{
-      const res=await fetch('../manifest.json',{cache:'no-cache'});
-      if(!res.ok)throw new Error('manifest.json introuvable');
-      const data=await res.json();
-
-      // Met à jour le label "édition en cours" depuis le manifest si dispo
-      const latest=(data.weekly_pulses||[]).find(w=>w.id===data.latest)||(data.weekly_pulses||[])[0];
-      if(latest){
-        const el=document.getElementById('currentEditionLabel');
-        if(el)el.textContent=latest.label;
-      }
-
-      // Weekly Pulse — 6 plus récents
-      const weekly=(data.weekly_pulses||[])
-        .slice() // copie pour ne pas muter
-        .sort((a,b)=>(b.date||'').localeCompare(a.date||''))
-        .slice(0,6);
-      const wList=document.getElementById('weeklyList');
-      if(weekly.length===0){
-        wList.innerHTML='<div class="dropdown-empty">Aucune édition disponible</div>';
-      }else{
-        wList.innerHTML=weekly.map(w=>{
-          const isCurrent=(w.id===CURRENT_WEEK_ID);
-          if(isCurrent){
-            return `<div class="dropdown-item current">${escapeHtml(w.label)}</div>`;
-          }
-          // On est dans archives/, donc on retire le préfixe archives/ du chemin
-          const f=String(w.file||'').replace(/^archives\//,'');
-          return `<a class="dropdown-item" href="${escapeAttr(f)}">${escapeHtml(w.label)}<div class="dropdown-item-date">${escapeHtml(w.date_label||'')}</div></a>`;
-        }).join('');
-      }
-
-      // Monthly Insight
-      const monthly=(data.monthly_insights||[])
-        .slice()
-        .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-      const mList=document.getElementById('monthlyList');
-      if(monthly.length===0){
-        mList.innerHTML='<div class="dropdown-empty">Bientôt disponible</div>';
-      }else{
-        mList.innerHTML=monthly.map(m=>{
-          const f=String(m.file||'').replace(/^archives\//,'');
-          return `<a class="dropdown-item" href="${escapeAttr(f)}">${escapeHtml(m.label)}<div class="dropdown-item-date">${escapeHtml(m.date_label||'')}</div></a>`;
-        }).join('');
-      }
-    }catch(err){
-      console.warn('Archive loading failed:',err);
-      document.getElementById('weeklyList').innerHTML='<div class="dropdown-empty">Manifest non disponible</div>';
-    }
-  }
-  
-  function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));}
-  function escapeAttr(s){return escapeHtml(s);}
-  
-  loadArchives();
-
-  // ============================ GESTION DES ONGLETS ============================
+  const pages = document.querySelectorAll('.page');
+  const tabs = document.querySelectorAll('.tab');
   function go(i){
-    const pages = document.querySelectorAll('.page');
-    const tabs = document.querySelectorAll('.tab');
-    
-    pages.forEach(p => p.classList.remove('active'));
-    tabs.forEach(t => t.classList.remove('active'));
-    
-    if(pages[i] && tabs[i]) {
-      pages[i].classList.add('active');
-      tabs[i].classList.add('active');
-      window.scrollTo({top:0,behavior:'smooth'});
-    }
+    pages.forEach((p,idx)=>p.classList.toggle('active', idx===i));
+    tabs.forEach((t,idx)=>{
+      const on = idx===i;
+      t.classList.toggle('active', on);
+      t.style.setProperty('--accent', t.dataset.accent);
+      t.style.setProperty('--glow', t.dataset.accent + '80');
+    });
+    window.scrollTo({top:0, behavior:'smooth'});
   }
-  
-  document.addEventListener('keydown', e => {
-    const active = document.querySelector('.page.active');
-    const pages = document.querySelectorAll('.page');
-    const idx = Array.from(pages).indexOf(active);
-    if(e.key === 'ArrowRight' && idx < pages.length - 1) go(idx + 1);
-    if(e.key === 'ArrowLeft' && idx > 0) go(idx - 1);
-  });
+  // init accent vars on tabs
+  tabs.forEach(t=>{ t.style.setProperty('--accent', t.dataset.accent); });
 </script>
-
 </body>
 </html>
