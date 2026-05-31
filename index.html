@@ -596,7 +596,7 @@
 
   async function loadArchives(){
     try{
-      const res=await fetch('../manifest.json',{cache:'no-cache'});
+      const res=await fetch('manifest.json',{cache:'no-cache'});
       if(!res.ok)throw new Error('manifest.json introuvable');
       const data=await res.json();
 
