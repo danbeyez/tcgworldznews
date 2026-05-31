@@ -480,48 +480,44 @@ table.sources-table a:hover { text-decoration: underline; }
 <body>
 <div class="wrap">
 <!-- ============================ ARCHIVE BANNER ============================ -->
-  <div class="archive-banner">
-    <div class="archive-banner-label">Archives</div>
-    <div class="archive-dropdown">
-      <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
-        <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
-        <span class="arrow">▼</span>
-      </button>
-      <div class="dropdown-menu" id="archiveMenu">
-        <div class="dropdown-section" id="weeklySection">
-          <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
-          <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
-        </div>
-        <div class="dropdown-section" id="monthlySection">
-          <div class="dropdown-section-title">Monthly Insight</div>
-          <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
-        </div>
-        <div class="dropdown-footer">
-          <a href="../archives.html">📂 Voir toutes les archives →</a>
-        </div>
+<div class="archive-banner">
+  <div class="archive-banner-label">Archives</div>
+  <div class="archive-dropdown">
+    <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
+      <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="dropdown-menu" id="archiveMenu">
+      <div class="dropdown-section" id="weeklySection">
+        <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
+        <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
+      </div>
+      <div class="dropdown-section" id="monthlySection">
+        <div class="dropdown-section-title">Monthly Insight</div>
+        <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
+      </div>
+      <div class="dropdown-footer">
+        <a href="../archives.html">📂 Voir toutes les archives →</a>
       </div>
     </div>
-    <div class="archive-banner-current">
-      <span class="label">Édition en cours</span>
-      <span class="value" id="currentEditionLabel">S19 · Mai 2026</span>
-    </div>
   </div>
-
-
-<div class="master-header">
-  <div class="logo-mini"><span class="dot"></span> TCG WORLD'Z · WEEKLY PULSE</div>
+  <div class="archive-banner-current">
+    <span class="label">Édition en cours</span>
+    <span class="value" id="currentEditionLabel">S21 · Mai 2026</span>
+  </div>
 </div>
 
+<!-- ============================ NAVIGATION ============================ -->
 <div class="nav">
-  <button class="tab t1 active" onclick="go(0)">🎯 Éditorial</button>
-  <button class="tab t2" onclick="go(1)">🔴 Pokémon</button>
-  <button class="tab t3" onclick="go(2)">⚫ Yu-Gi-Oh!</button>
-  <button class="tab t4" onclick="go(3)">🔵 One Piece</button>
-  <button class="tab t5" onclick="go(4)">🟣 Magic</button>
-  <button class="tab t6" onclick="go(5)">🏅 Gradation</button>
-  <button class="tab t7" onclick="go(6)">💡 Tech</button>
-  <button class="tab t8" onclick="go(7)">⚖️ Droit</button>
-  <button class="tab t9" onclick="go(8)">🏛️ Archive</button>
+  <button class="tab active" onclick="go(0)"><span class="tab-icon">🎯</span>Éditorial</button>
+  <button class="tab" onclick="go(1)"><span class="tab-icon">🔴</span>Pokémon</button>
+  <button class="tab" onclick="go(2)"><span class="tab-icon">⚫</span>Yu-Gi-Oh!</button>
+  <button class="tab" onclick="go(3)"><span class="tab-icon">🔵</span>One Piece</button>
+  <button class="tab" onclick="go(4)"><span class="tab-icon">🟣</span>Magic</button>
+  <button class="tab" onclick="go(5)"><span class="tab-icon">🏅</span>Gradation</button>
+  <button class="tab" onclick="go(6)"><span class="tab-icon">💡</span>Tech</button>
+  <button class="tab" onclick="go(7)"><span class="tab-icon">⚖️</span>Droit</button>
+  <button class="tab" onclick="go(8)"><span class="tab-icon">🏛️</span>Archive</button>
 </div>
 
 <!-- =================== PAGE 1 — ACTU DE LA SEMAINE =================== -->
