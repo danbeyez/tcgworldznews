@@ -81,8 +81,8 @@ Le site se met à jour automatiquement sur GitHub Pages (compter ~1 minute).
 Le script `update_manifest.py` automatise toutes les étapes 2 à 4.
 
 ```bash
-python update_manifest.py /chemin/vers/nouvelle_semaine.html \
-    --highlight "Phrase teaser sur le fait marquant de la semaine."
+python update_manifest.py /chemin/vers/nouvelle_semaine.html --highlight "Phrase teaser sur le fait marquant de la semaine."
+    
 ```
 
 Le script :
