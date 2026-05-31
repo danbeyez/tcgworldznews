@@ -217,6 +217,7 @@ def update_index_html(index_path: Path, archive_html: str, new_week_id: str,
     content = content.replace("'../manifest.json'", "'manifest.json'")
     content = content.replace('"../manifest.json"', '"manifest.json"')
     content = content.replace('href="../archives.html"', 'href="archives.html"')
+    content = content.replace('src="../archive-nav.js"', 'src="archive-nav.js"')
 
     # 6. Restaurer les chemins du dropdown (sans .replace archives/)
     # Si la version archives/ avait été utilisée comme base, on doit annuler
@@ -254,6 +255,8 @@ def prepare_archive_html(source_html: str) -> str:
     content = content.replace('"manifest.json"', '"../manifest.json"')
     # archives.html → ../archives.html
     content = content.replace('href="archives.html"', 'href="../archives.html"')
+    # archive-nav.js → ../archive-nav.js
+    content = content.replace('src="archive-nav.js"', 'src="../archive-nav.js"')
     # Dropdown : retirer le préfixe archives/ du file pour les liens
     if 'const f=String(w.file' not in content and 'const f=String(m.file' not in content:
         # Insérer la transformation de chemins pour les versions archives/
