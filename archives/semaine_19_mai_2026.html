@@ -444,98 +444,68 @@ table.sources-table a:hover { text-decoration: underline; }
   table.price-table th, table.price-table td { padding: 6px 6px; }
 }
 
-/* === Bandeau d'archives (injecte par migration) === */
-.archive-banner {
-  max-width: 920px;
-  margin: 0 auto 4px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px 16px;
-  background: linear-gradient(135deg, rgba(155,48,255,0.10), rgba(0,207,255,0.06));
-  border: 1px solid rgba(155,48,255,0.30);
-  border-radius: 12px;
-  position: relative;
-  z-index: 90;
-}
-.ab-brand { display: inline-flex; align-items: center; gap: 8px; }
-.ab-brand .ab-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: #9B30FF; box-shadow: 0 0 8px #9B30FF;
-}
-.ab-brand .ab-label {
-  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
-  font-weight: 700; color: #C97FFF;
-}
-.ab-current { font-size: 12px; color: #A0A8C0; }
-.ab-current strong { color: #00CFFF; }
-.ab-dropdown { position: relative; }
-.ab-toggle {
-  font-family: inherit; cursor: pointer;
-  font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
-  color: #fff; background: rgba(0,207,255,0.10);
-  border: 1px solid rgba(0,207,255,0.35);
-  border-radius: 100px; padding: 7px 14px;
-  display: inline-flex; align-items: center; gap: 8px;
-  transition: all 0.2s;
-}
-.ab-toggle:hover { background: rgba(0,207,255,0.18); border-color: rgba(0,207,255,0.6); }
-.ab-toggle .ab-caret { transition: transform 0.2s; font-size: 10px; }
-.ab-dropdown.open .ab-caret { transform: rotate(180deg); }
-.ab-menu {
-  display: none;
-  position: absolute; right: 0; top: calc(100% + 8px);
-  min-width: 260px; max-width: 320px; max-height: 360px; overflow-y: auto;
-  background: #0A0A12; border: 1px solid rgba(155,48,255,0.35);
-  border-radius: 12px; padding: 8px; z-index: 200;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 18px rgba(155,48,255,0.18);
-}
-.ab-dropdown.open .ab-menu { display: block; }
-.ab-menu-item {
-  display: block; text-decoration: none;
-  padding: 9px 11px; border-radius: 8px;
-  color: #E0E4F0; font-size: 13px; line-height: 1.35;
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.ab-menu-item:hover { background: rgba(0,207,255,0.08); border-color: rgba(0,207,255,0.25); }
-.ab-menu-item .ab-mi-label { font-weight: 700; color: #00CFFF; display: block; }
-.ab-menu-item .ab-mi-high { font-size: 11px; color: #A0A8C0; display: block; margin-top: 2px; }
-.ab-menu-item.current { background: rgba(155,48,255,0.10); border-color: rgba(155,48,255,0.30); }
-.ab-menu-item.current .ab-mi-label { color: #C97FFF; }
-.ab-menu-note { padding: 9px 11px; font-size: 12px; color: #A0A8C0; font-style: italic; }
-.ab-menu-all {
-  display: block; text-align: center; text-decoration: none;
-  margin-top: 6px; padding: 9px; border-radius: 8px;
-  font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
-  color: #fff; background: linear-gradient(135deg, #9B30FF, #00CFFF);
-}
-@media (max-width: 600px) {
-  .archive-banner { padding: 8px 12px; }
-  .ab-current { width: 100%; order: 3; }
-  .ab-menu { left: 0; right: auto; min-width: 220px; }
-}
+  /* ============================ ARCHIVE BANNER (ajout 24/05/2026) ============================ */
+  .archive-banner{background:linear-gradient(135deg,rgba(155,48,255,0.08),rgba(0,207,255,0.05));border:1px solid rgba(155,48,255,0.25);border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .archive-banner-label{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:600;flex-shrink:0}
+  .archive-banner-label::before{content:"📚";font-size:18px}
+  .archive-dropdown{position:relative;flex:1;min-width:240px;max-width:380px}
+  .dropdown-btn{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(0,207,255,0.3);color:#fff;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-family:inherit;letter-spacing:.2px;transition:all .2s}
+  .dropdown-btn:hover{border-color:#00CFFF;box-shadow:0 0 8px rgba(0,207,255,0.25)}
+  .dropdown-btn .arrow{font-size:11px;color:#00CFFF;transition:transform .2s}
+  .dropdown-btn.open .arrow{transform:rotate(180deg)}
+  .dropdown-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:#0A0A12;border:1px solid rgba(0,207,255,0.35);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.6),0 0 0 1px rgba(0,207,255,0.1);z-index:100;overflow:hidden;max-height:480px;overflow-y:auto}
+  .dropdown-menu.open{display:block}
+  .dropdown-section{padding:8px 0}
+  .dropdown-section + .dropdown-section{border-top:1px solid rgba(255,255,255,0.06)}
+  .dropdown-section-title{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.4);padding:8px 16px 6px}
+  .dropdown-item{display:block;padding:9px 16px;color:rgba(255,255,255,0.85);text-decoration:none;font-size:13.5px;transition:all .15s;border-left:3px solid transparent;font-weight:500}
+  .dropdown-item:hover{background:rgba(0,207,255,0.08);color:#fff;border-left-color:#00CFFF}
+  .dropdown-item.current{background:rgba(155,48,255,0.12);color:rgba(255,255,255,0.5);border-left-color:#9B30FF;cursor:default;pointer-events:none;font-style:italic}
+  .dropdown-item.current::after{content:" · actuel";font-size:11px;color:#9B30FF}
+  .dropdown-item-date{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
+  .dropdown-empty{padding:14px 16px;font-size:12px;color:rgba(255,255,255,0.35);font-style:italic;text-align:center}
+  .dropdown-footer{border-top:1px solid rgba(255,255,255,0.08);padding:10px 16px}
+  .dropdown-footer a{display:flex;align-items:center;justify-content:center;gap:6px;color:#00CFFF;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.3px}
+  .dropdown-footer a:hover{color:#9B30FF}
+  .archive-banner-current{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0}
+  .archive-banner-current .label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.4)}
+  .archive-banner-current .value{font-size:13px;font-weight:700;color:#00CFFF;letter-spacing:.3px}
+  @media (max-width:680px){
+    .archive-banner{padding:12px 14px;gap:10px}
+    .archive-banner-current{display:none}
+    .archive-dropdown{max-width:100%}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-
-<div class="archive-banner" data-week-id="semaine_19_mai_2026">
-  <div class="ab-brand">
-    <span class="ab-dot"></span>
-    <span class="ab-label">TCG World'z &middot; Archives</span>
-  </div>
-  <div class="ab-current">Édition&nbsp;: <strong id="abCurrentEdition">S19 · Mai 2026</strong></div>
-  <div class="ab-dropdown" id="abDropdown">
-    <button class="ab-toggle" id="abToggle" aria-haspopup="true" aria-expanded="false">
-      📂 Autres éditions <span class="ab-caret">▾</span>
-    </button>
-    <div class="ab-menu" id="abMenu" role="menu">
-      <div class="ab-menu-note">Chargement des archives…</div>
+<!-- ============================ ARCHIVE BANNER ============================ -->
+  <div class="archive-banner">
+    <div class="archive-banner-label">Archives</div>
+    <div class="archive-dropdown">
+      <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
+        <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="dropdown-menu" id="archiveMenu">
+        <div class="dropdown-section" id="weeklySection">
+          <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
+          <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
+        </div>
+        <div class="dropdown-section" id="monthlySection">
+          <div class="dropdown-section-title">Monthly Insight</div>
+          <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
+        </div>
+        <div class="dropdown-footer">
+          <a href="../archives.html">📂 Voir toutes les archives →</a>
+        </div>
+      </div>
+    </div>
+    <div class="archive-banner-current">
+      <span class="label">Édition en cours</span>
+      <span class="value" id="currentEditionLabel">S19 · Mai 2026</span>
     </div>
   </div>
-</div>
 
 
 <div class="master-header">
@@ -1151,89 +1121,74 @@ table.sources-table a:hover { text-decoration: underline; }
 
 </div>
 
-
 <script>
-/* === Dropdown d'archives (injecte par migration) === */
-(function () {
-  var CURRENT_WEEK_ID = "semaine_19_mai_2026";
-  var currentEditionLabel = "S19 · Mai 2026";
-  var MANIFEST_URL = "../manifest.json";
-  var ARCHIVES_URL = "../archives.html";
+  // ============================ DROPDOWN ARCHIVES ============================
+  const CURRENT_WEEK_ID = "semaine_19_mai_2026";
 
-  var dropdown = document.getElementById("abDropdown");
-  var toggle = document.getElementById("abToggle");
-  var menu = document.getElementById("abMenu");
-  if (!dropdown || !toggle || !menu) return;
-
-  toggle.addEventListener("click", function (e) {
+  function toggleArchive(e){
     e.stopPropagation();
-    var open = dropdown.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function (e) {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
+    const btn=document.getElementById('archiveBtn');
+    const menu=document.getElementById('archiveMenu');
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  }
+  document.addEventListener('click',e=>{
+    const dd=document.querySelector('.archive-dropdown');
+    if(dd && !dd.contains(e.target)){
+      document.getElementById('archiveBtn').classList.remove('open');
+      document.getElementById('archiveMenu').classList.remove('open');
     }
   });
+  function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));}
+  function escapeAttr(s){return escapeHtml(s);}
 
-  function esc(s) {
-    return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
+  async function loadArchives(){
+    try{
+      const res=await fetch('../manifest.json',{cache:'no-cache'});
+      if(!res.ok)throw new Error('manifest.json introuvable');
+      const data=await res.json();
+
+      const latest=(data.weekly_pulses||[]).find(w=>w.id===data.latest)||(data.weekly_pulses||[])[0];
+      // Sur une page d'archive, on N'ÉCRASE PAS le label "édition en cours"
+      // (il doit rester le label de l'archive consultée, pas la dernière édition)
+
+      const weekly=(data.weekly_pulses||[])
+        .slice()
+        .sort((a,b)=>(b.date||'').localeCompare(a.date||''))
+        .slice(0,6);
+      const wList=document.getElementById('weeklyList');
+      if(weekly.length===0){
+        wList.innerHTML='<div class="dropdown-empty">Aucune édition disponible</div>';
+      }else{
+        wList.innerHTML=weekly.map(w=>{
+          const isCurrent=(w.id===CURRENT_WEEK_ID);
+          if(isCurrent){
+            return `<div class="dropdown-item current">${escapeHtml(w.label)}</div>`;
+          }
+          // On est dans archives/, on retire le préfixe archives/ du chemin
+          const f=String(w.file||'').replace(/^archives\//,'');
+          return `<a class="dropdown-item" href="${escapeAttr(f)}">${escapeHtml(w.label)}<div class="dropdown-item-date">${escapeHtml(w.date_label||'')}</div></a>`;
+        }).join('');
+      }
+
+      const monthly=(data.monthly_insights||[])
+        .slice()
+        .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      const mList=document.getElementById('monthlyList');
+      if(monthly.length===0){
+        mList.innerHTML='<div class="dropdown-empty">Bientôt disponible</div>';
+      }else{
+        mList.innerHTML=monthly.map(m=>{
+          const f=String(m.file||'').replace(/^archives\//,'');
+          return `<a class="dropdown-item" href="${escapeAttr(f)}">${escapeHtml(m.label)}<div class="dropdown-item-date">${escapeHtml(m.date_label||'')}</div></a>`;
+        }).join('');
+      }
+    }catch(err){
+      console.warn('Archive loading failed:',err);
+      document.getElementById('weeklyList').innerHTML='<div class="dropdown-empty">Manifest non disponible</div>';
+    }
   }
-
-  function normalize(data) {
-    // Tolere plusieurs schemas de manifest possibles.
-    var list = [];
-    if (Array.isArray(data)) list = data;
-    else if (data && Array.isArray(data.editions)) list = data.editions;
-    else if (data && Array.isArray(data.pages)) list = data.pages;
-    else if (data && Array.isArray(data.weeks)) list = data.weeks;
-    return list.map(function (it) {
-      return {
-        id: it.id || it.week_id || it.slug || "",
-        label: it.label || it.title || it.name || it.id || "Édition",
-        file: it.file || it.url || it.path || it.href || "",
-        highlight: it.highlight || it.teaser || it.summary || ""
-      };
-    }).filter(function (it) { return it.file || it.id; });
-  }
-
-  function fallback(msg) {
-    menu.innerHTML =
-      '<div class="ab-menu-item current"><span class="ab-mi-label">' + esc(currentEditionLabel) +
-      '</span><span class="ab-mi-high">Édition actuellement ouverte</span></div>' +
-      (msg ? '<div class="ab-menu-note">' + esc(msg) + '</div>' : '') +
-      '<a class="ab-menu-all" href="' + esc(ARCHIVES_URL) + '">Voir toutes les archives</a>';
-  }
-
-  function render(items) {
-    if (!items.length) { fallback("Aucune autre édition listée."); return; }
-    var html = "";
-    items.forEach(function (it) {
-      var isCur = it.id && it.id === CURRENT_WEEK_ID;
-      var href = it.file || (it.id + ".html");
-      html += '<a class="ab-menu-item' + (isCur ? " current" : "") + '" href="' + esc(href) + '">' +
-              '<span class="ab-mi-label">' + esc(it.label) + (isCur ? " • actuelle" : "") + '</span>' +
-              (it.highlight ? '<span class="ab-mi-high">' + esc(it.highlight) + '</span>' : '') +
-              '</a>';
-    });
-    html += '<a class="ab-menu-all" href="' + esc(ARCHIVES_URL) + '">Voir toutes les archives</a>';
-    menu.innerHTML = html;
-  }
-
-  // file:// ne supporte pas fetch -> fallback direct
-  if (location.protocol === "file:") {
-    fallback("Liste complète disponible une fois la page servie en ligne (GitHub Pages).");
-    return;
-  }
-
-  fetch(MANIFEST_URL, { cache: "no-store" })
-    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-    .then(function (data) { render(normalize(data)); })
-    .catch(function () { fallback("Manifest introuvable pour le moment."); });
-})();
+  loadArchives();
 </script>
 
 <script>
