@@ -453,7 +453,7 @@ table.sources-table a:hover { text-decoration: underline; }
   .dropdown-btn:hover{border-color:#00CFFF;box-shadow:0 0 8px rgba(0,207,255,0.25)}
   .dropdown-btn .arrow{font-size:11px;color:#00CFFF;transition:transform .2s}
   .dropdown-btn.open .arrow{transform:rotate(180deg)}
-  .dropdown-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:#0A0A12;border:1px solid rgba(0,207,255,0.35);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.6),0 0 0 1px rgba(0,207,255,0.1);z-index:100;overflow:hidden;max-height:480px;overflow-y:auto}
+  .dropdown-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:#0A0A12;border:1px solid rgba(0,207,255,0.35);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.6),0 0 0 1px rgba(0,207,255,0.1);z-index:1000;overflow:hidden;max-height:480px;overflow-y:auto}
   .dropdown-menu.open{display:block}
   .dropdown-section{padding:8px 0}
   .dropdown-section + .dropdown-section{border-top:1px solid rgba(255,255,255,0.06)}
@@ -479,33 +479,34 @@ table.sources-table a:hover { text-decoration: underline; }
 </head>
 <body>
 <div class="wrap">
+
 <!-- ============================ ARCHIVE BANNER ============================ -->
-<div class="archive-banner">
-  <div class="archive-banner-label">Archives</div>
-  <div class="archive-dropdown">
-    <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
-      <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
-      <span class="arrow">▼</span>
-    </button>
-    <div class="dropdown-menu" id="archiveMenu">
-      <div class="dropdown-section" id="weeklySection">
-        <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
-        <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
-      </div>
-      <div class="dropdown-section" id="monthlySection">
-        <div class="dropdown-section-title">Monthly Insight</div>
-        <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
-      </div>
-      <div class="dropdown-footer">
-        <a href="../archives.html">📂 Voir toutes les archives →</a>
+  <div class="archive-banner">
+    <div class="archive-banner-label">Archives</div>
+    <div class="archive-dropdown">
+      <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
+        <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="dropdown-menu" id="archiveMenu">
+        <div class="dropdown-section" id="weeklySection">
+          <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
+          <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
+        </div>
+        <div class="dropdown-section" id="monthlySection">
+          <div class="dropdown-section-title">Monthly Insight</div>
+          <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
+        </div>
+        <div class="dropdown-footer">
+          <a href="../archives.html">📂 Voir toutes les archives →</a>
+        </div>
       </div>
     </div>
+    <div class="archive-banner-current">
+      <span class="label">Édition en cours</span>
+      <span class="value" id="currentEditionLabel">S19 · Mai 2026</span>
+    </div>
   </div>
-  <div class="archive-banner-current">
-    <span class="label">Édition en cours</span>
-    <span class="value" id="currentEditionLabel">S21 · Mai 2026</span>
-  </div>
-</div>
 
 <!-- ============================ NAVIGATION ============================ -->
 <div class="nav">
@@ -1186,6 +1187,7 @@ table.sources-table a:hover { text-decoration: underline; }
   }
   loadArchives();
 </script>
+
 
 <script>
 function go(i) {
