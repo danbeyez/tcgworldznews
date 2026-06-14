@@ -15,8 +15,7 @@ USAGE
 EXEMPLES
 --------
     # Publication d'une nouvelle semaine
-    python update_manifest.py /tmp/nouvelle_semaine.html \\
-        --highlight "Banlist Konami : 3 cartes interdites le 18 mai."
+    python update_manifest.py /tmp/nouvelle_semaine.html --highlight "Banlist Konami : 3 cartes interdites le 18 mai."
 
     # Simulation (n'écrit rien)
     python update_manifest.py /tmp/nouvelle_semaine.html --dry-run
@@ -31,6 +30,18 @@ CE QUE FAIT LE SCRIPT
    - Remplace `CURRENT_WEEK_ID` dans le JS.
    - Met à jour la balise `og:title`, `og:description` et le `<title>`.
 6. Recopie le contenu du HTML source dans `index.html`.
+
+MODE BACKFILL (--backfill)
+--------------------------
+Pour ajouter une ancienne édition aux archives sans toucher index.html ni
+modifier le champ `latest` du manifest. Utile pour intégrer des semaines
+passées après coup.
+
+    python update_manifest.py ancienne_semaine.html --backfill
+    python update_manifest.py ancienne_semaine.html --backfill --highlight "Résumé de l'époque."
+
+Les erreurs de validation sont des avertissements (pas bloquants) en mode
+--backfill, car les anciens fichiers peuvent ne pas avoir la structure actuelle.
 
 RÈGLE IMPORTANTE
 ----------------
@@ -218,29 +229,7 @@ def update_index_html(index_path: Path, archive_html: str, new_week_id: str,
     content = content.replace('"../manifest.json"', '"manifest.json"')
     content = content.replace('href="../archives.html"', 'href="archives.html"')
     content = content.replace('src="../archive-nav.js"', 'src="archive-nav.js"')
-
-    # 6. Restaurer les chemins du dropdown (sans .replace archives/)
-    # Si la version archives/ avait été utilisée comme base, on doit annuler
-    # la transformation `.replace(/^archives\//,'')`. On le fait par detection :
-    archive_strip_pattern = r"const f=String\([wm]\.file\|\|''\)\.replace\(/\^archives\\\/\/,''\);\n          return"
-    content = re.sub(
-        archive_strip_pattern,
-        "return",
-        content,
-    )
-    # Remplacer la variable f par w.file ou m.file directement
-    content = re.sub(
-        r'href="\$\{escapeAttr\(f\)\}"',
-        lambda m: 'href="${escapeAttr(w.file)}"',
-        content,
-        count=1,  # premier match = weekly
-    )
-    content = re.sub(
-        r'href="\$\{escapeAttr\(f\)\}"',
-        lambda m: 'href="${escapeAttr(m.file)}"',
-        content,
-        count=1,  # second match = monthly
-    )
+    content = content.replace('href="../archive-nav.css"', 'href="archive-nav.css"')
 
     index_path.write_text(content, encoding="utf-8")
 
@@ -257,24 +246,7 @@ def prepare_archive_html(source_html: str) -> str:
     content = content.replace('href="archives.html"', 'href="../archives.html"')
     # archive-nav.js → ../archive-nav.js
     content = content.replace('src="archive-nav.js"', 'src="../archive-nav.js"')
-    # Dropdown : retirer le préfixe archives/ du file pour les liens
-    if 'const f=String(w.file' not in content and 'const f=String(m.file' not in content:
-        # Insérer la transformation de chemins pour les versions archives/
-        # On modifie les deux occurrences (weekly puis monthly)
-        # Match 1 : weekly
-        content = re.sub(
-            r"(return `<a class=\"dropdown-item\" href=\"\$\{escapeAttr\()(w\.file)(\)\}\"[^`]*?<div class=\"dropdown-item-date\">\$\{escapeHtml\(w\.date_label)",
-            r"const f=String(w.file||'').replace(/^archives\\//,'');\n          \1f\3",
-            content,
-            count=1,
-        )
-        # Match 2 : monthly
-        content = re.sub(
-            r"(return `<a class=\"dropdown-item\" href=\"\$\{escapeAttr\()(m\.file)(\)\}\"[^`]*?<div class=\"dropdown-item-date\">\$\{escapeHtml\(m\.date_label)",
-            r"const f=String(m.file||'').replace(/^archives\\//,'');\n          \1f\3",
-            content,
-            count=1,
-        )
+    content = content.replace('href="archive-nav.css"', 'href="../archive-nav.css"')
     return content
 
 
@@ -291,6 +263,8 @@ def main():
                         help="Phrase teaser pour l'aperçu (fait marquant de la semaine).")
     parser.add_argument("--repo-root", type=Path, default=Path("."),
                         help="Racine du dépôt (défaut: dossier courant).")
+    parser.add_argument("--backfill", action="store_true",
+                        help="Ajoute une ancienne édition aux archives sans modifier index.html ni 'latest'.")
     parser.add_argument("--force", action="store_true",
                         help="Écrase une édition déjà publiée avec le même ID.")
     parser.add_argument("--dry-run", action="store_true",
@@ -342,6 +316,28 @@ def main():
     # 4. Lire source HTML
     source_html = args.source.read_text(encoding="utf-8")
 
+    # Valider la structure du HTML source
+    _errors = []
+    if 'class="archive-banner"' not in source_html and "class='archive-banner'" not in source_html:
+        _errors.append('Bannière d\'archives manquante (class="archive-banner")')
+    if 'CURRENT_WEEK_ID' not in source_html:
+        _errors.append('Déclaration CURRENT_WEEK_ID manquante dans le HTML source')
+    if 'archive-nav.js' not in source_html:
+        _errors.append('Référence à archive-nav.js manquante (script partagé)')
+    if 'archive-nav.css' not in source_html:
+        _errors.append('Lien vers archive-nav.css manquant (feuille de style)')
+    if _errors:
+        if args.backfill:
+            print('⚠️  Structure non conforme (avertissement ignoré en mode --backfill) :', file=sys.stderr)
+            for e in _errors:
+                print(f'   • {e}', file=sys.stderr)
+        else:
+            print('❌ Le fichier source ne respecte pas la structure requise :', file=sys.stderr)
+            for e in _errors:
+                print(f'   • {e}', file=sys.stderr)
+            print('   → Utilise actualitees/TEMPLATE.html comme base.', file=sys.stderr)
+            sys.exit(1)
+
     # 5. Préparer version archives/ (chemins relatifs ajustés)
     archive_html = prepare_archive_html(source_html)
 
@@ -349,7 +345,10 @@ def main():
         print("\n🔍 DRY-RUN : aucune modification effective.")
         print(f"   - Aurait écrit : {target_archive}")
         print(f"   - Aurait mis à jour : {manifest_path}")
-        print(f"   - Aurait copié vers : {index_path}")
+        if not args.backfill:
+            print(f"   - Aurait copié vers : {index_path}")
+        else:
+            print(f"   - Mode backfill : index.html NON modifié, 'latest' NON changé")
         return
 
     # 6. Écrire fichier archive
@@ -364,27 +363,34 @@ def main():
     # Trier par date desc
     weekly_pulses.sort(key=lambda w: w.get("date", ""), reverse=True)
     manifest["weekly_pulses"] = weekly_pulses
-    manifest["latest"] = entry["id"]
+    if not args.backfill:
+        manifest["latest"] = entry["id"]
     manifest_path.write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     print(f"✅ Manifest mis à jour ({len(weekly_pulses)} éditions au total)")
 
-    # 8. Mettre à jour index.html
-    update_index_html(
-        index_path,
-        archive_html,
-        entry["id"],
-        entry["label"],
-        entry.get("highlight", ""),
-    )
-    print(f"✅ Index.html mis à jour avec l'édition courante")
-
-    print(f"\n🎉 Publication terminée. N'oublie pas de commit + push.")
-    print(f"   git add archives/{file_name} manifest.json index.html")
-    print(f"   git commit -m \"📰 Publication {entry['label']}\"")
-    print(f"   git push")
+    # 8. Mettre à jour index.html (sauf en mode backfill)
+    if not args.backfill:
+        update_index_html(
+            index_path,
+            archive_html,
+            entry["id"],
+            entry["label"],
+            entry.get("highlight", ""),
+        )
+        print(f"✅ Index.html mis à jour avec l'édition courante")
+        print(f"\n🎉 Publication terminée. N'oublie pas de commit + push.")
+        print(f"   git add archives/{file_name} manifest.json index.html")
+        print(f"   git commit -m \"📰 Publication {entry['label']}\"")
+        print(f"   git push")
+    else:
+        print(f"ℹ️  Mode backfill : index.html et 'latest' non modifiés.")
+        print(f"\n🎉 Archive ajoutée. N'oublie pas de commit + push.")
+        print(f"   git add archives/{file_name} manifest.json")
+        print(f"   git commit -m \"📦 Backfill {entry['label']}\"")
+        print(f"   git push")
 
 
 if __name__ == "__main__":

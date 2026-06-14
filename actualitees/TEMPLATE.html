@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TW News — Weekly Pulse S[XX] · [Mois] [Année]">
+<meta property="og:description" content="[Résumé de la semaine en une phrase — utilisé pour l'aperçu sur les réseaux sociaux]">
+<meta property="og:image" content="https://raw.githubusercontent.com/danbeyez/tcgworldz-logo/main/logo.png.png">
+<meta property="og:site_name" content="TCG World'z">
+<meta name="twitter:card" content="summary_large_image">
+<title>TW News — Weekly Pulse S[XX] [Mois] [Année] · TCG World'z</title>
+<link rel="stylesheet" href="archive-nav.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#050508;
+    color:#FFFFFF;
+    font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:920px; margin:0 auto; padding:18px 14px 40px; }
+
+  /* Navigation */
+  .nav {
+    display:flex; flex-wrap:wrap; gap:6px;
+    position:sticky; top:0; z-index:50;
+    background:rgba(5,5,8,0.92);
+    backdrop-filter:blur(8px);
+    padding:10px 6px; margin-bottom:18px;
+    border-bottom:1px solid rgba(0,207,255,0.18);
+  }
+  .tab {
+    font-size:12px; font-weight:600; letter-spacing:.3px;
+    padding:7px 11px; border-radius:8px; cursor:pointer;
+    background:transparent; color:rgba(255,255,255,0.45);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:all .18s ease; white-space:nowrap;
+  }
+  .tab:hover { color:#fff; border-color:rgba(0,207,255,0.4); }
+  .tab.active {
+    color:#050508; font-weight:800;
+    background:var(--accent,#00CFFF);
+    border-color:var(--accent,#00CFFF);
+    box-shadow:0 0 12px var(--glow,rgba(0,207,255,0.5));
+  }
+
+  /* Pages */
+  .page { display:none; }
+  .page.active {
+    display:flex; flex-direction:column;
+    position:relative;
+    background:#0A0A12;
+    border:1px solid rgba(0,207,255,0.18);
+    border-radius:16px;
+    padding:40px 30px 30px;
+    overflow:hidden;
+    min-height:620px;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+  }
+  .watermark {
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%) rotate(-35deg);
+    font-size:140px; font-weight:900; color:#C97FFF;
+    opacity:0.14; pointer-events:none; white-space:nowrap;
+    z-index:1; letter-spacing:3px;
+    text-shadow:0 0 30px rgba(155,48,255,0.3);
+  }
+  @media (max-width:600px){ .watermark{ font-size:74px; } .page.active{ padding:28px 18px 24px; } }
+  .page-content { position:relative; z-index:2; display:flex; flex-direction:column; flex:1; }
+
+  .program-header { text-align:center; margin-bottom:26px; }
+  .program-title {
+    font-size:48px; font-weight:900; letter-spacing:2px; color:#00CFFF;
+    text-shadow:0 0 12px rgba(0,207,255,0.6),0 0 24px rgba(155,48,255,0.4);
+    margin:0; line-height:1;
+  }
+  .program-tagline {
+    font-size:14px; font-weight:500; letter-spacing:1.5px;
+    text-transform:lowercase; color:#A0A8C0; margin:6px 0 0;
+  }
+  .page-header { margin-bottom:22px; }
+  .page-meta { font-size:11px; letter-spacing:1.4px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:6px; }
+  .page-header h2 { font-size:27px; font-weight:800; line-height:1.2; color:var(--accent,#00CFFF); text-shadow:0 0 12px var(--glow,rgba(0,207,255,0.45)); }
+  .page-header .icon { font-size:22px; margin-right:6px; }
+  .lead { font-size:15.5px; color:#E8ECF6; margin-bottom:18px; }
+  .lead strong { color:#fff; }
+  h3 { font-size:17px; font-weight:700; color:#9B30FF; margin:22px 0 10px; letter-spacing:.2px; }
+  p { margin-bottom:12px; color:#D4D9E6; font-size:14.5px; }
+  .accent-c { color:#00CFFF; } .accent-v { color:#9B30FF; }
+  .up { color:#00CFFF; font-weight:700; } .down { color:#FF4DC4; font-weight:700; }
+  .box { background:rgba(255,255,255,0.025); border:1px solid rgba(0,207,255,0.22); border-left:3px solid var(--accent,#00CFFF); border-radius:10px; padding:14px 16px; margin:14px 0; }
+  .box.warn { border-color:rgba(255,106,0,0.4); border-left-color:#FF6A00; }
+  .box.calm { border-color:rgba(160,168,192,0.25); border-left-color:#A0A8C0; }
+  .box h4 { font-size:13px; text-transform:uppercase; letter-spacing:1px; color:#A0A8C0; margin-bottom:8px; }
+  ul.clean { list-style:none; margin:6px 0 14px; }
+  ul.clean li { padding:5px 0 5px 22px; position:relative; font-size:14.5px; color:#D4D9E6; }
+  ul.clean li::before { content:'▸'; position:absolute; left:2px; color:var(--accent,#00CFFF); font-weight:700; }
+  .tag { display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.5px; padding:2px 8px; border-radius:5px; margin-right:6px; vertical-align:middle; }
+  .tag.conf { background:rgba(0,207,255,0.14); color:#00CFFF; border:1px solid rgba(0,207,255,0.4); }
+  .tag.est  { background:rgba(155,48,255,0.14); color:#C97FFF; border:1px solid rgba(155,48,255,0.4); }
+  .tag.verif{ background:rgba(255,106,0,0.14); color:#FF6A00; border:1px solid rgba(255,106,0,0.4); }
+  .tag.rum  { background:rgba(255,77,196,0.14); color:#FF4DC4; border:1px solid rgba(255,77,196,0.4); }
+  .price-table { width:100%; border-collapse:collapse; margin:12px 0 16px; font-size:13px; }
+  .price-table th { text-align:left; padding:9px 10px; background:rgba(0,207,255,0.08); color:#00CFFF; font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.5px; border-bottom:1px solid rgba(0,207,255,0.3); }
+  .price-table td { padding:9px 10px; border-bottom:1px solid rgba(255,255,255,0.06); color:#D4D9E6; }
+  .price-table tr:hover td { background:rgba(255,255,255,0.02); }
+  .nd { color:rgba(255,255,255,0.35); font-style:italic; }
+  .sources { margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 14px; }
+  .sources .src-title { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.3); margin-bottom:8px; }
+  .sources table { width:100%; border-collapse:collapse; font-size:11px; color:rgba(255,255,255,0.45); }
+  .sources td, .sources th { padding:3px 6px; text-align:left; vertical-align:top; }
+  .sources a { color:#00CFFF; text-decoration:none; }
+  .sources a:hover { text-decoration:underline; }
+  .disclaimer { font-size:10px; color:rgba(255,255,255,0.3); margin-top:8px; line-height:1.5; }
+  .page-footer { margin-top:24px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; position:relative; z-index:2; }
+  .logo-block { display:flex; align-items:center; gap:10px; }
+  .logo-circle { width:36px; height:36px; border-radius:50%; background:radial-gradient(circle at 30% 30%,#0A0A12,#050508); border:1.5px solid #00CFFF; box-shadow:0 0 8px rgba(0,207,255,0.5); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:#fff; }
+  .logo-text .brand { font-size:13px; color:#00CFFF; font-weight:700; }
+  .logo-text .sub { font-size:10px; color:#A0A8C0; }
+  .page-counter { font-size:11px; color:rgba(255,255,255,0.4); text-align:right; }
+  .copyright { text-align:center; padding:14px 16px 4px; font-size:10px; color:rgba(255,255,255,0.2); font-style:italic; letter-spacing:.3px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============================ ARCHIVE BANNER ============================ -->
+  <div class="archive-banner">
+    <div class="archive-banner-label">Archives</div>
+    <div class="archive-dropdown">
+      <button class="dropdown-btn" id="archiveBtn" onclick="toggleArchive(event)">
+        <span id="archiveBtnLabel">📅 Choisir une autre semaine…</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="dropdown-menu" id="archiveMenu">
+        <div class="dropdown-section" id="weeklySection">
+          <div class="dropdown-section-title">Weekly Pulse — 6 dernières</div>
+          <div id="weeklyList"><div class="dropdown-empty">Chargement…</div></div>
+        </div>
+        <div class="dropdown-section" id="monthlySection">
+          <div class="dropdown-section-title">Monthly Insight</div>
+          <div id="monthlyList"><div class="dropdown-empty">Bientôt disponible</div></div>
+        </div>
+        <div class="dropdown-footer">
+          <a href="archives.html">📂 Voir toutes les archives →</a>
+        </div>
+      </div>
+    </div>
+    <div class="archive-banner-current">
+      <span class="label">Édition en cours</span>
+      <span class="value" id="currentEditionLabel">S[XX] · [Mois] [Année]</span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION (adapter les accents data-accent si besoin) -->
+  <nav class="nav">
+    <button class="tab active" data-accent="#00CFFF" onclick="go(0)">🎯 Fait Marquant</button>
+    <button class="tab" data-accent="#FF4DC4" onclick="go(1)">🔴 Pokémon</button>
+    <button class="tab" data-accent="#FF6A00" onclick="go(2)">⚫ Yu-Gi-Oh!</button>
+    <button class="tab" data-accent="#2255FF" onclick="go(3)">🔵 One Piece</button>
+    <button class="tab" data-accent="#9B30FF" onclick="go(4)">🟣 Magic</button>
+    <button class="tab" data-accent="#00CFFF" onclick="go(5)">🏅 Gradation</button>
+    <button class="tab" data-accent="#00CFFF" onclick="go(6)">💡 Innovation</button>
+    <button class="tab" data-accent="#FF6A00" onclick="go(7)">⚖️ Droit</button>
+    <button class="tab" data-accent="#9B30FF" onclick="go(8)">🏛️ Archive</button>
+  </nav>
+
+  <!-- ============ PAGE 1 — FAIT MARQUANT ============ -->
+  <section class="page active" style="--accent:#00CFFF;--glow:rgba(0,207,255,0.45);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="program-header">
+        <h1 class="program-title">TW News</h1>
+        <p class="program-tagline">l'actu TCG &amp; son environnement</p>
+      </div>
+      <div class="page-header">
+        <div class="page-meta">Page 1/9 · Semaine S[XX] · [dates de la semaine]</div>
+        <h2><span class="icon">🎯</span>Actu de la semaine — Le Fait Marquant</h2>
+      </div>
+
+      <p class="lead"><span class="tag conf">CONFIRMÉ</span> <strong>[Titre du fait marquant de la semaine]</strong></p>
+
+      <p>[Corps du texte — développer ici le fait marquant principal de la semaine.]</p>
+
+      <div class="box">
+        <h4>[Titre de la boîte d'encart]</h4>
+        <ul class="clean">
+          <li>[Point clé 1]</li>
+          <li>[Point clé 2]</li>
+          <li>[Point clé 3]</li>
+        </ul>
+      </div>
+
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="[URL]" target="_blank">[Nom de la source]</a></td><td>[Données]</td><td>[Date]</td></tr>
+        </table>
+        <div class="disclaimer">Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
+      </div>
+
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 1/9 · Semaine S[XX] · [Mois] [Année]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 2 — POKÉMON ============ -->
+  <section class="page" style="--accent:#FF4DC4;--glow:rgba(255,77,196,0.4);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 2/9 · Semaine S[XX] · [dates]</div>
+        <h2><span class="icon">🔴</span>Pokémon</h2>
+      </div>
+      <p class="lead">[Résumé Pokémon de la semaine]</p>
+      <p>[Corps du texte Pokémon]</p>
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 2/9 · Semaine S[XX] · [Mois] [Année]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 3 — YU-GI-OH ============ -->
+  <section class="page" style="--accent:#FF6A00;--glow:rgba(255,106,0,0.4);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 3/9 · Semaine S[XX] · [dates]</div>
+        <h2><span class="icon">⚫</span>Yu-Gi-Oh!</h2>
+      </div>
+      <p class="lead">[Résumé Yu-Gi-Oh! de la semaine]</p>
+      <p>[Corps du texte Yu-Gi-Oh!]</p>
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 3/9 · Semaine S[XX] · [Mois] [Année]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 4 — ONE PIECE ============ -->
+  <section class="page" style="--accent:#2255FF;--glow:rgba(34,85,255,0.4);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 4/9 · Semaine S[XX] · [dates]</div>
+        <h2><span class="icon">🔵</span>One Piece TCG</h2>
+      </div>
+      <p class="lead">[Résumé One Piece TCG de la semaine]</p>
+      <p>[Corps du texte One Piece TCG]</p>
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 4/9 · Semaine S[XX] · [Mois] [Année]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 5 — MAGIC ============ -->
+  <section class="page" style="--accent:#9B30FF;--glow:rgba(155,48,255,0.4);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 5/9 · Semaine S[XX] · [dates]</div>
+        <h2><span class="icon">🟣</span>Magic: The Gathering</h2>
+      </div>
+      <p class="lead">[Résumé Magic de la semaine]</p>
+      <p>[Corps du texte Magic]</p>
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 5/9 · Semaine S[XX] · [Mois] [Année]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 6 — GRADATION ============ -->
+  <section class="page" style="--accent:#00CFFF;--glow:rgba(0,207,255,0.45);">
+    <div class="watermark">TCG World'z</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 6/9 · Semaine S[XX] · [dates]</div>
+        <h2><span class="icon">🏅</span>Gradation &amp; Marché</h2>
+      </div>
+      <p class="lead">[Résumé Gradation &amp; Marché de la semaine]</p>
+      <p>[Corps du texte Gradation]</p>
+      <div class="page-footer">
+        <div class="logo-block">
+          <div class="logo-circle">TW</div>
+          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 6/9 · Semaine S[XX] · [Mois] [Année]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGES 7, 8, 9 — LAISSER VIDES (à remplir si besoin) ============ -->
+  <section class="page" style="--accent:#00CFFF;--glow:rgba(0,207,255,0.45);"></section>
+  <section class="page" style="--accent:#FF6A00;--glow:rgba(255,106,0,0.4);"></section>
+  <section class="page" style="--accent:#9B30FF;--glow:rgba(155,48,255,0.4);"></section>
+
+  <div class="copyright">
+    © [Année] TCGWORLD'Z. Tous droits réservés. Tous les autres noms ou logos cités appartiennent à leurs propriétaires respectifs.
+  </div>
+
+</div>
+
+<!-- OBLIGATOIRE : déclarer l'ID de l'édition AVANT de charger le script -->
+<script>const CURRENT_WEEK_ID = "semaine_XX_mois_ANNEE";</script>
+<script src="archive-nav.js"></script>
+
+</body>
+</html>
