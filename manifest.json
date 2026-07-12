@@ -5,8 +5,16 @@
     "generator_version": "1.0",
     "schema_version": 1
   },
-  "latest": "semaine_27_juillet_2026",
+  "latest": "semaine_28_juillet_2026",
   "weekly_pulses": [
+    {
+      "id": "semaine_28_juillet_2026",
+      "label": "S28 · Juillet 2026",
+      "date": "2026-07-12",
+      "date_label": "Semaine du 6 au 12 juillet 2026",
+      "file": "archives/semaine_28_juillet_2026.html",
+      "highlight": "Un seul groupe,80% de la gradation ?"
+    },
     {
       "id": "semaine_27_juillet_2026",
       "label": "S27 · Juillet 2026",
@@ -21,7 +29,7 @@
       "date": "2026-06-28",
       "date_label": "Semaine du 22 au 28 juin 2026",
       "file": "archives/semaine_26_juin_2026.html",
-      "highlight":"Magic franchit un cap avec Marvel Super Heroes : le second set Univers Infinis Marvel arrive en boutique le 26 juin, et confirme la bascule du modèle économique de Wizards vers les licences externes"
+      "highlight": "Magic franchit un cap avec Marvel Super Heroes : le second set Univers Infinis Marvel arrive en boutique le 26 juin, et confirme la bascule du modèle économique de Wizards vers les licences externes"
     },
     {
       "id": "semaine_25_juin_2026",
