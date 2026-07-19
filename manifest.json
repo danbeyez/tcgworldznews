@@ -5,8 +5,16 @@
     "generator_version": "1.0",
     "schema_version": 1
   },
-  "latest": "semaine_28_juillet_2026",
+  "latest": "semaine_29_juillet_2026",
   "weekly_pulses": [
+    {
+      "id": "semaine_29_juillet_2026",
+      "label": "S29 · Juillet 2026",
+      "date": "2026-07-19",
+      "date_label": "Semaine du 13 au 19 juillet 2026",
+      "file": "archives/semaine_29_juillet_2026.html",
+      "highlight": "PSA gèle ses quatre niveaux de gradation les moins chers face à un arriéré de près de 10 millions de cartes."
+    },
     {
       "id": "semaine_28_juillet_2026",
       "label": "S28 · Juillet 2026",
