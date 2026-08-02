@@ -5,8 +5,16 @@
     "generator_version": "1.0",
     "schema_version": 1
   },
-  "latest": "semaine_30_juillet_2026",
+  "latest": "semaine_31_juillet_2026",
   "weekly_pulses": [
+    {
+      "id": "semaine_31_juillet_2026",
+      "label": "S31 · Juillet 2026",
+      "date": "2026-08-02",
+      "date_label": "Semaine du 27 juillet au 2 juillet 2026",
+      "file": "archives/semaine_31_juillet_2026.html",
+      "highlight": "Lewis Hamilton ouvre sa première boutique de cartes à Francfort — le hobby TCG entre dans une nouvelle sphère de visibilité"
+    },
     {
       "id": "semaine_30_juillet_2026",
       "label": "S30 · Juillet 2026",

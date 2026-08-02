@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TW News — Weekly Pulse S30 · Juillet 2026">
+<meta property="og:title" content="TW News — Weekly Pulse S31 · Juillet 2026">
 <meta property="og:description" content="PSA gèle ses quatre niveaux de gradation les moins chers face à un arriéré de près de 10 millions de cartes.">
 <meta property="og:image" content="https://raw.githubusercontent.com/danbeyez/tcgworldz-logo/main/logo.png.png">
-<meta property="og:site_name" content="TCG World'z">
+<meta property="og:site_name" content="KRXO">
 <meta name="twitter:card" content="summary_large_image">
-<title>TW News — Weekly Pulse S30 · Juillet 2026 · TCG World'z</title>
+<title>TW News — Weekly Pulse S31 · Juillet 2026 · TCG World'z</title>
 <link rel="stylesheet" href="archive-nav.css">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    background:#050508;
+    background:#120D16;
     color:#FFFFFF;
     font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
     line-height:1.6;
@@ -29,7 +29,7 @@
     background:rgba(5,5,8,0.92);
     backdrop-filter:blur(8px);
     padding:10px 6px; margin-bottom:18px;
-    border-bottom:1px solid rgba(0,207,255,0.18);
+    border-bottom:1px solid rgba(227,178,60,0.18);
   }
   .tab {
     font-size:12px; font-weight:600; letter-spacing:.3px;
@@ -38,12 +38,12 @@
     border:1px solid rgba(255,255,255,0.08);
     transition:all .18s ease; white-space:nowrap;
   }
-  .tab:hover { color:#fff; border-color:rgba(0,207,255,0.4); }
+  .tab:hover { color:#fff; border-color:rgba(227,178,60,0.4); }
   .tab.active {
-    color:#050508; font-weight:800;
-    background:var(--accent,#00CFFF);
-    border-color:var(--accent,#00CFFF);
-    box-shadow:0 0 12px var(--glow,rgba(0,207,255,0.5));
+    color:#120D16; font-weight:800;
+    background:var(--accent,#E3B23C);
+    border-color:var(--accent,#E3B23C);
+    box-shadow:0 0 12px var(--glow,rgba(227,178,60,0.5));
   }
 
   /* Pages */
@@ -51,8 +51,8 @@
   .page.active {
     display:flex; flex-direction:column;
     position:relative;
-    background:#0A0A12;
-    border:1px solid rgba(0,207,255,0.18);
+    background:#1E1638;
+    border:1px solid rgba(227,178,60,0.18);
     border-radius:16px;
     padding:40px 30px 30px;
     overflow:hidden;
@@ -62,48 +62,50 @@
   .watermark {
     position:absolute; top:50%; left:50%;
     transform:translate(-50%,-50%) rotate(-35deg);
-    font-size:140px; font-weight:900; color:#C97FFF;
+    font-size:140px; font-weight:900; color:#E8C46A;
     opacity:0.14; pointer-events:none; white-space:nowrap;
     z-index:1; letter-spacing:3px;
-    text-shadow:0 0 30px rgba(155,48,255,0.3);
+    text-shadow:0 0 30px rgba(155,127,224,0.3);
   }
   @media (max-width:600px){ .watermark{ font-size:74px; } .page.active{ padding:28px 18px 24px; } }
   .page-content { position:relative; z-index:2; display:flex; flex-direction:column; flex:1; }
 
   .program-header { text-align:center; margin-bottom:26px; }
   .program-title {
-    font-size:48px; font-weight:900; letter-spacing:2px; color:#00CFFF;
-    text-shadow:0 0 12px rgba(0,207,255,0.6),0 0 24px rgba(155,48,255,0.4);
+    font-size:48px; font-weight:900; letter-spacing:2px; color:#E3B23C;
+    background:linear-gradient(180deg,#F7DA9E 0%,#E5CB7C 22%,#D8BF62 42%,#CEAB59 58%,#A97A2E 75%,#603000 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 2px 3px rgba(0,0,0,0.55));
     margin:0; line-height:1;
   }
   .program-tagline {
     font-size:14px; font-weight:500; letter-spacing:1.5px;
-    text-transform:lowercase; color:#A0A8C0; margin:6px 0 0;
+    text-transform:lowercase; color:#A79BC7; margin:6px 0 0;
   }
   .page-header { margin-bottom:22px; }
   .page-meta { font-size:11px; letter-spacing:1.4px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:6px; }
-  .page-header h2 { font-size:27px; font-weight:800; line-height:1.2; color:var(--accent,#00CFFF); text-shadow:0 0 12px var(--glow,rgba(0,207,255,0.45)); }
+  .page-header h2 { font-size:27px; font-weight:800; line-height:1.2; color:var(--accent,#E3B23C); text-shadow:0 0 12px var(--glow,rgba(227,178,60,0.45)); }
   .page-header .icon { font-size:22px; margin-right:6px; }
   .lead { font-size:15.5px; color:#E8ECF6; margin-bottom:18px; }
   .lead strong { color:#fff; }
-  h3 { font-size:17px; font-weight:700; color:#9B30FF; margin:22px 0 10px; letter-spacing:.2px; }
+  h3 { font-size:17px; font-weight:700; color:#9B7FE0; margin:22px 0 10px; letter-spacing:.2px; }
   p { margin-bottom:12px; color:#D4D9E6; font-size:14.5px; }
-  .accent-c { color:#00CFFF; } .accent-v { color:#9B30FF; }
-  .up { color:#00CFFF; font-weight:700; } .down { color:#FF4DC4; font-weight:700; }
-  .box { background:rgba(255,255,255,0.025); border:1px solid rgba(0,207,255,0.22); border-left:3px solid var(--accent,#00CFFF); border-radius:10px; padding:14px 16px; margin:14px 0; }
-  .box.warn { border-color:rgba(255,106,0,0.4); border-left-color:#FF6A00; }
-  .box.calm { border-color:rgba(160,168,192,0.25); border-left-color:#A0A8C0; }
-  .box h4 { font-size:13px; text-transform:uppercase; letter-spacing:1px; color:#A0A8C0; margin-bottom:8px; }
+  .accent-c { color:#E3B23C; } .accent-v { color:#9B7FE0; }
+  .up { color:#E3B23C; font-weight:700; } .down { color:#FFFFFF; font-weight:700; }
+  .box { background:rgba(255,255,255,0.025); border:1px solid rgba(227,178,60,0.22); border-left:3px solid var(--accent,#E3B23C); border-radius:10px; padding:14px 16px; margin:14px 0; }
+  .box.warn { border-color:rgba(201,138,0,0.4); border-left-color:#C98A00; }
+  .box.calm { border-color:rgba(160,168,192,0.25); border-left-color:#A79BC7; }
+  .box h4 { font-size:13px; text-transform:uppercase; letter-spacing:1px; color:#A79BC7; margin-bottom:8px; }
   ul.clean { list-style:none; margin:6px 0 14px; }
   ul.clean li { padding:5px 0 5px 22px; position:relative; font-size:14.5px; color:#D4D9E6; }
-  ul.clean li::before { content:'▸'; position:absolute; left:2px; color:var(--accent,#00CFFF); font-weight:700; }
+  ul.clean li::before { content:'▸'; position:absolute; left:2px; color:var(--accent,#E3B23C); font-weight:700; }
   .tag { display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.5px; padding:2px 8px; border-radius:5px; margin-right:6px; vertical-align:middle; }
-  .tag.conf { background:rgba(0,207,255,0.14); color:#00CFFF; border:1px solid rgba(0,207,255,0.4); }
-  .tag.est  { background:rgba(155,48,255,0.14); color:#C97FFF; border:1px solid rgba(155,48,255,0.4); }
-  .tag.verif{ background:rgba(255,106,0,0.14); color:#FF6A00; border:1px solid rgba(255,106,0,0.4); }
-  .tag.rum  { background:rgba(255,77,196,0.14); color:#FF4DC4; border:1px solid rgba(255,77,196,0.4); }
+  .tag.conf { background:rgba(227,178,60,0.14); color:#E3B23C; border:1px solid rgba(227,178,60,0.4); }
+  .tag.est  { background:rgba(155,127,224,0.14); color:#E8C46A; border:1px solid rgba(155,127,224,0.4); }
+  .tag.verif{ background:rgba(201,138,0,0.14); color:#C98A00; border:1px solid rgba(201,138,0,0.4); }
+  .tag.rum  { background:rgba(255,255,255,0.14); color:#FFFFFF; border:1px solid rgba(255,255,255,0.4); }
   .price-table { width:100%; border-collapse:collapse; margin:12px 0 16px; font-size:13px; }
-  .price-table th { text-align:left; padding:9px 10px; background:rgba(0,207,255,0.08); color:#00CFFF; font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.5px; border-bottom:1px solid rgba(0,207,255,0.3); }
+  .price-table th { text-align:left; padding:9px 10px; background:rgba(227,178,60,0.08); color:#E3B23C; font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.5px; border-bottom:1px solid rgba(227,178,60,0.3); }
   .price-table td { padding:9px 10px; border-bottom:1px solid rgba(255,255,255,0.06); color:#D4D9E6; }
   .price-table tr:hover td { background:rgba(255,255,255,0.02); }
   .nd { color:rgba(255,255,255,0.35); font-style:italic; }
@@ -111,14 +113,14 @@
   .sources .src-title { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.3); margin-bottom:8px; }
   .sources table { width:100%; border-collapse:collapse; font-size:11px; color:rgba(255,255,255,0.45); }
   .sources td, .sources th { padding:3px 6px; text-align:left; vertical-align:top; }
-  .sources a { color:#00CFFF; text-decoration:none; }
+  .sources a { color:#E3B23C; text-decoration:none; }
   .sources a:hover { text-decoration:underline; }
   .disclaimer { font-size:10px; color:rgba(255,255,255,0.3); margin-top:8px; line-height:1.5; }
   .page-footer { margin-top:24px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; position:relative; z-index:2; }
   .logo-block { display:flex; align-items:center; gap:10px; }
-  .logo-circle { width:36px; height:36px; border-radius:50%; background:radial-gradient(circle at 30% 30%,#0A0A12,#050508); border:1.5px solid #00CFFF; box-shadow:0 0 8px rgba(0,207,255,0.5); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:#fff; }
-  .logo-text .brand { font-size:13px; color:#00CFFF; font-weight:700; }
-  .logo-text .sub { font-size:10px; color:#A0A8C0; }
+  .logo-circle { width:36px; height:36px; border-radius:50%; object-fit:cover; display:block; box-shadow:0 0 8px rgba(227,178,60,0.5); }
+  .logo-text .brand { font-size:13px; color:#E3B23C; font-weight:700; }
+  .logo-text .sub { font-size:10px; color:#A79BC7; }
   .page-counter { font-size:11px; color:rgba(255,255,255,0.4); text-align:right; }
   .copyright { text-align:center; padding:14px 16px 4px; font-size:10px; color:rgba(255,255,255,0.2); font-style:italic; letter-spacing:.3px; }
 </style>
@@ -150,50 +152,51 @@
     </div>
     <div class="archive-banner-current">
       <span class="label">Édition en cours</span>
-      <span class="value" id="currentEditionLabel">S30 · Juillet 2026</span>
+      <span class="value" id="currentEditionLabel">S31 · Juillet-Août 2026</span>
     </div>
   </div>
 
   <!-- NAVIGATION (adapter les accents data-accent si besoin) -->
   <nav class="nav">
-    <button class="tab active" data-accent="#00CFFF" onclick="go(0)">🎯 Fait Marquant</button>
-    <button class="tab" data-accent="#FF4DC4" onclick="go(1)">🔴 Pokémon</button>
-    <button class="tab" data-accent="#FF6A00" onclick="go(2)">⚫ Yu-Gi-Oh!</button>
-    <button class="tab" data-accent="#2255FF" onclick="go(3)">🔵 One Piece</button>
-    <button class="tab" data-accent="#9B30FF" onclick="go(4)">🟣 Magic</button>
-    <button class="tab" data-accent="#00CFFF" onclick="go(5)">🏅 Gradation</button>
-    <button class="tab" data-accent="#00CFFF" onclick="go(6)">💡 Innovation</button>
-    <button class="tab" data-accent="#FF6A00" onclick="go(7)">⚖️ Droit</button>
-    <button class="tab" data-accent="#9B30FF" onclick="go(8)">🏛️ Archive</button>
+    <button class="tab active" data-accent="#E3B23C" onclick="go(0)">🎯 Fait Marquant</button>
+    <button class="tab" data-accent="#FFFFFF" onclick="go(1)">🔴 Pokémon</button>
+    <button class="tab" data-accent="#C98A00" onclick="go(2)">⚫ Yu-Gi-Oh!</button>
+    <button class="tab" data-accent="#6D4AC7" onclick="go(3)">🔵 One Piece</button>
+    <button class="tab" data-accent="#9B7FE0" onclick="go(4)">🟣 Magic</button>
+    <button class="tab" data-accent="#E3B23C" onclick="go(5)">🏅 Gradation</button>
+    <button class="tab" data-accent="#E3B23C" onclick="go(6)">💡 Innovation</button>
+    <button class="tab" data-accent="#C98A00" onclick="go(7)">⚖️ Droit</button>
+    <button class="tab" data-accent="#9B7FE0" onclick="go(8)">🏛️ Archive</button>
   </nav>
 
   <!-- ============ PAGE 1 — FAIT MARQUANT ============ -->
-  <section class="page active" style="--accent:#00CFFF;--glow:rgba(0,207,255,0.45);">
-    <div class="watermark">TCG World'z</div>
+  <section class="page active" style="--accent:#E3B23C;--glow:rgba(227,178,60,0.45);">
+    <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="program-header">
-        <h1 class="program-title">TW News</h1>
+        <h1 class="program-title">KRXO News</h1>
         <p class="program-tagline">l'actu TCG &amp; son environnement</p>
       </div>
       <div class="page-header">
-        <div class="page-meta">Page 1/9 · Semaine S30 · 20 – 26 juillet 2026</div>
+        <div class="page-meta">Page 1/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
         <h2><span class="icon">🎯</span>Actu de la semaine — Le Fait Marquant</h2>
       </div>
 
-      <p class="lead"><span class="tag conf">CONFIRMÉ</span> <strong>Magic: The Gathering | Star Trek inaugure les premières cartes signées à la main de l'histoire du jeu</strong></p>
+      <p class="lead"><span class="tag conf">CONFIRMÉ</span> <strong>Lewis Hamilton ouvre sa première boutique de cartes à Francfort — le hobby TCG entre dans une nouvelle sphère de visibilité</strong></p>
 
-      <p>Cette semaine, Wizards of the Coast a dévoilé la carte Headliner de Jean-Luc Picard portant une signature manuscrite de l'acteur Patrick Stewart, reproduite sur un tirage limité à 200 exemplaires. Elle rejoint celle de James T. Kirk signée par William Shatner et de Kathryn Janeway signée par Kate Mulgrew, révélées lors du First Look du 14 juillet à MagicCon Amsterdam. Sur les sept capitaines prévus dans le set <em>Magic: The Gathering | Star Trek</em> (sortie le 13 novembre 2026), seuls trois signatures sont confirmées à ce stade.</p>
+      <p>Le septuple champion du monde de Formule 1 a ouvert le premier magasin phare de "Card Culture by Lewis Hamilton", une coentreprise entre sa société d'investissement et Dave &amp; Adam's Card World, l'un des plus gros acteurs américains du marché des cartes à collectionner. Le magasin, situé à Francfort, est le point de départ d'une expansion prévue au Royaume-Uni, en Australie, au Moyen-Orient et en Asie. Hamilton explique son geste par une passion d'enfance pour les cartes de football, et affirme collectionner aujourd'hui environ 500 cartes Pokémon, aux côtés de pièces sport américaines (Mickey Mantle, Michael Jordan, Tom Brady, Shohei Ohtani).</p>
 
-      <p>C'est une première en plus de trente ans d'existence pour Magic : jamais le jeu n'avait intégré de véritables autographes de célébrités directement sur ses cartes. L'enjeu dépasse le simple collector — ces cartes vont poser une question inédite aux entreprises de gradation (authentification de la signature en plus de l'état de la carte) et s'inscrivent dans un calendrier de croisements « Universes Beyond » déjà chargé en 2026 : Teenage Mutant Ninja Turtles en mars, Marvel Super Heroes en juin, la réédition de The One Ring dans <em>The Hobbit</em> attendue en août, puis Reality Fracture avant Star Trek en novembre.</p>
+      <p><span class="tag rum">À noter — sources contradictoires</span> Les dates d'ouverture divergent selon les médias : Sports Illustrated évoquait le 24 juillet dans un article publié le 22 juillet, tandis que plusieurs titres spécialisés F1 (Grand Prix, F1-Fansite, Motorsport.com) rapportent au 31 juillet que le magasin "a ouvert ses portes". Les deux dates concordent sur le fond — la boutique est bien ouverte à ce jour — mais pas sur le jour exact, sans doute un report de quelques jours du calendrier initial.</p>
+
+      <p>Pourquoi c'est le fait marquant de la semaine plutôt qu'une sortie de set : c'est un signal de mainstream. Un athlète mondialement identifié, hors du sport américain, qui investit dans une chaîne de boutiques dédiées aux cartes — avec pack-opening events et volet éducatif pour attirer de nouveaux collectionneurs — pousse le hobby vers une visibilité qu'aucune sortie de set, aussi majeure soit-elle, n'apporte à elle seule. Cette semaine a par ailleurs été dense sur le terrain plus classique de l'actualité TCG : Storm Emeralda est sorti au Japon avec Mega Rayquaza ex, Yu-Gi-Oh! a dévoilé un nouveau set collector, et One Piece a multiplié les annonces. Le détail complet est dans les pages suivantes.</p>
 
       <div class="box">
         <h4>Ce qu'il faut retenir</h4>
         <ul class="clean">
-          <li>Carte Picard/Patrick Stewart révélée cette semaine — 3e signature confirmée sur 7 capitaines annoncés</li>
-          <li>Uniquement disponibles en Collector Boosters, tirage limité à 200 exemplaires par carte</li>
-          <li>Première historique : aucune carte Magic n'avait jusqu'ici porté de signature manuscrite réelle</li>
-          <li>Nouvelle problématique pour les graders (authentification autographe) à surveiller dans les prochains mois</li>
-          <li>Sortie du set complet : 13 novembre 2026 — prévente en boutique du 6 au 12 novembre</li>
+          <li>Card Culture by Lewis Hamilton : première boutique physique ouverte à Francfort, coentreprise avec Dave &amp; Adam's Card World.</li>
+          <li>Expansion prévue : Royaume-Uni, Australie, Moyen-Orient, Asie.</li>
+          <li>Hamilton collectionne lui-même environ 500 cartes Pokémon.</li>
+          <li>En toile de fond cette semaine : sortie japonaise de Storm Emeralda (Mega Rayquaza ex), reveal Magnificent Maestros chez Yu-Gi-Oh!, multiples annonces One Piece autour d'OP-17 — voir pages suivantes.</li>
         </ul>
       </div>
 
@@ -201,340 +204,380 @@
         <div class="src-title">Sources</div>
         <table>
           <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://gamerant.com/magic-the-gathering-star-trek-autographed-card/" target="_blank">GameRant</a></td><td>Révélation carte Picard/Patrick Stewart</td><td>25 juillet 2026</td></tr>
-          <tr><td>2</td><td><a href="https://articles.starcitygames.com/magic-the-gathering/magic-the-gathering-star-trek-first-look-reveals-iconic-captains-set-mechanics-and-booster-fun/" target="_blank">Star City Games</a></td><td>Détails First Look, mécaniques, calendrier</td><td>14 juillet 2026</td></tr>
-          <tr><td>3</td><td><a href="https://magic.wizards.com/en/products/star-trek" target="_blank">Wizards of the Coast — Star Trek</a></td><td>Produits, dates officielles</td><td>Consulté le 26 juillet 2026</td></tr>
+          <tr><td>1</td><td><a href="https://www.grandprix.com/news/hamilton-opens-first-trading-card-flagship.html" target="_blank">Grandprix.com</a></td><td>Ouverture boutique, citation Hamilton</td><td>31/07/2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.si.com/collectibles/card-culture-by-lewis-hamilton-first-flagship-store-frankfurt" target="_blank">Sports Illustrated</a></td><td>Date d'ouverture annoncée (24 juillet)</td><td>22-23/07/2026</td></tr>
+          <tr><td>3</td><td><a href="https://www.f1-fansite.com/f1-news/hamilton-opens-first-trading-card-flagship/" target="_blank">F1-Fansite</a></td><td>Détail collection personnelle Hamilton (500 cartes Pokémon)</td><td>31/07/2026</td></tr>
         </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Les informations juridiques et fiscales sont données à titre indicatif et ne constituent pas un conseil professionnel. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Article produit pour la communauté KRXO — Discord TCG francophone.</div>
       </div>
 
       <div class="page-footer">
         <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 1/9 · Semaine S30 · Juillet 2026</div>
+        <div class="page-counter">Page 1/9 · Semaine S31 · Juillet-Août 2026</div>
       </div>
     </div>
   </section>
 
   <!-- ============ PAGE 2 — POKÉMON ============ -->
-  <section class="page" style="--accent:#FF4DC4;--glow:rgba(255,77,196,0.4);">
-    <div class="watermark">TCG World'z</div>
+  <section class="page" style="--accent:#FFFFFF;--glow:rgba(255,255,255,0.4);">
+    <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 2/9 · Semaine S30 · 20 – 26 juillet 2026</div>
+        <div class="page-meta">Page 2/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
         <h2><span class="icon">🔴</span>Pokémon</h2>
       </div>
-      <p class="lead">Mega Evolution — Pitch Black digère sa première semaine de marché, pendant que la cardlist du 30th Celebration continue de s'étoffer à deux mois de sa sortie mondiale simultanée.</p>
-      <p>Sorti le 17 juillet, <strong>Pitch Black</strong> (120 cartes, dont 36 secret rares) a connu une semaine de marché typique d'un lancement Mega Evolution : forte volatilité sur les chases day one, puis correction. <span class="tag conf">CONFIRMÉ</span> Mega Darkrai ex domine largement le set, aussi bien en version Special Illustration Rare qu'en Mega Hyper Rare, loin devant Morpeko ex qui a déjà perdu une bonne partie de sa valeur de lancement selon plusieurs trackers américains.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Côté 30th Celebration (sortie mondiale simultanée le 16 septembre), The Pokémon Company a confirmé cette semaine que le Charizard du Base Set original ainsi que le Pikachu &amp; Zekrom Tag Team seront réédités dans le set, aux côtés d'une nouvelle rareté baptisée « Futuristic Rare ». Le nombre exact de secret rares et le contenu complet de la Classic Collection restent à confirmer.</p>
+      <p class="lead">Le fait marquant de la semaine se joue au Japon (voir page 1), mais le calendrier occidental continue d'avancer : Pitch Black poursuit sa vie en boutique et le 30th Celebration se profile pour septembre.</p>
+      <p>Storm Emeralda est sorti au Japon le 31 juillet 2026 — voir l'analyse complète en page 1. Pendant ce temps, en anglais, <strong>Mega Evolution — Pitch Black</strong> (sorti le 17 juillet) continue de tourner sur le marché secondaire : les chase cards montrent un net refroidissement post-lancement, cohérent avec le schéma déjà observé sur Abyss Eye deux mois plus tôt. Le calendrier officiel confirme par ailleurs le <strong>30th Celebration</strong> (30 ans du TCG Pokémon) pour le 16 septembre 2026 — premier lancement mondial simultané de l'histoire de la marque plutôt qu'un déploiement régional échelonné — suivi de Delta Reign (Mega Rayquaza ex) le 6 novembre.</p>
+      <div class="box calm">
+        <h4>À l'œil</h4>
+        <ul class="clean">
+          <li>30th Celebration : 16 septembre 2026, premier lancement mondial simultané.</li>
+          <li>Delta Reign (Mega Rayquaza ex) : 6 novembre 2026.</li>
+          <li>Storm Emeralda propose une nouvelle mécanique de cartes Stade jumelées "Legendary", écho aux LEGEND de l'ère HeartGold &amp; SoulSilver.</li>
+        </ul>
+      </div>
+
+      <h3>Les leaks de la semaine sur Storm Emeralda</h3>
+      <p><span class="tag rum">RUMEUR</span> Avant même la confirmation officielle de Mega Rayquaza ex comme mascotte du set, une partie de la communauté évoquait plutôt Mega Zygarde ex sur la base de rumeurs antérieures — showing bien que les spéculations pré-annonce ne sont pas toujours fiables, même quand elles proviennent de sources habituellement bien informées.</p>
+      <p><span class="tag rum">RUMEUR</span> Après la confirmation officielle de deux Art Rares le 26 juillet, des photos de fans ont fait fuiter un lot supplémentaire de secrètes de Storm Emeralda, dont une version Special Art Rare de Mega Rayquaza ex — non confirmées par The Pokémon Company au moment de la rédaction, à prendre avec précaution.</p>
+      <h3>Prix de la semaine — Pitch Black <span class="tag est">ESTIMÉ</span></h3>
+      <p style="font-size:12.5px;color:rgba(255,255,255,0.5);margin-top:-6px;">Cardmarket ne publiant pas encore de comparatif S-1 fiable sur des cartes sorties il y a deux semaines, la variation ci-dessous est une estimation basée sur l'écart entre la moyenne 7 jours et la moyenne 30 jours (méthodologie KRXO) : un 7 jours inférieur au 30 jours traduit un refroidissement post-lancement.</p>
       <table class="price-table">
-        <tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Variation S-1</th><th>Fiabilité</th><th>Source</th></tr>
-        <tr><td>Pitch Black</td><td>Mega Darkrai ex (SIR #116/084)</td><td>370,33 €</td><td class="nd">Nouveauté — pas de comparatif</td><td><span class="tag conf">CONFIRMÉ</span></td><td>Cardmarket</td></tr>
-        <tr><td>Pitch Black</td><td>Mega Darkrai ex (Mega Hyper Rare #120/084)</td><td>166,98 €</td><td class="nd">Nouveauté — pas de comparatif</td><td><span class="tag conf">CONFIRMÉ</span></td><td>Cardmarket</td></tr>
-        <tr><td>Pitch Black</td><td>Morpeko ex (SIR)</td><td class="nd">[N/D en €]</td><td class="down">≈ -50 % depuis le pic de lancement (source $)</td><td><span class="tag est">ESTIMÉ</span></td><td>PokemonWizard (TCGPlayer)</td></tr>
-        <tr><td>30th Celebration</td><td>—</td><td class="nd">[N/D — set non commercialisé]</td><td class="nd">—</td><td><span class="tag verif">À VÉRIFIER</span></td><td>Sortie prévue le 16/09/2026</td></tr>
+        <tr><th>Carte</th><th>Prix actuel (Price Trend)</th><th>Moy. 7j / 30j</th><th>Variation estimée</th><th>Source</th></tr>
+        <tr><td>Mega Darkrai ex (SIR 116)</td><td>282,90 €</td><td>305,12 € / 327,06 €</td><td class="down">≈ −6,7 %</td><td>Cardmarket</td></tr>
+        <tr><td>Mega Chandelure ex (115)</td><td>32,78 €</td><td>36,03 € / 38,59 €</td><td class="down">≈ −6,6 %</td><td>Cardmarket</td></tr>
+        <tr><td>Morpeko ex (117)</td><td>75,01 €</td><td>66,71 € / 67,07 €</td><td>≈ stable</td><td>Cardmarket</td></tr>
       </table>
       <div class="sources">
         <div class="src-title">Sources</div>
         <table>
           <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://www.cardmarket.com/en/Pokemon/Products/Singles/Pitch-Black/Mega-Darkrai-ex-V3-PBL116" target="_blank">Cardmarket</a></td><td>Prix Mega Darkrai ex SIR</td><td>26 juillet 2026</td></tr>
-          <tr><td>2</td><td><a href="https://www.cardrake.com/expansions/me05" target="_blank">Cardrake</a></td><td>Vue d'ensemble marché Pitch Black</td><td>25 juillet 2026</td></tr>
-          <tr><td>3</td><td><a href="https://pokecottage.com/sets/30th-anniversary-card-list" target="_blank">PokeCottage</a></td><td>Cardlist 30th Celebration en cours de révélation</td><td>25 juillet 2026</td></tr>
+          <tr><td>1</td><td><a href="https://www.cardrake.com/guides/upcoming-sets" target="_blank">Cardrake</a></td><td>Calendrier de sortie 2026</td><td>25/07/2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.cardmarket.com/en/Pokemon/Products/Singles/Pitch-Black" target="_blank">Cardmarket</a></td><td>Price Trend, moyennes 7j/30j</td><td>02/08/2026</td></tr>
         </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.</div>
       </div>
       <div class="page-footer">
         <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 2/9 · Semaine S30 · Juillet 2026</div>
+        <div class="page-counter">Page 2/9 · Semaine S31 · Juillet-Août 2026</div>
       </div>
     </div>
   </section>
 
   <!-- ============ PAGE 3 — YU-GI-OH ============ -->
-  <section class="page" style="--accent:#FF6A00;--glow:rgba(255,106,0,0.4);">
-    <div class="watermark">TCG World'z</div>
+  <section class="page" style="--accent:#C98A00;--glow:rgba(201,138,0,0.4);">
+    <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 3/9 · Semaine S30 · 20 – 26 juillet 2026</div>
+        <div class="page-meta">Page 3/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
         <h2><span class="icon">⚫</span>Yu-Gi-Oh!</h2>
       </div>
-      <p class="lead">Konami publie la Forbidden &amp; Limited List spécifique aux Mondiaux 2026, pendant que le calendrier compétitif de la fin d'année se précise.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Le 21 juillet, Konami a dévoilé la liste Forbidden &amp; Limited dédiée au <strong>Yu-Gi-Oh! World Championship 2026</strong>, qui se tiendra les 29-30 août au Tokyo Garden Theater (Ariake, Japon). D'après YGOrganization, cette liste est plus longue que celle de l'an dernier ; elle interdit par ailleurs l'usage de toute carte OCG sortie à partir du 26 avril 2026. Le tournoi accueillera cette année 30 duellistes (contre 28 les années précédentes), le Japon et la Chine récupérant chacun une invitation supplémentaire.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Autre annonce de la semaine : la <strong>Yu-Gi-Oh! Championship Series de Paris</strong> ouvre ses inscriptions pour les 18-20 septembre 2026, avec Main Event et Public Events pour duellistes de tous niveaux — inscription obligatoire via l'application NEURON.</p>
-      <p>Côté prix, aucune sortie de set majeure cette semaine côté TCG occidental ; le marché reste calme sur les staples compétitifs.</p>
-      <table class="price-table">
-        <tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Variation S-1</th><th>Fiabilité</th><th>Source</th></tr>
-        <tr><td>25th Anniversary Rarity Collection</td><td>Ash Blossom &amp; Joyous Spring (Quarter Century Secret Rare)</td><td>52,11 €</td><td class="down">-9 % vs moyenne 30 jours (57,27 €)</td><td><span class="tag conf">CONFIRMÉ</span></td><td>Cardmarket</td></tr>
-      </table>
-      <div class="box calm">
-        <h4>Semaine calme sur les sorties</h4>
+      <p class="lead">Konami a dévoilé Magnificent Maestros, la suite de Magnificent Monsters — la semaine la plus dense en annonces produit depuis plusieurs numéros.</p>
+      <p><span class="tag conf">CONFIRMÉ</span> Konami a officiellement révélé <strong>Magnificent Maestros</strong> en partenariat avec le créateur de contenu RevzCards, avec une présentation complète le 30-31 juillet. Le set sort le 12-13 novembre 2026 et fait suite à Magnificent Monsters (4 septembre). Il propose 18 cartes réimaginées autour des rivaux et antagonistes emblématiques de l'anime — Seto Kaiba, Zane Truesdale, Jack Atlas, Kite Tenjo, le trio Yuto/Yugo/Yuri, et Varis — disponibles en Ultra Rare, Ultra/Starlight Rare extended art, et en Grand Master Rare numérotée. Le set ajoute aussi 21 nouvelles cartes pour les archétypes Toon, Witchcrafter et Unchained (une par pack), plus 10 cartes supplémentaires inspirées de l'anime, dont les tout premiers monstres "Dark Tuner" du jeu.</p>
+      <p>Aucune mise à jour de la Forbidden &amp; Limited List TCG cette semaine : la dernière remonte au 18 mai 2026. Konami prépare par ailleurs deux sorties collector plus proches : <strong>Legendary Arc-V Decks Collector's Set</strong> le 7 août, puis <strong>Limited Pack World Championship 2026</strong> le 8 août — un set de 21 cartes en variantes Ukiyo-e et Starlight Rare qui célèbre la saison compétitive 2025-2026. Sur le plan compétitif, les règles de conclusion (concessions) du <strong>Yu-Gi-Oh! World Championship 2026</strong> (28-30 août, Tokyo) ont été publiées le 21 juillet.</p>
+      <div class="box">
+        <h4>Ce qu'il faut retenir</h4>
         <ul class="clean">
-          <li>Aucune nouvelle extension TCG occidentale cette semaine — le marché suit surtout les Mondiaux à venir</li>
-          <li>Pas de mise à jour de banlist standard cette semaine (dernière en date : 1er juillet, format OCG uniquement)</li>
+          <li>Magnificent Maestros : annoncé le 30 juillet, sortie 12-13 novembre 2026 — 18 cartes rivaux réimaginées + 21 nouvelles cartes Toon/Witchcrafter/Unchained.</li>
+          <li>Aucune annonce Forbidden &amp; Limited List (TCG) cette semaine.</li>
+          <li>Legendary Arc-V Decks Collector's Set : 7 août · Limited Pack World Championship 2026 : 8 août.</li>
+          <li>World Championship 2026 : 28-30 août, Tokyo Garden Theater — retour au Japon après l'Amérique du Nord puis l'Europe.</li>
+        </ul>
+      </div>
+      <h3>Prix de la semaine — Chaos Origins <span class="tag est">ESTIMÉ</span></h3>
+      <table class="price-table">
+        <tr><th>Carte</th><th>Prix actuel (Price Trend)</th><th>Moy. 7j / 30j</th><th>Variation estimée</th><th>Source</th></tr>
+        <tr><td>Black Chaos (Secret Rare)</td><td>59,58 €</td><td>56,51 € / 48,30 €</td><td class="up">≈ +17,0 %</td><td>Cardmarket</td></tr>
+      </table>
+      <p style="font-size:12.5px;color:rgba(255,255,255,0.5);margin-top:-8px;">Un mois après sa sortie (3 juillet), Chaos Origins voit sa Secret Rare vedette regagner du terrain — comportement inverse du refroidissement observé côté Pokémon cette semaine.</p>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://www.yugioh-card.com/en/products/mams/" target="_blank">Yu-Gi-Oh! TCG (Konami)</a></td><td>Détails officiels Magnificent Maestros</td><td>31/07/2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.konami.com/yugioh/worldchampionship/2026/en/" target="_blank">Konami — WCS 2026</a></td><td>Règles, dates, format Swiss</td><td>21/07/2026</td></tr>
+          <tr><td>3</td><td><a href="https://icv2.com/articles/news/view/62404/konami-unveils-new-yu-gi-oh-tcg-limited-pack-booster-set" target="_blank">ICv2</a></td><td>Limited Pack World Championship 2026</td><td>18/05/2026 (màj sortie 08/08)</td></tr>
+          <tr><td>4</td><td><a href="https://www.cardmarket.com/en/YuGiOh/Products/Singles/Chaos-Origins/Black-Chaos-V1-Secret-Rare" target="_blank">Cardmarket</a></td><td>Price Trend, moyennes 7j/30j</td><td>02/08/2026</td></tr>
+        </table>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.</div>
+      </div>
+      <div class="page-footer">
+        <div class="logo-block">
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 3/9 · Semaine S31 · Juillet-Août 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 4 — ONE PIECE ============ -->
+  <section class="page" style="--accent:#6D4AC7;--glow:rgba(34,85,255,0.4);">
+    <div class="watermark">KRXO</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 4/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
+        <h2><span class="icon">🔵</span>One Piece TCG</h2>
+      </div>
+      <p class="lead">La licence la plus chargée de la semaine : leaders OP-17 dévoilés, six Starter Decks lancés, coffret 4ᵉ anniversaire chinois révélé, deux Premium Card Collections — et un avertissement à connaître avant de précommander.</p>
+
+      <h3>OP-17 "The World's Strongest Warriors" — les leaders se précisent</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Cinq des six Leaders du set anniversaire sont désormais confirmés via les vidéos de reveal officielles de Bandai : Edward Newgate/Barbe Blanche (Rouge), Monkey D. Luffy (Noir), Shanks (Vert, carte OP17-020/022), Kaido (Violet) et Charlotte Linlin/Big Mom (Jaune). Le sixième reste inconnu — la communauté spécule sur Rocks D. Xebec, cohérent avec le thème "guerriers les plus forts". Le set introduit aussi les tout premiers <strong>Manga Leader et Manga Rares</strong> du jeu, avec en tête d'affiche les quatre Empereurs originaux (Shanks, Barbe Blanche, Kaido, Big Mom) en version Manga Rare, une Secret Rare Loki (OP17-119), et une Super Leader Parallel de Luffy pressentie comme la carte la plus recherchée du set. Rappel calendrier : sortie Japon le 22 août, prerelease US le 21 août, sortie mondiale simultanée le 28 août — première fois que le jeu lance un set principal en JP/EN au même moment.</p>
+
+      <h3>Pirate Crew Super Alt Art — une nouvelle rareté au sommet du set</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> OP-17 introduit une rareté inédite, la <strong>Pirate Crew Super Alt Art</strong>, qui devient la plus haute de toute la série des sets anniversaire (après OP-05, OP-09, OP-13). Le principe : le personnage est mis en scène devant son équipage au complet, dans un traitement graphique proche de la planche de manga. Deux cartes révélées pour l'instant : Monkey D. Luffy entouré de l'équipage du Chapeau de Paille (en Gear 5), et <strong>Rocks D. Xebec</strong> avec l'équipage des Rocks au complet — une apparition qui confirme la spéculation communautaire faisant de Xebec un personnage clé du set. Détail notable côté guest artist : le Kaido OP17-062 est illustré par Keisuke Itagaki, le dessinateur de Baki the Grappler.</p>
+
+      <h3>Six nouveaux Starter Decks et calendrier produit chargé</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Le 31 juillet 2026, Bandai a lancé <strong>six nouveaux Starter Decks</strong> à l'international (après une sortie japonaise le 11 juillet) : ST-31 Luffy (Rouge), ST-32 Zoro (Vert), ST-33 Kuzan (Bleu), ST-34 Katakuri (Violet), ST-35 Sabo (Rouge/Noir) et ST-36 Kid (Jaune) — chacun à 11,99 $, avec un booster bonus OP-16 inclus. Le même jour sont sortis Illustration Box Vol. 7 et Vol. 8 ainsi que les Official Card Sleeves 16, et Bandai a confirmé sa présence au Gen Con 2026.</p>
+
+      <h3>Treasure Pack Campaign — le cadeau du 4ᵉ anniversaire</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Pour tout achat d'une box OP-17 en boutique physique (hors ventes en ligne), Bandai offre un Dash Pack contenant 3 cartes tirées d'une sélection de 7 types de cartes Treasure Campaign. La campagne démarre le 21 août 2026, dans la limite des stocks disponibles.</p>
+
+      <h3>Coffret 4ᵉ anniversaire chinois — 12 cartes du zodiaque</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Bandai a dévoilé l'intégralité des 12 cartes du coffret 4th Anniversary chinois, une par signe du zodiaque, en artwork continu inédit — un des plus beaux produits anniversaire du jeu selon la presse spécialisée. Tirage limité à 5 000 exemplaires pour un marché d'1,4 milliard d'habitants : une politique de rareté extrême assumée. Sortie prévue avant fin décembre 2026.</p>
+
+      <h3>Premium Card Collections et 3ᵉ anniversaire anglais</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Deux Premium Card Collections ont été annoncées cette semaine : -29th Anniversary Edition- (29 juillet), centrée sur la carte P-159 Monkey D. Luffy en version normale et premium, et -Ace &amp; Sabo &amp; Luffy- (23 juillet). Par ailleurs, un <strong>English Version 3rd Anniversary Set</strong> a été annoncé pour célébrer les 3 ans de la sortie anglaise du jeu, autour du thème des Trois Frères (Luffy, Ace, Sabo) — à ne pas confondre avec le 3rd Anniversary Set chinois, un produit distinct annoncé plus tôt pour le marché chinois.</p>
+
+      <h3>BANDAI CARD GAMES Fest 26-27</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> L'événement a été annoncé le 30 juillet : 11 dates à travers le monde, tournois et animations pour l'ensemble des jeux de cartes Bandai (One Piece, Digimon, Dragon Ball Super, Gundam, Union Arena, Battle Spirits). <span class="tag verif">À VÉRIFIER</span> Sur la base du même schéma que les éditions précédentes (24-25, 25-26), chaque édition distribue une carte promo Monkey D. Luffy exclusive aux participants — la carte précise de cette édition 26-27 n'était pas encore confirmée au moment de la rédaction.</p>
+
+      <div class="box warn">
+        <h4>Point de vigilance précommandes OP-17</h4>
+        <p style="margin-bottom:0;">Plusieurs guides d'achat spécialisés alertent sur la confusion croissante autour des précommandes OP-17 : pages japonaises et anglaises aux dates et prix différents, vendeurs qui mélangent les éditions, annonces "case 12 box" ambiguës sur la langue du produit. Aucun signalement d'une vague de fraude organisée à proprement parler n'a été trouvé cette semaine, mais le risque de confusion — donc d'achat au mauvais prix ou de la mauvaise édition — est documenté et mérite la prudence : vérifiez toujours édition, vendeur et dates avant de payer.</p>
+      </div>
+
+      <h3>Prix de la semaine — The Time of Battle (OP-16) <span class="tag est">ESTIMÉ</span></h3>
+      <table class="price-table">
+        <tr><th>Carte</th><th>Prix actuel (Price Trend)</th><th>Moy. 7j / 30j</th><th>Variation estimée</th><th>Source</th></tr>
+        <tr><td>Portgas.D.Ace (OP16-118, V.2)</td><td>27,72 €</td><td>27,79 € / 27,19 €</td><td class="up">≈ +2,2 %</td><td>Cardmarket</td></tr>
+      </table>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://www.shonentcg.com/blog/op-17-spoilers-complete-tracker" target="_blank">ShonenTCG</a></td><td>Leaders confirmés, chase cards OP-17</td><td>Mi-juillet 2026, màj continue</td></tr>
+          <tr><td>2</td><td><a href="https://pokecop.com/blog/op17-the-worlds-strongest-warriors-sortie-mondiale-cartes-manga-raretes" target="_blank">Pokecop</a></td><td>Rareté Pirate Crew Super Alt Art, cartes Luffy &amp; Xebec</td><td>11/07/2026, màj 02/08/2026</td></tr>
+          <tr><td>3</td><td><a href="https://onepiece.gg/news/" target="_blank">OnePiece.gg</a></td><td>Fil d'actualité officiel Starter Decks, Premium Card Collections, Fest</td><td>17-31/07/2026</td></tr>
+          <tr><td>4</td><td><a href="https://pokecop.com/blog/coffret-4eme-anniversaire-one-piece-chinois-cartes-zodiaque" target="_blank">Pokecop</a></td><td>Coffret 4e anniversaire chinois, tirage limité</td><td>28/07/2026</td></tr>
+          <tr><td>5</td><td><a href="https://totalcards.net/blogs/one-piece/treasure-pack-campaign-free-op-17-dash-pack-with-every-booster-box" target="_blank">TotalCards</a></td><td>Détail Treasure Pack Campaign</td><td>24/07/2026</td></tr>
+          <tr><td>6</td><td><a href="https://samuraiswordtokyo.com/blogs/news/op-17-release-date-card-list-pre-order-guide" target="_blank">Samurai Sword Tokyo</a></td><td>Point de vigilance précommandes JP/EN</td><td>23-30/07/2026</td></tr>
+          <tr><td>7</td><td><a href="https://www.cardmarket.com/en/OnePiece/Products/Singles/OP16/PortgasDAce-OP16-118-V2" target="_blank">Cardmarket</a></td><td>Price Trend, moyennes 7j/30j</td><td>02/08/2026</td></tr>
+        </table>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.</div>
+      </div>
+      <div class="page-footer">
+        <div class="logo-block">
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 4/9 · Semaine S31 · Juillet-Août 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 5 — MAGIC ============ -->
+  <section class="page" style="--accent:#9B7FE0;--glow:rgba(155,127,224,0.4);">
+    <div class="watermark">KRXO</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 5/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
+        <h2><span class="icon">🟣</span>Magic: The Gathering</h2>
+      </div>
+      <p class="lead">La saison de spoilers de The Hobbit continue de tourner à plein régime, avec un aperçu Gen Con et Magic Online qui ouvre son bêta-test le 31 juillet.</p>
+      <p><strong>Magic: The Gathering | The Hobbit</strong> (sortie tabletop le 14 août, prerelease dès le 7 août) poursuit sa saison de previews lancée à MagicCon Amsterdam le 18 juillet. Le 31 juillet, Wizards a révélé les dernières cartes manquantes du set principal, complétant la totalité des 305 cartes réparties entre HOB et HOC. Rappel du fait marquant déjà couvert : <em>The One Ring</em> est réimprimé dans le set complémentaire HOC avec un artwork inédit "ère Hobbit", aux côtés d'Orcish Bowmasters, Mox Amber et plusieurs terrains légendaires.</p>
+      <p><span class="tag rum">RUMEUR</span> Avant même leurs reveals officiels, plusieurs cartes du set ont fuité : Fateful Discovery, un sort de pioche puissant attaché à un enchantement, ainsi que Gandalf, Party Guest, repéré quelques jours avant sa présentation officielle en stream. Ces leaks ne sont pas rares en période de spoilers actifs, mais restent non officiels jusqu'à confirmation par Wizards.</p>
+      <p>Sur Magic Online, un round bêta dédié au set a démarré le 31 juillet. Côté compétitif, la prochaine annonce Banned &amp; Restricted est fixée au 10 août — aucun changement cette semaine.</p>
+      <div class="box calm">
+        <h4>Semaine calme côté banlist</h4>
+        <ul class="clean">
+          <li>Aucun changement Standard/Modern/Pioneer cette semaine ; prochaine annonce B&amp;R le 10 août 2026.</li>
+          <li>The Hobbit : prerelease le 7-8 août, lancement Arena le 11 août, sortie tabletop le 14 août.</li>
+          <li>Gleaming Gold Smaug (≈500 exemplaires, Collector Boosters) confirmé comme pièce la plus rare du set.</li>
+        </ul>
+      </div>
+      <h3>Prix de la semaine — The One Ring <span class="tag conf">CONFIRMÉ</span></h3>
+      <table class="price-table">
+        <tr><th>Carte</th><th>Prix actuel (Price Trend)</th><th>Moy. 7j / 30j</th><th>Variation S-1</th><th>Source</th></tr>
+        <tr><td>The One Ring (LTR, non-foil)</td><td>78,44 €</td><td>77,71 € / 78,84 €</td><td class="nd">≈ stable</td><td>Cardmarket</td></tr>
+        <tr><td>The One Ring (édition Hobbit, HOC)</td><td class="nd">[N/D — carte non encore imprimée]</td><td class="nd">—</td><td class="nd">—</td><td class="nd">—</td></tr>
+      </table>
+      <p style="font-size:12.5px;color:rgba(255,255,255,0.5);margin-top:-8px;">La version HOC n'est pas encore sur le marché secondaire (impression au 14 août) — impossible de chiffrer l'effet de la réimpression sur le prix de l'originale avant sa sortie effective.</p>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://skillshotzgaming.com/mtg-hobbit-spoiler-season-preview-dates/" target="_blank">Skillshotz Gaming</a></td><td>Décompte des cartes révélées, mécaniques</td><td>23/07/2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.mtgo.com/news/mtgo072826" target="_blank">Magic Online</a></td><td>Lancement du round bêta The Hobbit</td><td>28/07/2026</td></tr>
+          <tr><td>3</td><td><a href="https://www.cardmarket.com/en/Magic/Products/Singles/The-Lord-of-the-Rings-Tales-of-Middle-earth/The-One-Ring" target="_blank">Cardmarket</a></td><td>Price Trend, moyennes 7j/30j</td><td>02/08/2026</td></tr>
+        </table>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.</div>
+      </div>
+      <div class="page-footer">
+        <div class="logo-block">
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 5/9 · Semaine S31 · Juillet-Août 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 6 — GRADATION ============ -->
+  <section class="page" style="--accent:#E3B23C;--glow:rgba(227,178,60,0.45);">
+    <div class="watermark">KRXO</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 6/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
+        <h2><span class="icon">🏅</span>Gradation &amp; Marché</h2>
+      </div>
+      <p class="lead">PSA ouvre une 5ᵉ usine à Plano (Texas) et voit malgré tout son backlog repartir à la hausse — la nouvelle capacité n'a pas encore renversé la courbe.</p>
+      <h3>PSA</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Le backlog PSA est reparti à la hausse : 12,4 millions de cartes au 28 juillet, contre 11 millions au 14 juillet — l'augmentation est attribuée à la saison des conventions, à un pic de soumissions sur les paliers supérieurs, et à la fenêtre d'éligibilité de 45 jours qui suit la fermeture des paliers Value (toujours en pause depuis le 2 juin). Dans le même temps, PSA a ouvert sa cinquième usine de gradation à Plano, au Texas — ville natale du président PSA Ryan Hoge, qui en a fait l'annonce personnellement. Le tarif d'entrée reste à 79,99 $ (palier Regular), les paliers Value restant suspendus.</p>
+      <h3>BGS — Beckett Grading Services</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Beckett, désormais propriété de Collectors (maison-mère de PSA), a mis à jour ses délais de traitement fin juillet / début août depuis son siège de Plano, Texas — même ville que la nouvelle usine PSA, signe de la mutualisation en cours entre les deux marques du groupe.</p>
+      <h3>CGC</h3>
+      <p><span class="tag rum">À VÉRIFIER</span> Aucune annonce officielle CGC cette semaine. Pour mémoire, ses délais restaient nettement plus courts que ceux de PSA lors du dernier relevé (Bulk ≈ 40 jours, Economy ≈ 20 jours, Standard ≈ 10 jours) — donnée à revérifier car datant d'un relevé antérieur à cette semaine.</p>
+      <h3>PCA — Pokemon Card Agency</h3>
+      <p>Aucune annonce officielle cette semaine.</p>
+      <h3>HGA &amp; SGC</h3>
+      <p>Aucune annonce officielle cette semaine pour HGA. Pour SGC, rien de nouveau cette semaine non plus — le plan d'expansion de capacité annoncé par Collectors en janvier reste en cours d'exécution, sans mise à jour datée de cette période.</p>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://www.sportscollectorsdaily.com/psa-expands-grading-capacity-with-opening-of-plano-facility/" target="_blank">Sports Collectors Daily</a></td><td>Ouverture usine Plano, backlog 12,4M</td><td>28-31/07/2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.psacard.com/info/backlog-tracker" target="_blank">PSA Backlog Tracker</a></td><td>Chiffres officiels du backlog</td><td>02/08/2026</td></tr>
+          <tr><td>3</td><td><a href="https://www.beckett.com/news/beckett-turnaround-time-updates/" target="_blank">Beckett News</a></td><td>Mise à jour délais de traitement</td><td>28/07 - 01/08/2026</td></tr>
+        </table>
+        <div class="disclaimer">Article produit pour la communauté KRXO — Discord TCG francophone.</div>
+      </div>
+      <div class="page-footer">
+        <div class="logo-block">
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 6/9 · Semaine S31 · Juillet-Août 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 7 — INNOVATION & TECH ============ -->
+  <section class="page" style="--accent:#E3B23C;--glow:rgba(227,178,60,0.45);">
+    <div class="watermark">KRXO</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 7/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
+        <h2><span class="icon">💡</span>Innovation &amp; Tech</h2>
+      </div>
+      <p class="lead">Semaine calme — aucune annonce ni lancement majeur cette semaine.</p>
+      <div class="box calm">
+        <h4>Semaine calme</h4>
+        <p style="margin-bottom:0;">Aucune nouveauté significative identifiée cette semaine côté scan IA, NFC/blockchain ou plateformes de gestion de collection. Le marché des applications de pré-gradation par IA (CardGrader.AI, TCG Grading, CardBoss, Ludex, Collx…) continue de se densifier en arrière-plan, mais sans annonce datée sur la période — retrouvez Innovation &amp; Tech dans le prochain Weekly Pulse.</p>
+      </div>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <div class="disclaimer" style="margin-top:0;">Aucune source externe consultée pour cette page — recherche effectuée, aucune actualité datée de la semaine du 27 juillet au 2 août 2026 n'a été identifiée.</div>
+      </div>
+      <div class="page-footer">
+        <div class="logo-block">
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 7/9 · Semaine S31 · Juillet-Août 2026</div>
+      </div>
+    </div>
+  </section>
+  <!-- ============ PAGE 8 — DROIT & FISCALITÉ ============ -->
+  <section class="page" style="--accent:#C98A00;--glow:rgba(201,138,0,0.4);">
+    <div class="watermark">KRXO</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 8/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
+        <h2><span class="icon">⚖️</span>Droit &amp; Fiscalité</h2>
+      </div>
+      <p class="lead">Le nouveau régime tarifaire UE-USA (effectif depuis le 1ᵉʳ juillet) continue de se mettre en place, avec des incertitudes juridiques persistantes côté américain sur le tarif "Section 122".</p>
+      <p><span class="tag conf">CONFIRMÉ</span> Depuis le 1ᵉʳ juillet 2026, l'accord commercial UE-USA plafonne à 15 % tout inclus les droits appliqués aux marchandises d'origine européenne entrant aux États-Unis — un point pertinent pour les vendeurs français expédiant du scellé ou des singles vers des acheteurs américains. Pour rappel, les cartes à jouer (Pokémon, Magic, Yu-Gi-Oh!, One Piece) relèvent du code SH 9504.40, généralement à 0 % de droit de base NPF, mais des surtaxes Section 301/232 peuvent s'appliquer sur les produits d'origine chinoise (accessoires, sleeves, présentoirs).</p>
+      <p><span class="tag verif">À VÉRIFIER</span> Le tarif américain "Section 122" (10 % sur la plupart des pays hors UE) a été jugé illégal par la Court of International Trade en mai 2026, mais reste appliqué sous sursis en attendant l'appel devant la Federal Circuit. Son extinction était initialement prévue vers le 24 juillet 2026, avec en remplacement possible des droits Section 301 de 12,5 % sur 46 pays — situation encore mouvante à la date de rédaction, à surveiller pour les commandes en provenance des États-Unis.</p>
+      <div class="box warn">
+        <h4>Point de vigilance</h4>
+        <ul class="clean">
+          <li>UE → USA : plafond 15 % tout inclus depuis le 1ᵉʳ juillet 2026 (accord commercial UE-USA).</li>
+          <li>Cartes à jouer : code SH 9504.40, 0 % de droit de base habituel, hors surtaxes ciblées.</li>
+          <li>Section 122 (USA) : validité juridique contestée, situation encore incertaine — ne pas se fier à une date d'extinction fixe pour l'instant.</li>
+        </ul>
+      </div>
+      <p style="font-size:12px;color:rgba(255,255,255,0.4);">Aucune actualité fiscale ou réglementaire spécifique à la France (BOFiP, TVA) identifiée cette semaine.</p>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://www.tariffstool.com/tariffs-on-toys-games" target="_blank">TariffsTool</a></td><td>Accord UE-USA, statut Section 122</td><td>14/07/2026</td></tr>
+          <tr><td>2</td><td><a href="https://dutiable.io/hs-code/board-games-tabletop/trading-card-game" target="_blank">Dutiable.io</a></td><td>Classification SH 9504.40 des cartes à jouer</td><td>Avril 2026</td></tr>
+        </table>
+        <div class="disclaimer">Les informations juridiques et fiscales sont données à titre indicatif et ne constituent pas un conseil professionnel.</div>
+      </div>
+      <div class="page-footer">
+        <div class="logo-block">
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
+        </div>
+        <div class="page-counter">Page 8/9 · Semaine S31 · Juillet-Août 2026</div>
+      </div>
+    </div>
+  </section>
+  <!-- ============ PAGE 9 — LA MINUTE ARCHIVE ============ -->
+  <section class="page" style="--accent:#9B7FE0;--glow:rgba(155,127,224,0.4);">
+    <div class="watermark">KRXO</div>
+    <div class="page-content">
+      <div class="page-header">
+        <div class="page-meta">Page 9/9 · Semaine S31 · 27 juil. – 2 août 2026</div>
+        <h2><span class="icon">🏛️</span>La Minute Archive</h2>
+      </div>
+      <p class="lead">En écho à l'ouverture de la cinquième usine PSA cette semaine : retour sur la naissance de la gradation professionnelle, en 1991, dans un petit bureau de Newport Beach.</p>
+      <p>Avant 1991, une carte se vendait "Near Mint" ou "Mint" sur la seule parole du vendeur — une promesse, pas une garantie. David Hall, collectionneur et fondateur de Collectors Universe, change la donne cette année-là en lançant Professional Sports Authenticator : pour la première fois, une carte est examinée par un tiers indépendant, notée sur une échelle de 1 à 10, puis scellée dans un boîtier inviolable. L'idée paraît presque provocatrice à l'époque : payer pour qu'un inconnu vous dise ce que vaut vraiment votre carte.</p>
+      <p>Le pari est le bon. En quelques années, le "slab" PSA devient une norme de confiance sur laquelle tout le marché secondaire va se reconstruire — d'abord pour les cartes de sport américaines, puis, décennie après décennie, pour les Pokémon, Magic, Yu-Gi-Oh! et One Piece qui remplissent aujourd'hui l'essentiel de son volume. De 15 000 cartes gradées par jour en 2021 à environ 90 000 aujourd'hui, en passant par cinq usines à travers le pays dont la petite dernière, ouverte cette semaine à Plano — la ville natale de son actuel président — l'histoire de PSA est celle d'une idée simple, née d'un manque de confiance, devenue infrastructure mondiale du hobby.</p>
+      <div class="box">
+        <h4>Le saviez-vous ?</h4>
+        <ul class="clean">
+          <li>PSA a été fondée en 1991 par David Hall, également fondateur de Collectors Universe.</li>
+          <li>La première grille de notation allait de PSA 1 (Poor) à PSA 10 (Gem Mint) — l'échelle est restée quasiment inchangée depuis.</li>
+          <li>PSA gradait environ 15 000 cartes par jour en 2021 ; ce chiffre avoisine aujourd'hui les 90 000, porté notamment par la demande TCG.</li>
         </ul>
       </div>
       <div class="sources">
         <div class="src-title">Sources</div>
         <table>
           <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://ygorganization.com/wcs-forbidden-limited-list-for-the-world-championship-2026/" target="_blank">YGOrganization</a></td><td>Forbidden &amp; Limited List WCS 2026</td><td>21 juillet 2026</td></tr>
-          <tr><td>2</td><td><a href="https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_World_Championship_2026" target="_blank">Yu-Gi-Oh! Wiki</a></td><td>Détails logistiques WCS 2026</td><td>Consulté le 26 juillet 2026</td></tr>
-          <tr><td>3</td><td><a href="https://www.yugioh-card.com/eu/event/yu-gi-oh-championship-series-paris-2026/" target="_blank">Yu-Gi-Oh! Europe</a></td><td>Annonce YCS Paris</td><td>24 juillet 2026</td></tr>
-          <tr><td>4</td><td><a href="https://www.cardmarket.com/en/YuGiOh/Products/Singles/25th-Anniversary-Rarity-Collection/Ash-Blossom-Joyous-Spring-V5-Quarter-Century-Secret-Rare" target="_blank">Cardmarket</a></td><td>Prix Ash Blossom &amp; Joyous Spring QCSR</td><td>26 juillet 2026</td></tr>
+          <tr><td>1</td><td><a href="https://pregradecards.com/blog/psa-backlog-july-2026-value-tiers-reopening-timeline" target="_blank">PreGradeCards</a></td><td>Historique de volume et cadence de gradation PSA</td><td>Juillet 2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.sportscollectorsdaily.com/psa-expands-grading-capacity-with-opening-of-plano-facility/" target="_blank">Sports Collectors Daily</a></td><td>Ouverture de la 5ᵉ usine PSA (Plano)</td><td>28/07/2026</td></tr>
         </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
+        <div class="disclaimer">Article produit pour la communauté KRXO — Discord TCG francophone.</div>
       </div>
       <div class="page-footer">
         <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
+          <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
+          <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 3/9 · Semaine S30 · Juillet 2026</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAGE 4 — ONE PIECE ============ -->
-  <section class="page" style="--accent:#2255FF;--glow:rgba(34,85,255,0.4);">
-    <div class="watermark">TCG World'z</div>
-    <div class="page-content">
-      <div class="page-header">
-        <div class="page-meta">Page 4/9 · Semaine S30 · 20 – 26 juillet 2026</div>
-        <h2><span class="icon">🔵</span>One Piece TCG</h2>
-      </div>
-      <p class="lead">OP-17 « The World's Strongest Warriors » confirme sa nouvelle rareté Treasure Rare et son premier Secret Rare officiel, pendant que Bandai muscle sa protection anti-contrefaçon.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Le statut de <strong>Loki (OP17-119)</strong> est désormais officiellement fixé : après plusieurs semaines de rumeurs relayées par les trackers japonais, Bandai a confirmé via son programme de reveal officiel qu'il s'agit bien d'un Secret Rare noir. C'est la première carte officiellement dévoilée du set, qui s'articule autour du thème Elbaf / Yonko. Cinq des six leaders sont désormais confirmés : Barbe Blanche (Rouge), Luffy (Noir), Shanks (Vert), Kaido (Violet) et Big Mom (Jaune) — le sixième reste inconnu.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Autre nouveauté structurelle : OP-17 introduit la <strong>Treasure Rare</strong>, une rareté inédite positionnée au-dessus du Secret Rare — une première pour le jeu depuis son lancement en 2022. Sortie prévue le 22 août au Japon, avec pré-release US le 21 août et sortie large anglaise le 28 août.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Le 10 juillet, Bandai a publié un avis officiel renforçant la protection de la propriété intellectuelle du One Piece Card Game — une mesure anti-contrefaçon/anti-proxy à suivre dans les prochaines semaines (voir aussi Page 8, Droit &amp; Fiscalité).</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Trois autres informations à ne pas manquer cette semaine, correction éditoriale suite à une remarque de la communauté : le 18 juillet, Bandai a dévoilé les cartes récompenses du <strong>Treasure Cup</strong>, avec un traitement foil spécial pour Boa Hancock, Roronoa Zoro et Monkey D. Luffy — à partir de la saison 2026, les Treasure Cups ne se joueront plus qu'en présentiel, en side event des Regionals d'août-septembre. Autre annonce officielle : la <strong>Premium Card Collection ONE PIECE DAY '26</strong> (Monkey D. Luffy P-161 + DON!! promo exclusif) sera vendue par loterie sur Premium Bandai JP à partir du 22 août, en marge de l'événement du Makuhari Messe les 22-23 août — elle ne sera pas disponible sur place. Enfin, les cartes récompenses de la saison en cours des <strong>Regionals Championship 26-27</strong> ont été précisées : versions alt art des Sept Grands Corsaires — Boa Hancock (Top 64), Crocodile (Top 16) et Dracule Mihawk (Top 8) — ainsi qu'une carte à numéro de série Monkey D. Luffy pour les paliers supérieurs.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Sur le contenu des boosters eux-mêmes : le programme officiel de reveal a confirmé quatre traitements Manga Rare distincts dans OP-17, un pour chacun des quatre anciens Empereurs — Barbe Blanche (OP17-005), Shanks (OP17-022), Kaido (OP17-062) et Big Mom (OP17-112) — en miroir, quatre SP Gold Cards distinctes célèbrent cette fois les quatre nouveaux Empereurs : Luffy, Barbe Noire (Marshall D. Teach), Buggy et Shanks (qui cumule donc les deux générations sur deux cartes différentes). S'y ajoute un nouveau style de SP façon croquis d'artiste (Gol D. Roger, Monkey D. Garp). C'est effectivement une excellente nouvelle pour l'ouverture de boosters : huit chases visuellement distincts et de très haut niveau à viser sur un seul set anniversaire.</p>
-      <p class="nd" style="font-style:italic">Note éditoriale : je n'ai en revanche trouvé aucune source confirmant une variation de l'illustration de couverture du paquet booster lui-même (4 visuels de pack différents) — si c'est bien ce point précis qu'il faut vérifier, dis-moi où tu l'as vu et je creuse la source.</p>
-      <table class="price-table">
-        <tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Variation S-1</th><th>Fiabilité</th><th>Source</th></tr>
-        <tr><td>OP-16</td><td>Portgas D. Ace (SEC #118 V.2)</td><td>27,72 €</td><td class="up">+2 % vs moyenne 30 jours (27,19 €)</td><td><span class="tag conf">CONFIRMÉ</span></td><td>Cardmarket</td></tr>
-        <tr><td>OP-17</td><td>Loki (SEC #119)</td><td class="nd">[N/D — pas encore en circulation]</td><td class="nd">—</td><td><span class="tag verif">À VÉRIFIER</span></td><td>Sortie prévue le 22/08/2026</td></tr>
-      </table>
-      <div class="sources">
-        <div class="src-title">Sources</div>
-        <table>
-          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://samuraiswordtokyo.com/blogs/news/op-17-release-date-card-list-pre-order-guide" target="_blank">Samurai Sword Tokyo</a></td><td>Confirmation officielle Loki, Treasure Rare</td><td>23 juillet 2026</td></tr>
-          <tr><td>2</td><td><a href="https://www.shonentcg.com/blog/op-17-spoilers-complete-tracker" target="_blank">Shonen TCG</a></td><td>Tracker leaders et spoilers OP-17</td><td>18 juillet 2026</td></tr>
-          <tr><td>3</td><td><a href="https://en.onepiece-cardgame.com/news/" target="_blank">One Piece Card Game — Officiel</a></td><td>Avis protection propriété intellectuelle</td><td>10 juillet 2026</td></tr>
-          <tr><td>4</td><td><a href="https://www.cardmarket.com/en/OnePiece/Products/Singles/OP16/PortgasDAce-OP16-118-V2" target="_blank">Cardmarket</a></td><td>Prix Portgas D. Ace SEC</td><td>26 juillet 2026</td></tr>
-          <tr><td>5</td><td><a href="https://x.com/ONEPIECE_tcg_EN/status/2078525209099800939" target="_blank">One Piece Card Game EN — Officiel (X)</a></td><td>Reveal cartes Treasure Cup</td><td>18 juillet 2026</td></tr>
-          <tr><td>6</td><td><a href="https://dlgaming.fr/one-piece-day-2026-une-premium-card-collection-exclusive-les-mugiwara-en-rencontre-des-cadeaux-pour-les-visiteurs-et-toutes-les-informations-prati-idA3823.html" target="_blank">DLGaming.fr</a></td><td>Premium Card Collection One Piece Day '26</td><td>Juillet 2026</td></tr>
-          <tr><td>7</td><td><a href="https://www.tcgplayer.com/content/article/Upcoming-Events-for-the-One-Piece-Card-Game-July-2026/7d1f4af0-4c21-4c16-959e-a1b97e9e2914/" target="_blank">TCGplayer</a></td><td>Cartes récompenses Regionals 26-27</td><td>Juin 2026</td></tr>
-          <tr><td>8</td><td><a href="https://samuraiswordtokyo.com/blogs/news/op-17-release-date-card-list-pre-order-guide" target="_blank">Samurai Sword Tokyo</a></td><td>Quatre traitements Manga Rare (Empereurs)</td><td>23 juillet 2026</td></tr>
-        </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
-      </div>
-      <div class="page-footer">
-        <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
-        </div>
-        <div class="page-counter">Page 4/9 · Semaine S30 · Juillet 2026</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAGE 5 — MAGIC ============ -->
-  <section class="page" style="--accent:#9B30FF;--glow:rgba(155,48,255,0.4);">
-    <div class="watermark">TCG World'z</div>
-    <div class="page-content">
-      <div class="page-header">
-        <div class="page-meta">Page 5/9 · Semaine S30 · 20 – 26 juillet 2026</div>
-        <h2><span class="icon">🟣</span>Magic: The Gathering</h2>
-      </div>
-      <p class="lead">Au-delà du fait marquant Star Trek (voir Page 1), la semaine a été rythmée par la saison de spoilers active de The Hobbit, les suites du Pro Tour Marvel Super Heroes et le lancement de Planar Cube sur Arena.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> <strong>Yuuki Ichikawa</strong> a remporté le Pro Tour Magic: The Gathering | Marvel Super Heroes, pilotant un deck Simic Neoform à travers les rondes Modern avant de dominer le draft du Top 8 face à Lorenzo Gruppi. Sur MTG Arena, le nouveau <strong>Planar Cube</strong> — un Cube géant à 200 cartes de base — a été lancé le 21 juillet.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Sur le marché secondaire, l'effet Marvel Super Heroes continue de se faire sentir : plusieurs cartes liées à l'archétype Villain typal (porté par le precon Doom Prevails) progressent depuis la sortie du set, Namor the Sub-Mariner en tête des mouvements de la semaine sur les places de marché américaines.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Correction éditoriale : la saison de spoilers de <strong>The Hobbit</strong> (sortie le 14 août, prévente du 7 au 13 août) est activement en cours cette semaine — 119 des 248 cartes du set sont désormais confirmées à date du 23 juillet, avec un rythme de preview quotidien depuis le lancement à MagicCon Amsterdam le 18 juillet. Les révélations marquantes de la semaine incluent Sauron, the Dark Lord, Bilbo, Thief in the Night, Smaug the Magnificent, The Arkenstone et My Precious — un nouvel équipement légendaire distinct de la réédition de The One Ring elle-même, qui reste la carte la plus attendue du set pour les joueurs Commander (l'original se négocie régulièrement au-dessus de 50 $).</p>
-      <table class="price-table">
-        <tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Variation S-1</th><th>Fiabilité</th><th>Source</th></tr>
-        <tr><td>Marvel Super Heroes</td><td>Namor the Sub-Mariner</td><td>10,07 €</td><td class="up">+65 % vs moyenne 30 jours (5,84 €)</td><td><span class="tag conf">CONFIRMÉ</span></td><td>Cardmarket</td></tr>
-      </table>
-      <div class="sources">
-        <div class="src-title">Sources</div>
-        <table>
-          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://magic.wizards.com/en/news/mtg-arena/announcements-july-20-2026" target="_blank">Wizards of the Coast — MTG Arena</a></td><td>Résultats Pro Tour, lancement Planar Cube</td><td>20 juillet 2026</td></tr>
-          <tr><td>2</td><td><a href="https://www.beckett.com/news/magic-the-gathering-hot-cold-list-for-the-week-of-july-12-2026/" target="_blank">Beckett News</a></td><td>Contexte mouvements de marché Marvel Super Heroes</td><td>12 juillet 2026</td></tr>
-          <tr><td>3</td><td><a href="https://www.cardmarket.com/en/Magic/Products/Singles/Magic-The-Gathering-Marvel-Super-Heroes/Namor-the-Sub-Mariner" target="_blank">Cardmarket</a></td><td>Prix Namor the Sub-Mariner</td><td>26 juillet 2026</td></tr>
-          <tr><td>4</td><td><a href="https://skillshotzgaming.com/mtg-hobbit-spoiler-season-preview-dates/" target="_blank">Skillshotz Gaming</a></td><td>Suivi spoiler season The Hobbit (119/248 cartes)</td><td>23 juillet 2026</td></tr>
-          <tr><td>5</td><td><a href="https://draftsim.com/mtg-spoilers/the-hobbit/" target="_blank">Draftsim</a></td><td>Liste des cartes révélées (Sauron, Bilbo, Smaug, My Precious)</td><td>25 juillet 2026</td></tr>
-        </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
-      </div>
-      <div class="page-footer">
-        <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
-        </div>
-        <div class="page-counter">Page 5/9 · Semaine S30 · Juillet 2026</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAGE 6 — GRADATION ============ -->
-  <section class="page" style="--accent:#00CFFF;--glow:rgba(0,207,255,0.45);">
-    <div class="watermark">TCG World'z</div>
-    <div class="page-content">
-      <div class="page-header">
-        <div class="page-meta">Page 6/9 · Semaine S30 · 20 – 26 juillet 2026</div>
-        <h2><span class="icon">🏅</span>Gradation &amp; Marché</h2>
-      </div>
-      <p class="lead">Le backlog PSA repasse sous les 11 millions de cartes ; les autres graders restent silencieux cette semaine, et le dossier antitrust FTC/Collectors Holdings reste sans décision.</p>
-      <h3>PSA — Professional Sports Authenticator</h3>
-      <p><span class="tag conf">CONFIRMÉ</span> Le backlog tracker officiel de PSA affiche désormais <strong>11 millions de cartes</strong> en attente, en baisse par rapport aux 12 millions annoncés début juillet et au pic de 14 millions de juin. PSA indique que son rythme de gradation de juillet est en passe de dépasser le record déjà établi en juin. Les niveaux Value restent suspendus (Regular à 79,99 $ reste le service le moins cher disponible), avec une réouverture désormais projetée entre novembre 2026 et janvier 2027 selon les estimations relayées par la presse spécialisée — à prendre comme une fourchette indicative, pas une date officielle. La sortie de 2026 Topps Chrome le 22 juillet ajoute une pression supplémentaire sur les nouvelles soumissions.</p>
-      <h3>BGS — Beckett Grading Services</h3>
-      <div class="box calm"><p style="margin:0">Aucune annonce officielle cette semaine.</p></div>
-      <h3>CGC — Certified Guaranty Company</h3>
-      <div class="box calm"><p style="margin:0">Aucune annonce officielle cette semaine.</p></div>
-      <h3>PCA — Pokemon Card Agency</h3>
-      <div class="box calm"><p style="margin:0">Aucune annonce officielle cette semaine.</p></div>
-      <h3>HGA &amp; SGC</h3>
-      <div class="box calm"><p style="margin:0">Aucune annonce officielle cette semaine.</p></div>
-      <h3>Suivi — Dossier antitrust FTC / Collectors Holdings</h3>
-      <p><span class="tag verif">À VÉRIFIER</span> Aucune décision ou nouvelle étape n'a été publiquement rapportée cette semaine sur la demande d'enquête antitrust déposée par le Congressman Pat Ryan auprès de la FTC concernant la concentration du marché de la gradation par Collectors Holdings (PSA, SGC, Beckett). Le dossier reste en instance.</p>
-      <h3>Tableau de Bord des Prix — Mouvements de la semaine</h3>
-      <table class="price-table">
-        <tr><th>Carte</th><th>Licence</th><th>Prix S-1 / 30j</th><th>Prix actuel</th><th>Variation</th><th>Plateforme</th></tr>
-        <tr><td>Namor the Sub-Mariner</td><td>Magic</td><td>5,84 €</td><td>10,07 €</td><td class="up">+65 %</td><td>Cardmarket</td></tr>
-        <tr><td>Mega Darkrai ex (SIR)</td><td>Pokémon</td><td class="nd">Nouveauté</td><td>370,33 €</td><td class="nd">—</td><td>Cardmarket</td></tr>
-        <tr><td>Portgas D. Ace (OP16 SEC)</td><td>One Piece</td><td>27,19 €</td><td>27,72 €</td><td class="up">+2 %</td><td>Cardmarket</td></tr>
-        <tr><td>Ash Blossom &amp; Joyous Spring (QCSR)</td><td>Yu-Gi-Oh!</td><td>57,27 €</td><td>52,11 €</td><td class="down">-9 %</td><td>Cardmarket</td></tr>
-        <tr><td>Morpeko ex (SIR)</td><td>Pokémon</td><td class="nd">Pic de lancement (~105 $)</td><td class="nd">≈ 50-70 $</td><td class="down">≈ -35 à -50 %</td><td>TCGPlayer (ESTIMÉ)</td></tr>
-      </table>
-      <div class="sources">
-        <div class="src-title">Sources</div>
-        <table>
-          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://www.psacard.com/info/backlog-tracker" target="_blank">PSA Backlog Tracker</a></td><td>Volume de backlog, projections</td><td>Consulté le 26 juillet 2026</td></tr>
-          <tr><td>2</td><td><a href="https://athlonsports.com/collectibles/psa-grading-backlog-2026-current-status" target="_blank">Athlon Sports</a></td><td>Fenêtre de réouverture des tiers Value</td><td>13 juillet 2026</td></tr>
-          <tr><td>3</td><td><a href="https://patryan.house.gov/media/press-releases/congressman-pat-ryan-demands-ftc-investigation-collectors-holdings-attempt" target="_blank">Bureau du Congressman Pat Ryan</a></td><td>Suivi dossier antitrust</td><td>Consulté le 26 juillet 2026</td></tr>
-        </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
-      </div>
-      <div class="page-footer">
-        <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
-        </div>
-        <div class="page-counter">Page 6/9 · Semaine S30 · Juillet 2026</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAGE 7 — INNOVATION & TECH ============ -->
-  <section class="page" style="--accent:#00CFFF;--glow:rgba(0,207,255,0.45);">
-    <div class="watermark">TCG World'z</div>
-    <div class="page-content">
-      <div class="page-header">
-        <div class="page-meta">Page 7/9 · Semaine S30 · 20 – 26 juillet 2026</div>
-        <h2><span class="icon">💡</span>Innovation &amp; Tech</h2>
-      </div>
-      <p class="lead">Semaine calme côté annonces produits — aucun nouvel outil de scan ou plateforme majeure lancé cette semaine.</p>
-      <div class="box calm">
-        <h4>Semaine calme — aucune annonce majeure</h4>
-        <p style="margin:0">Le paysage des applications de collection (Collectr, Dex, ManaBox, DittoDex, CollX…) reste stable cette semaine, sans nouvelle fonctionnalité annoncée. À noter pour mémoire : la plateforme <strong>Hobby Card Index</strong>, lancée début juillet avec scanner de cartes et heatmap de marché en temps réel (incluant une catégorie Pokémon/TCG), poursuit son déploiement mais sans annonce nouvelle cette semaine spécifiquement.</p>
-      </div>
-      <div class="sources">
-        <div class="src-title">Sources</div>
-        <table>
-          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://www.sportscollectorsdaily.com/hobby-card-index-debuts-collector-platform-featuring-card-scanner-price-tracking-and-seller-tools/" target="_blank">Sports Collectors Daily</a></td><td>Contexte lancement Hobby Card Index</td><td>Juillet 2026</td></tr>
-        </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
-      </div>
-      <div class="page-footer">
-        <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
-        </div>
-        <div class="page-counter">Page 7/9 · Semaine S30 · Juillet 2026</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAGE 8 — DROIT & FISCALITÉ ============ -->
-  <section class="page" style="--accent:#FF6A00;--glow:rgba(255,106,0,0.4);">
-    <div class="watermark">TCG World'z</div>
-    <div class="page-content">
-      <div class="page-header">
-        <div class="page-meta">Page 8/9 · Semaine S30 · 20 – 26 juillet 2026</div>
-        <h2><span class="icon">⚖️</span>Droit &amp; Fiscalité</h2>
-      </div>
-      <p class="lead">Pas de nouveau développement réglementaire cette semaine — suivi des deux dossiers ouverts : douanes UE et protection IP One Piece.</p>
-      <h3>Union Européenne — Douanes</h3>
-      <p><span class="tag conf">CONFIRMÉ</span> La franchise de douane de minimis (150 €) reste supprimée depuis le 1er juillet 2026 ; le droit forfaitaire transitoire de 3 € par ligne tarifaire, applicable jusqu'en 2028, continue de s'appliquer sans changement cette semaine. Rappel utile pour les vendeurs : l'identifiant produit (PID) devient obligatoire à partir du 1er novembre 2026 (fourniture volontaire possible dès maintenant).</p>
-      <h3>One Piece Card Game — Protection de la propriété intellectuelle</h3>
-      <p><span class="tag conf">CONFIRMÉ</span> Bandai a publié le 10 juillet un avis officiel renforçant la protection de la propriété intellectuelle associée au One Piece Card Game (voir Page 4). Aucun détail d'application concret (mesures anti-proxy, poursuites) n'a encore été communiqué à ce stade — dossier à suivre.</p>
-      <h3>France / États-Unis / Japon</h3>
-      <div class="box calm"><p style="margin:0">Aucune actualité fiscale ou réglementaire spécifique à signaler cette semaine pour la France, les États-Unis ou le Japon.</p></div>
-      <div class="sources">
-        <div class="src-title">Sources</div>
-        <table>
-          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://taxation-customs.ec.europa.eu/news/guidance-and-legal-text-temporary-flat-fee-low-value-imports-which-will-apply-until-1-july-2028-2026-06-08_en" target="_blank">Commission Européenne — Taxation &amp; Customs Union</a></td><td>Guidance officielle droit de 3 € et calendrier PID</td><td>8 juin 2026</td></tr>
-          <tr><td>2</td><td><a href="https://en.onepiece-cardgame.com/news/" target="_blank">One Piece Card Game — Officiel</a></td><td>Avis protection propriété intellectuelle</td><td>10 juillet 2026</td></tr>
-        </table>
-        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente. Les informations juridiques et fiscales sont données à titre indicatif et ne constituent pas un conseil professionnel. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
-      </div>
-      <div class="page-footer">
-        <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
-        </div>
-        <div class="page-counter">Page 8/9 · Semaine S30 · Juillet 2026</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAGE 9 — LA MINUTE ARCHIVE ============ -->
-  <section class="page" style="--accent:#9B30FF;--glow:rgba(155,48,255,0.4);">
-    <div class="watermark">TCG World'z</div>
-    <div class="page-content">
-      <div class="page-header">
-        <div class="page-meta">Page 9/9 · Semaine S30 · 20 – 26 juillet 2026</div>
-        <h2><span class="icon">🏛️</span>La Minute Archive</h2>
-      </div>
-      <p class="lead">En écho à la reconfirmation cette semaine du Charizard du Base Set dans le 30th Celebration : retour sur la carte qui a inventé la notion même de « chase card ».</p>
-      <p>Octobre 1996, Japon : le Pokémon Card Game sort avec le Base Set (Expansion Pack). Personne, à l'époque, ne pouvait imaginer qu'une simple carte holographique d'un lézard cracheur de feu allait devenir l'un des objets de collection les plus emblématiques du XXe siècle finissant. Le Charizard holo du Base Set — numéro 4/102 en anglais — doit une partie de sa légende à une évolution de tirage largement méconnue : les tout premiers exemplaires imprimés portaient un copyright « 1999 Wizards » en caractères fins, avant qu'une révision du print run n'épaississe la police pour les tirages suivants. Cette différence typographique, invisible au premier regard, est devenue l'un des marqueurs les plus recherchés par les collectionneurs pour distinguer les « Shadowless » des tirages ultérieurs.</p>
-      <p>Ce qui n'était au départ qu'une variation d'imprimerie presque anodine a fini par structurer tout un pan du hobby : la chasse aux micro-différences d'édition, aujourd'hui omniprésente dans la gradation moderne (first edition, shadowless, staff rare…), trouve directement sa source dans ce Charizard de 1999. Trente ans plus tard, quand The Pokémon Company choisit de le réimprimer dans le 30th Celebration, ce n'est pas un hasard : c'est un hommage direct à la carte qui a créé, presque malgré elle, le concept moderne de chase card.</p>
-      <div class="sources">
-        <div class="src-title">Sources</div>
-        <table>
-          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://bulbapedia.bulbagarden.net/wiki/30th_Celebration_(TCG)" target="_blank">Bulbapedia</a></td><td>Contexte 30th Celebration et cartes classiques réimprimées</td><td>Consulté le 26 juillet 2026</td></tr>
-        </table>
-        <div class="disclaimer">Récit historique à visée éditoriale — synthèse de sources publiques disponibles sur l'histoire du Base Set. Article produit pour la communauté TCG World'z — Discord TCG francophone.</div>
-      </div>
-      <div class="page-footer">
-        <div class="logo-block">
-          <div class="logo-circle">TW</div>
-          <div class="logo-text"><div class="brand">TCG World'z</div><div class="sub">Discord TCG francophone</div></div>
-        </div>
-        <div class="page-counter">Page 9/9 · Semaine S30 · Juillet 2026</div>
+        <div class="page-counter">Page 9/9 · Semaine S31 · Juillet-Août 2026</div>
       </div>
     </div>
   </section>
 
   <div class="copyright">
-    © 2026 TCGWORLD'Z. Tous droits réservés. Tous les autres noms ou logos cités appartiennent à leurs propriétaires respectifs.
+    © 2026 KRXO. Tous droits réservés. Tous les autres noms ou logos cités appartiennent à leurs propriétaires respectifs.
   </div>
 
 </div>
 
 <!-- OBLIGATOIRE : déclarer l'ID de l'édition AVANT de charger le script -->
-<script>const CURRENT_WEEK_ID = "semaine_30_juillet_2026";</script>
+<script>const CURRENT_WEEK_ID = "semaine_31_juillet_2026";</script>
 <script src="archive-nav.js"></script>
 
 </body>
