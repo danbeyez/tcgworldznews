@@ -5,8 +5,16 @@
     "generator_version": "1.0",
     "schema_version": 1
   },
-  "latest": "semaine_31_juillet_2026",
+  "latest": "semaine_32_aout_2026",
   "weekly_pulses": [
+    {
+      "id": "semaine_32_aout_2026",
+      "label": "S32 · Août 2026",
+      "date": "2026-08-09",
+      "date_label": "Semaine du 3 au 9 août 2026",
+      "file": "archives/semaine_32_aout_2026.html",
+      "highlight": "Gradation : PSA et Beckett resserrent leurs paliers d'entrée en même temps"
+    },
     {
       "id": "semaine_31_juillet_2026",
       "label": "S31 · Juillet 2026",
