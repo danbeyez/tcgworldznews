@@ -5,8 +5,16 @@
     "generator_version": "1.0",
     "schema_version": 1
   },
-  "latest": "semaine_33_aout_2026",
+  "latest": "semaine_34_aout_2026",
   "weekly_pulses": [
+    {
+      "id": "semaine_34_aout_2026",
+      "label": "S34 · Août 2026",
+      "date": "2026-08-23",
+      "date_label": "Semaine du 17 au 23 août 2026",
+      "file": "archives/semaine_34_aout_2026.html",
+      "highlight": "One Piece OP-17 The World's Strongest Warriors : le plus gros set de l'histoire du jeu débarque au Japon"
+    },
     {
       "id": "semaine_33_aout_2026",
       "label": "S33 · Août 2026",
