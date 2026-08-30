@@ -5,8 +5,16 @@
     "generator_version": "1.0",
     "schema_version": 1
   },
-  "latest": "semaine_34_aout_2026",
+  "latest": "semaine_35_aout_2026",
   "weekly_pulses": [
+    {
+      "id": "semaine_35_aout_2026",
+      "label": "S35 · Août 2026",
+      "date": "2026-08-30",
+      "date_label": "Semaine du 24 au 30 août 2026",
+      "file": "archives/semaine_35_aout_2026.html",
+      "highlight": "San Francisco accueille les Championnats du Monde Pokémon 2026, couplés pour la première fois à la convention PokémonXP."
+    },
     {
       "id": "semaine_34_aout_2026",
       "label": "S34 · Août 2026",
