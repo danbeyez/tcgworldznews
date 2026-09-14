@@ -5,8 +5,16 @@
     "generator_version": "1.0",
     "schema_version": 1
   },
-  "latest": "semaine_36_septembre_2026",
+  "latest": "semaine_37_septembre_2026",
   "weekly_pulses": [
+    {
+      "id": "semaine_37_septembre_2026",
+      "label": "S37 · Septembre 2026",
+      "date": "2026-09-13",
+      "date_label": "Semaine du 7 au 13 septembre 2026",
+      "file": "archives/semaine_37_septembre_2026.html",
+      "highlight": "Le marché s'emballe avant le 30th Celebration"
+    },
     {
       "id": "semaine_36_septembre_2026",
       "label": "S36 · Septembre 2026",
