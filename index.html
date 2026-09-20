@@ -4,46 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TW News — Weekly Pulse S37 · Septembre 2026">
+<meta property="og:title" content="TW News — Weekly Pulse S38 · Septembre 2026">
 <meta property="og:description" content="PSA gèle ses quatre niveaux de gradation les moins chers face à un arriéré de près de 10 millions de cartes.">
-<meta property="og:site_name" content="KRXO">
 <meta property="og:image" content="https://raw.githubusercontent.com/danbeyez/tcgworldz-logo/main/logo.png.png">
+<meta property="og:site_name" content="KRXO">
 <meta name="twitter:card" content="summary_large_image">
-<title>TW News — Weekly Pulse S37 · Septembre 2026 · TCG World'z</title>
+<title>TW News — Weekly Pulse S38 · Septembre 2026 · TCG World'z</title>
 <link rel="stylesheet" href="archive-nav.css">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    background:#120D16; color:#FFFFFF;
+    background:#120D16;
+    color:#FFFFFF;
     font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
-    line-height:1.6; -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
   }
   .wrap { max-width:920px; margin:0 auto; padding:18px 14px 40px; }
-  .current-edition { text-align:center; font-size:11px; letter-spacing:1.4px; text-transform:uppercase; color:#A79BC7; margin-bottom:14px; }
-  .nav { display:flex; flex-wrap:wrap; gap:6px; position:sticky; top:0; z-index:50;
-    background:rgba(5,5,8,0.92); backdrop-filter:blur(8px); padding:10px 6px; margin-bottom:18px;
-    border-bottom:1px solid rgba(227,178,60,0.18); border-radius:10px; }
-  .tab { font-size:12px; font-weight:600; letter-spacing:.3px; padding:7px 11px; border-radius:8px; cursor:pointer;
-    background:transparent; color:rgba(255,255,255,0.45); border:1px solid rgba(255,255,255,0.08);
-    transition:all .18s ease; white-space:nowrap; }
+
+  /* Navigation */
+  .nav {
+    display:flex; flex-wrap:wrap; gap:6px;
+    position:sticky; top:0; z-index:50;
+    background:rgba(5,5,8,0.92);
+    backdrop-filter:blur(8px);
+    padding:10px 6px; margin-bottom:18px;
+    border-bottom:1px solid rgba(227,178,60,0.18);
+  }
+  .tab {
+    font-size:12px; font-weight:600; letter-spacing:.3px;
+    padding:7px 11px; border-radius:8px; cursor:pointer;
+    background:transparent; color:rgba(255,255,255,0.45);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:all .18s ease; white-space:nowrap;
+  }
   .tab:hover { color:#fff; border-color:rgba(227,178,60,0.4); }
-  .tab.active { color:#120D16; font-weight:800; background:var(--accent,#E3B23C); border-color:var(--accent,#E3B23C);
-    box-shadow:0 0 12px var(--glow,rgba(227,178,60,0.5)); }
+  .tab.active {
+    color:#120D16; font-weight:800;
+    background:var(--accent,#E3B23C);
+    border-color:var(--accent,#E3B23C);
+    box-shadow:0 0 12px var(--glow,rgba(227,178,60,0.5));
+  }
+
+  /* Pages */
   .page { display:none; }
-  .page.active { display:flex; flex-direction:column; position:relative; background:#1E1638;
-    border:1px solid rgba(227,178,60,0.18); border-radius:16px; padding:40px 30px 30px; overflow:hidden;
-    min-height:620px; box-shadow:0 0 40px rgba(0,0,0,0.5); }
-  .watermark { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-35deg);
-    font-size:140px; font-weight:900; color:#E8C46A; opacity:0.14; pointer-events:none; white-space:nowrap;
-    z-index:1; letter-spacing:3px; text-shadow:0 0 30px rgba(155,127,224,0.3); }
+  .page.active {
+    display:flex; flex-direction:column;
+    position:relative;
+    background:#1E1638;
+    border:1px solid rgba(227,178,60,0.18);
+    border-radius:16px;
+    padding:40px 30px 30px;
+    overflow:hidden;
+    min-height:620px;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+  }
+  .watermark {
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%) rotate(-35deg);
+    font-size:140px; font-weight:900; color:#E8C46A;
+    opacity:0.14; pointer-events:none; white-space:nowrap;
+    z-index:1; letter-spacing:3px;
+    text-shadow:0 0 30px rgba(155,127,224,0.3);
+  }
   @media (max-width:600px){ .watermark{ font-size:74px; } .page.active{ padding:28px 18px 24px; } }
   .page-content { position:relative; z-index:2; display:flex; flex-direction:column; flex:1; }
+
   .program-header { text-align:center; margin-bottom:26px; }
-  .program-title { font-size:48px; font-weight:900; letter-spacing:2px; color:#E3B23C;
+  .program-title {
+    font-size:48px; font-weight:900; letter-spacing:2px; color:#E3B23C;
     background:linear-gradient(180deg,#F7DA9E 0%,#E5CB7C 22%,#D8BF62 42%,#CEAB59 58%,#A97A2E 75%,#603000 100%);
     -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-    filter:drop-shadow(0 2px 3px rgba(0,0,0,0.55)); margin:0; line-height:1; }
-  .program-tagline { font-size:14px; font-weight:500; letter-spacing:1.5px; text-transform:lowercase; color:#A79BC7; margin:6px 0 0; }
+    filter:drop-shadow(0 2px 3px rgba(0,0,0,0.55));
+    margin:0; line-height:1;
+  }
+  .program-tagline {
+    font-size:14px; font-weight:500; letter-spacing:1.5px;
+    text-transform:lowercase; color:#A79BC7; margin:6px 0 0;
+  }
   .page-header { margin-bottom:22px; }
   .page-meta { font-size:11px; letter-spacing:1.4px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:6px; }
   .page-header h2 { font-size:27px; font-weight:800; line-height:1.2; color:var(--accent,#E3B23C); text-shadow:0 0 12px var(--glow,rgba(227,178,60,0.45)); }
@@ -69,6 +107,7 @@
   .price-table { width:100%; border-collapse:collapse; margin:12px 0 16px; font-size:13px; }
   .price-table th { text-align:left; padding:9px 10px; background:rgba(227,178,60,0.08); color:#E3B23C; font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.5px; border-bottom:1px solid rgba(227,178,60,0.3); }
   .price-table td { padding:9px 10px; border-bottom:1px solid rgba(255,255,255,0.06); color:#D4D9E6; }
+  .price-table tr:hover td { background:rgba(255,255,255,0.02); }
   .nd { color:rgba(255,255,255,0.35); font-style:italic; }
   .sources { margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.03); border-radius:8px; padding:12px 14px; }
   .sources .src-title { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.3); margin-bottom:8px; }
@@ -79,7 +118,7 @@
   .disclaimer { font-size:10px; color:rgba(255,255,255,0.3); margin-top:8px; line-height:1.5; }
   .page-footer { margin-top:24px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; position:relative; z-index:2; }
   .logo-block { display:flex; align-items:center; gap:10px; }
-  .logo-circle { width:36px; height:36px; border-radius:50%; object-fit:cover; display:block; box-shadow:0 0 8px rgba(227,178,60,0.5); background:#0A0710; }
+  .logo-circle { width:36px; height:36px; border-radius:50%; object-fit:cover; display:block; box-shadow:0 0 8px rgba(227,178,60,0.5); }
   .logo-text .brand { font-size:13px; color:#E3B23C; font-weight:700; }
   .logo-text .sub { font-size:10px; color:#A79BC7; }
   .page-counter { font-size:11px; color:rgba(255,255,255,0.4); text-align:right; }
@@ -113,10 +152,11 @@
     </div>
     <div class="archive-banner-current">
       <span class="label">Édition en cours</span>
-      <span class="value" id="currentEditionLabel">S37 · Septembre 2026</span>
+      <span class="value" id="currentEditionLabel">S38 · Septembre 2026</span>
     </div>
   </div>
 
+  <!-- NAVIGATION -->
   <nav class="nav">
     <button class="tab active" data-accent="#E3B23C" onclick="go(0)">🎯 Fait Marquant</button>
     <button class="tab" data-accent="#FFFFFF" onclick="go(1)">🔴 Pokémon</button>
@@ -138,37 +178,44 @@
         <p class="program-tagline">l'actu TCG &amp; son environnement</p>
       </div>
       <div class="page-header">
-        <div class="page-meta">Page 1/9 · Semaine S37 · 7–13 septembre 2026</div>
-        <h2><span class="icon">🎯</span>Le marché s'emballe avant le 30th Celebration</h2>
+        <div class="page-meta">Page 1/9 · Semaine S38 · 14-20 septembre 2026</div>
+        <h2><span class="icon">🎯</span>Actu de la semaine — Le Fait Marquant</h2>
       </div>
 
-      <p class="lead"><span class="tag conf">CONFIRMÉ</span> <strong>La semaine qui précède le 16 septembre — jour du premier lancement mondial simultané de l'histoire du JCC Pokémon — a été dominée par la montée de pression sur 30th Celebration.</strong></p>
+      <p class="lead"><span class="tag conf">CONFIRMÉ</span> <strong>30 ans de Pokémon : une sortie mondiale historique, gâchée par une pénurie générale — et un cambriolage la veille à Lille.</strong></p>
 
-      <p>À trois jours de sa sortie, <strong>Pokémon TCG: 30th Celebration</strong> concentre déjà toute l'attention du marché. C'est la toute première fois en 30 ans que la licence sort un set simultanément au Japon et à l'international — jusqu'ici, l'écart entre les deux marchés était systématiquement de 1 à 3 mois. Le set introduit une rareté inédite, la <strong>Futuristic Rare</strong>, sur Mewtwo ex et Mew ex (illustrations YOSHIROTTEN), garantit un des 30 Pikachu Rare inédits dans chaque booster, et embarque une Classic Collection de réimpressions historiques — dont le Charizard du tout premier Base Set de 1999.</p>
+      <p>Le 16 septembre 2026, Pokémon TCG: 30th Celebration est devenu la toute première extension de l'histoire du JCC à sortir le même jour dans le monde entier — Japon, Amériques, Europe. Une première absolue pour un éditeur qui avait toujours désynchronisé ses marchés de plusieurs semaines, voire plusieurs mois. Le concept : 30 versions différentes du Pikachu, une par génération de jeux vidéo, réparties en Rare, Illustration Rare et Full Art.</p>
 
-      <p>Sur le marché secondaire, le prix constaté des boosters (hors MSRP) grimpait déjà à <strong>16,95 $</strong> sur TCGPlayer début septembre — un niveau de précommande rarement vu pour un set qui n'est pas encore sorti. Côté retail US, les trackers communautaires annonçaient un gros restock Target dans la nuit du 11 septembre.</p>
+      <p>Mais la réalité du lancement a été à la hauteur du symbole en pire : files d'attente interminables, ruptures de stock quasi immédiates, la Fnac contrainte de réserver la vente en ligne à ses seuls adhérents, et des scalpers revendant l'Elite Trainer Box (55,99 € en boutique) jusqu'au triple de son prix sur Vinted. Plusieurs experts, dont la journaliste Amandine Jonniaux, ont conseillé aux collectionneurs de ne pas céder à la panique et d'attendre les vagues de restock prévues en octobre et novembre plutôt que de payer le prix fort.</p>
+
+      <p>Autre coïncidence brutale : dans la nuit du 15 au 16 septembre — la veille du lancement — le magasin Ludotrotter à Lille a été cambriolé, avec environ 40 000 € de stock dérobé. Les coffrets collectors 30 ans, dont la livraison avait été retardée, ont échappé au vol de justesse.</p>
 
       <div class="box">
-        <h4>Pourquoi ça compte</h4>
+        <h4>Ce qu'il faut retenir</h4>
         <ul class="clean">
-          <li>1ère sortie mondiale simultanée JP/EN de l'histoire du JCC Pokémon (30 ans)</li>
-          <li>Nouvelle rareté "Futuristic Rare" — débute sur Mewtwo ex / Mew ex</li>
-          <li>Classic Collection : réimpressions historiques, dont le Charizard Base Set 1999</li>
-          <li>Effet immédiat sur le marché vintage : le Charizard Celebrations (2021) sert déjà de référence de comparaison pour anticiper la décote/prime du nouveau reprint</li>
+          <li>Sortie mondiale simultanée le 16/09/2026 — une première absolue pour le JCC Pokémon</li>
+          <li>Pénurie générale dès le premier week-end, scalping massif sur l'ETB</li>
+          <li>Conseil unanime des experts : attendre les restocks d'octobre-novembre plutôt qu'acheter au prix fort</li>
+          <li>Ludotrotter (Lille) cambriolé la nuit précédant le lancement — ~40 000 € de stock volé, coffrets 30 ans épargnés</li>
         </ul>
       </div>
 
-      <p style="font-size:12.5px;color:rgba(255,255,255,0.45)">Sortie officielle : mercredi 16 septembre 2026 — donc après la clôture de cette édition. On couvrira les premiers relevés de prix post-lancement dans le S38.</p>
+      <div class="box calm">
+        <h4>À noter dans vos agendas</h4>
+        <p style="margin-bottom:0;">Deux rendez-vous majeurs de la scène TCG française à venir : le <strong>Lille Card Show</strong> (4e édition, samedi 3 octobre, B'Twin Village Lille, déjà complet) et <strong>Le Royaume du TCG</strong> (4e édition, 14-15 novembre, Parc des Expositions de Villepinte), qui recrute actuellement ses bénévoles pour l'événement.</p>
+      </div>
 
       <div class="sources">
         <div class="src-title">Sources</div>
         <table>
           <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://www.pokemon.com/us/news/check-out-every-pokemon-tcg-product-release-in-september-2026" target="_blank">Pokemon.com</a></td><td>Détail produit 30th Celebration</td><td>07/09/2026</td></tr>
-          <tr><td>2</td><td><a href="https://www.tcgplayer.com/content/article/Buyer-s-Guide-to-Pok%C3%A9mon-TCG-30th-Celebration/0d9be702-6afe-467a-9aeb-d531592d9889/" target="_blank">TCGplayer</a></td><td>Prix booster marché 30th Celebration</td><td>03/09/2026</td></tr>
-          <tr><td>3</td><td><a href="https://cardgrader.ai/blog/30th-celebration-complete-guide" target="_blank">CardGrader</a></td><td>Futuristic Rare, Classic Collection</td><td>12/09/2026</td></tr>
+          <tr><td>1</td><td><a href="https://www.pokemon.com/us/news/get-ready-for-pokemon-tcg-30th-celebration" target="_blank">Pokemon.com</a></td><td>Annonce officielle de l'extension et date de sortie</td><td>Consulté le 20/09/2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.journaldugeek.com/2026/09/17/files-dattente-interminables-pour-les-30-ans-de-pokemon-faut-il-sattendre-a-une-rupture-generale/" target="_blank">Journal du Geek</a></td><td>Pénurie, scalping, conseil d'experts</td><td>17/09/2026</td></tr>
+          <tr><td>3</td><td><a href="https://sevenradio.fr/2026/09/17/cambriolage-a-lille-le-magasin-ludotrotter-vise-par-les-malfaiteurs/" target="_blank">Seven Radio</a></td><td>Cambriolage Ludotrotter Lille</td><td>17/09/2026</td></tr>
+          <tr><td>4</td><td><a href="https://lillecardshow.fr/" target="_blank">Lille Card Show</a></td><td>Date, lieu, statut complet</td><td>Consulté le 20/09/2026</td></tr>
+          <tr><td>5</td><td>Instagram — <a href="https://www.instagram.com/royaumedutcg/" target="_blank">@royaumedutcg</a></td><td>Recherche de bénévoles, 4e édition</td><td>Capture communiquée le 20/09/2026</td></tr>
         </table>
-        <div class="disclaimer">Article produit pour la communauté KRXO — Discord TCG francophone.</div>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.<br>Article produit pour la communauté KRXO — Discord TCG francophone.</div>
       </div>
 
       <div class="page-footer">
@@ -176,7 +223,7 @@
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 1/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 1/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
@@ -186,39 +233,57 @@
     <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 2/9 · Semaine S37 · 7–13 septembre 2026</div>
+        <div class="page-meta">Page 2/9 · Semaine S38 · 14-20 septembre 2026</div>
         <h2><span class="icon">🔴</span>Pokémon</h2>
       </div>
-      <p class="lead">Semaine de pré-lancement pour 30th Celebration, doublée d'un événement communautaire sur TCG Pocket.</p>
+      <p class="lead">Semaine entièrement dominée par 30th Celebration : taux de pull confirmés, marché de prix instable, et vigilance de mise face aux faux sites qui prolifèrent autour de la hype.</p>
 
-      <h3>30th Celebration — le détail produit</h3>
-      <p><span class="tag conf">CONFIRMÉ</span> L'Elite Trainer Box exclusive Pokémon Center embarque 11 boosters (contre 10 pour l'ETB standard) et deux promos full art Nidorina, dont une frappée du logo Pokémon Center. L'Ultra Premium Collection (Espeon &amp; Umbreon) est en précommande boutique chez GameStop. Chaque booster garantit un des 30 Pikachu Rare et une Basic Energy foil — les huit types ont été redessinés par YOSHIROTTEN.</p>
+      <h3>Taux de pull confirmés (30th Celebration)</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Sur la base de 652 ouvertures de boosters vérifiées indépendamment, les taux de pull sont désormais bien documentés :</p>
+      <table class="price-table">
+        <tr><th>Rareté</th><th>Taux</th><th>Fréquence</th></tr>
+        <tr><td>Pikachu Holo</td><td>100%</td><td>Garanti par pack</td></tr>
+        <tr><td>Standard ex</td><td>21,9%</td><td>≈ 1 pack sur 5</td></tr>
+        <tr><td>Illustration Rare (IR)</td><td>18,4%</td><td>≈ 1 pack sur 5-6</td></tr>
+        <tr><td>Classic Reprint (bordure or)</td><td>9,8%</td><td>≈ 1 pack sur 10</td></tr>
+        <tr><td>Special Illustration Rare (SIR)</td><td>5,5%</td><td>≈ 1 pack sur 18</td></tr>
+        <tr><td>FUR — Mewtwo ex / Mew ex (YOSHIROTTEN)</td><td>1,2%</td><td>≈ 1 pack sur 82</td></tr>
+      </table>
 
-      <h3>TCG Pocket</h3>
-      <p><span class="tag conf">CONFIRMÉ</span> La Community Week s'est tenue du 4 au 11 septembre : missions communautaires (entraide, échanges de cartes) contre récompenses cosmétiques et sabliers de boosters.</p>
+      <h3>Tableau des prix</h3>
+      <table class="price-table">
+        <tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Variation S-1</th><th>Fiabilité</th><th>Source</th></tr>
+        <tr><td>30th Celebration</td><td>Charizard (Classic Collection #4)</td><td>≈187 $ (brut) / listé 380 $</td><td class="nd">N/D — nouvelle sortie</td><td><span class="tag est">ESTIMÉ</span></td><td>PriceCharting / TCGPlayer</td></tr>
+      </table>
+      <p style="font-size:12.5px;color:rgba(255,255,255,0.4);">Écart important entre le prix "brut" (PriceCharting) et TCGPlayer sur la même carte : le marché n'a pas encore trouvé son équilibre, un peu plus d'une semaine après la sortie.</p>
 
       <div class="box warn">
-        <h4>À prendre avec prudence</h4>
-        <p style="margin-bottom:0"><span class="tag rum">RUMEUR</span> Un gros restock Target était annoncé par les trackers communautaires (non officiels) pour la nuit du 11 septembre — Target n'a, comme d'habitude, rien confirmé officiellement.</p>
+        <h4>Vigilance — arnaques en ligne</h4>
+        <p style="margin-bottom:0;">La ruée sur 30th Celebration s'accompagne, comme à chaque grosse sortie, d'une vague de faux sites de vente. Le site communautaire indépendant <strong>PokéScam</strong> répertorie déjà 45 boutiques frauduleuses documentées, avec preuves à l'appui, ainsi qu'une liste de sites fiables vérifiés par la communauté. Un réflexe simple avant tout achat en ligne sur un produit en pénurie.</p>
       </div>
 
-      <h3>Vie du hobby — boutiques</h3>
-      <p><span class="tag conf">CONFIRMÉ</span> La boutique française <strong>Missplaybros</strong> (Saint-Georges-lès-Baillargeaux) a confirmé via ses propres réseaux qu'elle rachète désormais les collections Pokémon des clients directement en boutique.</p>
+      <div class="box calm">
+        <h4>Jeu-concours</h4>
+        <p style="margin-bottom:0;">Neo Geek &amp; Card Show organise un grand jeu-concours pour les 30 ans de Pokémon (Vergèze Espace), avec trois coffrets collector à gagner : Coffret Amphinobi ex, Coffret Nymphali ex et la Collection Poster (Articuno/Zapdos/Moltres).</p>
+      </div>
 
-      <table class="price-table">
-        <tr><th>Extension</th><th>Carte</th><th>Prix actuel</th><th>Var. S-1</th><th>Fiabilité</th><th>Source</th></tr>
-        <tr><td>Base Set (1999)</td><td>Charizard 4/102</td><td>493,21 €</td><td class="nd">N/D — 1er relevé</td><td>Confirmé</td><td>Cardmarket</td></tr>
-        <tr><td>Celebrations (2021)</td><td>Charizard (reprint BS4)</td><td>213,13 €</td><td class="nd">N/D — 1er relevé</td><td>Confirmé</td><td>Cardmarket</td></tr>
-        <tr><td>30th Celebration</td><td>Booster (marché, hors MSRP)</td><td>16,95 $</td><td class="nd">Prélancement</td><td>Confirmé</td><td>TCGPlayer</td></tr>
-      </table>
-      <p style="font-size:12px;color:rgba(255,255,255,0.4)">Le détail complet de tous les prix est dans le rapport KRXO News de la semaine, lien en description.</p>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://tcgtalk.com/guides/30th-anniversary-pull-rates" target="_blank">TCGTalk</a></td><td>Taux de pull sur 652 ouvertures</td><td>Consulté le 20/09/2026</td></tr>
+          <tr><td>2</td><td><a href="https://pokescam.com/" target="_blank">PokéScam</a></td><td>Annuaire des sites frauduleux</td><td>Consulté le 20/09/2026</td></tr>
+          <tr><td>3</td><td>Instagram — Neo Geek &amp; Card Show</td><td>Visuel du jeu-concours 30 ans</td><td>Capture communiquée le 20/09/2026</td></tr>
+        </table>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.<br>Article produit pour la communauté KRXO — Discord TCG francophone.</div>
+      </div>
 
       <div class="page-footer">
         <div class="logo-block">
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 2/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 2/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
@@ -228,22 +293,23 @@
     <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 3/9 · Semaine S37 · 7–13 septembre 2026</div>
+        <div class="page-meta">Page 3/9 · Semaine S38 · 14-20 septembre 2026</div>
         <h2><span class="icon">⚫</span>Yu-Gi-Oh!</h2>
       </div>
-      <p class="lead">Rectificatif : la semaine n'était pas si calme — Konami a sorti une annonce jeu vidéo majeure le 9 septembre.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Konami a dévoilé le 9 septembre, pendant un Nintendo Direct, <strong>Yu-Gi-Oh! TAG FORCE GX</strong> — un remake complet de l'iconique <em>Yu-Gi-Oh! GX Tag Force 3</em> (jamais sorti en Occident à l'époque), sur Steam, Switch et Switch 2. Sortie prévue le 16 février 2027. Plus de 3 800 cartes, plus de 100 personnages entièrement doublés, refonte des scènes d'invocation. Les précommandes physiques (Switch/Switch 2) débloquent trois cartes TCG papier, dont Yubel en Starlight Rare et Wicked Canon en Ultra Rare — leur toute première sortie physique, 20 ans après leurs débuts dans l'anime GX.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Konami a par ailleurs annoncé le 11 septembre que la prochaine Limit Regulation OCG (applicable au 1er octobre) sera dévoilée le dimanche 20 septembre à 21h JST — annonce de date seulement, la banlist elle-même reste à venir.</p>
       <div class="box calm">
-        <h4>Côté TCG papier</h4>
-        <p style="margin-bottom:0">Aucun YCS ni sortie de set n'est tombé sur cette fenêtre. Pas de tableau de prix cette semaine — se référer au rapport S36 pour les derniers relevés sur Magnificent Monsters.</p>
+        <h4>Semaine calme</h4>
+        <p style="margin-bottom:0;">Aucune sortie ni annonce majeure côté TCG papier cette semaine. La banlist papier reste celle du 18 mai 2026, inchangée depuis quatre mois. Konami n'a communiqué aucune date de mise à jour pour l'instant. Rien à signaler côté YCS/Régionaux pour la période du 14 au 20 septembre.</p>
+      </div>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <div class="disclaimer">Aucune source externe consultée pour cette page — semaine sans actualité confirmée à rapporter.</div>
       </div>
       <div class="page-footer">
         <div class="logo-block">
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 3/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 3/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
@@ -253,39 +319,53 @@
     <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 4/9 · Semaine S37 · 7–13 septembre 2026</div>
+        <div class="page-meta">Page 4/9 · Semaine S38 · 14-20 septembre 2026</div>
         <h2><span class="icon">🔵</span>One Piece TCG</h2>
       </div>
-      <p class="lead">Deux Regionals se sont tenus ce week-end, mais aucun résultat officiel n'était publié au moment de la rédaction.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Le Regional de Hampton Roads, VA (12 septembre, jauge jusqu'à 1024 joueurs, tournoi géré sous Bandai TCG+) et le Regional d'Athènes (12 septembre) ont eu lieu comme prévu au calendrier officiel Bandai.</p>
-      <div class="box warn">
-        <h4>À vérifier</h4>
-        <p style="margin-bottom:0"><span class="tag verif">À VÉRIFIER</span> Limitless One Piece n'avait pas encore indexé les decklists/classements de ces deux Regionals au moment de la clôture de cette édition. Tout classement qui circulerait avant la publication officielle Bandai reste à traiter avec prudence.</p>
-      </div>
-      <p>Prochains rendez-vous à suivre : Championship Finals de Dallas (18/09) et Regional de Mexico (19/09).</p>
+      <p class="lead">Pas de régionale cette semaine, mais du mouvement sur les sorties à venir et une animation locale qui sort du lot.</p>
 
-      <div class="box">
-        <h4>Rattrapage S36 — à ne pas confondre</h4>
-        <p style="margin-bottom:0"><span class="tag conf">CONFIRMÉ</span> Deux titres distincts ont été décernés au BCG Fest Utrecht début septembre : <strong>Benjo</strong> a remporté le tournoi collatéral Flame-Flame Fruit Coliseum (couvert en S36), tandis que <strong>Luka Forjan</strong> a remporté le titre européen à proprement parler — les Championship 26-27 Season 1 Finals, disputées le 5-6 septembre avec un mazzo Enel violet (OP-15) — et se qualifie pour les Mondiaux. Deux compétitions différentes, deux vainqueurs différents, pas une contradiction.</p>
-      </div>
+      <h3>EB-05 : le visuel du booster et la carte Manga révélés</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Correction par rapport à notre première édition : EB-05 "Heroines Edition Vol.2" est bien plus avancée qu'annoncé. Le visuel officiel du sachet booster est désormais public — cover art Nico Robin en version française — et Nico Robin est confirmée comme Leader du set. La carte "Manga" de l'extension (une rareté spéciale) met en vedette Shirahoshi, et plusieurs Super Rare ont été révélées lors du North America Final (EB05-055, EB05-052, EB05-034, EB05-046...). Sortie mondiale annoncée pour octobre 2026, version française disponible 4 à 6 semaines après (189,90 € le display de 24 boosters).</p>
 
-      <h3>Promos, prizes et leaks Japon — confirmés par tes captures</h3>
-      <ul class="clean">
-        <li><span class="tag conf">CONFIRMÉ</span> <strong>Promotional Pack EX Vol.5</strong> révélé pour le marché japonais (compte fan officieux onepiece.cardgame) : Nico Robin, Shanks (P-097) et Bundy dans le lot</li>
-        <li><span class="tag conf">CONFIRMÉ</span> <strong>Prizes du Flagship Battle d'octobre</strong> dévoilés : Dracule Mihawk (ST32-003) pour le vainqueur, Ben Beckman (OP17-027) pour les Top 8 — artworks alternatifs inédits, exclusifs au circuit japonais</li>
-        <li><span class="tag conf">CONFIRMÉ</span> <strong>Prize card des Regionals Season 2 2026</strong> révélée : Nami (OP15-108) en artwork alternatif</li>
-        <li><span class="tag verif">LEAK — À CONFIRMER</span> Le packaging booster d'<strong>OP-18 "The Dominance of God"</strong> (神の支配) aurait fuité, avec Saint Gunko en vedette et les Chevaliers de Dieu comme thème central. Sortie visée en novembre 2026. C'est un leak communautaire, pas une annonce Bandai officielle — à traiter avec la prudence habituelle jusqu'à confirmation.</li>
-      </ul>
+      <h3>OP-18 "The Dominance of God" : les leaders dévoilés</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Lors de ONE PIECE DAY '26 (23-24 août 2026), Bandai a révélé les leaders du prochain set principal OP-18, attendu en novembre 2026 : le tout premier Leader Franky de l'histoire du jeu (Vert/Violet, 5000 de puissance, capacité qui transforme les cartes Stage en main en ressources de Counter), un nouveau Leader Gunko (Violet/Noir), et un Saint Gunko doté d'un attribut de couleur encore mystérieux, noté "?". Le set inclura aussi la première carte Manga Rare de Nico Robin et deux Secret Rare illustrées par Yoshitaka Amano.</p>
+
+      <h3>Nouveauté produit — TS-03</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Selon un post communautaire relayé cette semaine, les rolling trays TS-03 (déclinées Luffy, Nico Robin, Boa Hancock et autres personnages) arriveront en octobre, en même temps que le restock d'OP-17.</p>
+
+      <h3>Animation locale — Maxi Rêves (Abbeville)</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> La boutique Maxi Rêves (Abbeville) organise un tournoi hors-norme sur le principe "One Piece TCG, mais x2" : format 2v2, decks et règles doublés. Une animation locale qui change du format classique et mérite le déplacement pour les curieux du secteur.</p>
+
+      <h3>PEB-01 — encore loin, mais déjà chiffré</h3>
+      <p><span class="tag verif">NON OFFICIEL</span> Des documents distributeurs, apparus en septembre 2026, situent la sortie anglaise du Premium Extra Booster PEB-01 au vendredi 23 avril 2027 — un format record de 16 cartes foil par booster, 12 boosters par display à environ 145 €. Bandai n'a fait aucune annonce officielle : liste de cartes, leaders et version française restent totalement inconnus à ce stade.</p>
+
       <div class="box calm">
-        <h4>Semaine calme côté prix</h4>
-        <p style="margin-bottom:0">Pas de nouveau relevé vérifié sur la fenêtre 7-13/09 — se référer au rapport S36 pour les derniers prix OP17.</p>
+        <h4>Calendrier compétitif</h4>
+        <p style="margin-bottom:0;">Aucune régionale entre le 14 et le 20 septembre : celle d'Utrecht s'est tenue le 5-6 septembre, la suivante (Gatineau, Prague) est prévue les 26-27 septembre.</p>
       </div>
+
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://onepiecetopdecks.com/leaks-one-piece-heroines-edition-vol-2-eb05/" target="_blank">OnePieceTopDecks</a></td><td>Visuel booster EB-05, Leader, carte Manga, SR révélées</td><td>Consulté le 20/09/2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.pixelheart.eu/en/produit/one-piece-24-extra-booster-box-eb05-heroines-edition-vol-2-french-version/" target="_blank">PixelHeart</a></td><td>Version française EB-05, prix, cover art</td><td>Consulté le 20/09/2026</td></tr>
+          <tr><td>3</td><td><a href="https://www.tcgroupau.com.au/blogs/news/one-piece-card-game-op-18-the-dominance-of-god-revealed-at-one-piece-day-26" target="_blank">TCGroupAU</a></td><td>Leaders OP-18, date de sortie</td><td>24/08/2026</td></tr>
+          <tr><td>4</td><td><a href="https://www.thornberrymedia.com/post/franky-op18-021-first-franky-leader-revealed" target="_blank">Thornberry Media</a></td><td>Détail du Leader Franky OP18-021</td><td>23/08/2026</td></tr>
+          <tr><td>5</td><td>Instagram — @bill_dev</td><td>Annonce TS-03 / octobre</td><td>Consulté le 20/09/2026</td></tr>
+          <tr><td>6</td><td>Instagram — @maxireves_abbeville / @gonepiece.tcg</td><td>Tournoi "x2" — format, règles</td><td>Capture communiquée le 20/09/2026</td></tr>
+          <tr><td>7</td><td><a href="https://www.onepiecetcgmarket.fr/guide/peb-01-premium-extra-booster-one-piece-date-sortie-prix-cartes" target="_blank">OnePieceTCGMarket.fr</a></td><td>Date, format et prix PEB-01</td><td>Consulté le 20/09/2026</td></tr>
+          <tr><td>8</td><td><a href="https://en.onepiece-cardgame.com/events/regional-season2-26-27.html" target="_blank">Site officiel One Piece Card Game</a></td><td>Calendrier des régionales</td><td>Consulté le 20/09/2026</td></tr>
+        </table>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.<br>Article produit pour la communauté KRXO — Discord TCG francophone.</div>
+      </div>
+
       <div class="page-footer">
         <div class="logo-block">
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 4/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 4/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
@@ -295,19 +375,30 @@
     <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 5/9 · Semaine S37 · 7–13 septembre 2026</div>
+        <div class="page-meta">Page 5/9 · Semaine S38 · 14-20 septembre 2026</div>
         <h2><span class="icon">🟣</span>Magic: The Gathering</h2>
       </div>
-      <p class="lead"><strong>Pete Ingram</strong> remporte le Regional Championship de Baltimore avec un mono-vert Broodscale, et confirme la mainmise de l'archétype sur le format Modern.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Le Regional Championship s'est tenu du 11 au 13 septembre dans le cadre de SCG CON Baltimore. Ingram a terminé la Swiss à 14-2 (7e seed), éliminé Aaron Schwarcz (Esper Blink) puis Brett Kroeger en mirroir Broodscale, avant de battre en finale <strong>Curtis Lam</strong> — qui avait pourtant démarré l'événement à 13-0 avec son Devoted Druid Combo. Sur les 8 finalistes, 5 jouaient une variante de Broodscale, confirmant sa place de deck le plus craint du format en ce moment.</p>
-      <p><span class="tag conf">CONFIRMÉ</span> Rectificatif : la semaine n'était pas calme niveau sorties non plus — la saison de spoilers de <strong>Reality Fracture</strong> a officiellement démarré le 8 septembre (stream de présentation sur Twitch/YouTube), et se poursuit jusqu'au 17 septembre. L'histoire du set (Jace Beleren devenu "The Theorist", qui a créé un multivers alternatif appelé l'Echoverse) s'est conclue le 10 septembre sur DailyMTG. Mécanique signature : chaque booster Play/Collector contient une "paire échoïque" — une carte de notre multivers et son miroir Echoverse. Une carte sérialisée à 500 exemplaires (Bloodline Recollector) fait déjà parler d'elle. Sortie prévue le 2 octobre, prerelease du 25 septembre au 1er octobre, arrivée sur MTG Arena le 29 septembre.</p>
-      <p style="font-size:12.5px;color:rgba(255,255,255,0.4)">Pas de relevé de prix Cardmarket/TCGPlayer vérifié cette semaine côté Magic — à compléter au prochain rapport.</p>
+      <p class="lead"><span class="tag conf">CONFIRMÉ</span> Compte à rebours lancé pour Reality Fracture — prerelease dès le 25 septembre, sortie mondiale le 2 octobre 2026.</p>
+      <p>Wizards of the Coast a publié cette semaine le guide officiel de prerelease de Reality Fracture. Chaque pack de prerelease contient 6 Play Boosters, 1 carte promo foil traditionnelle, une deck box et un spindown die. Le set s'articule autour du concept de "paires d'échos" (echoed pairs) : des versions alternatives de personnages et de cartes emblématiques de l'histoire de Magic, réparties sur dix archétypes de draft bicolores (surveil agressif en Blanc-Bleu, cimetière/calculs en Bleu-Noir, burn en Noir-Rouge, ramp en Rouge-Vert, etc.).</p>
+      <p>Parmi les cartes phares annoncées : Chandra, Torch of Defiance et Sphinx of False Conclusions comme menaces de haut niveau, ainsi que des versions alternatives de planeswalkers comme Jace et Kiora of Salt and Sand.</p>
+      <div class="box calm">
+        <h4>Marché</h4>
+        <p style="margin-bottom:0;">Semaine calme côté prix : dernier set réellement sorti, The Hobbit (14/08), pas de mouvement notable signalé cette semaine. Le marché reste concentré sur l'anticipation de Reality Fracture plutôt que sur les valeurs en circulation.</p>
+      </div>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://magic.wizards.com/en/news/feature/reality-fracture-prerelease-guide" target="_blank">Wizards of the Coast</a></td><td>Dates prerelease/sortie, mécaniques, cartes phares</td><td>Consulté le 20/09/2026</td></tr>
+        </table>
+        <div class="disclaimer">Article produit pour la communauté KRXO — Discord TCG francophone.</div>
+      </div>
       <div class="page-footer">
         <div class="logo-block">
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 5/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 5/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
@@ -317,55 +408,68 @@
     <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 6/9 · Semaine S37 · 7–13 septembre 2026</div>
+        <div class="page-meta">Page 6/9 · Semaine S38 · 14-20 septembre 2026</div>
         <h2><span class="icon">🏅</span>Gradation &amp; Marché</h2>
       </div>
-      <p class="lead">Rectificatif : grosse semaine chez PSA en réalité — réorganisation complète des services et ouverture de PSA Europe.</p>
+      <p class="lead">Beckett rouvre ses portes après six semaines de pause — mais le retour à la normale reste partiel.</p>
 
-      <h3>PSA</h3>
-      <p><span class="tag conf">CONFIRMÉ</span> PSA a annoncé le 9 septembre une réorganisation complète de ses services, effective le 14 septembre :</p>
-      <ul class="clean">
-        <li>Nouveau tier <strong>Standard</strong> à 59,99 $/carte, délai estimé 90-100 jours ouvrés, valeur assurée max. 1 000 $</li>
-        <li><strong>Regular</strong> renommé <strong>Priority</strong> (79,99 $, ~70-80 jours ouvrés, max. 1 500 $)</li>
-        <li><strong>Walk-Through</strong> renommé <strong>Premier</strong> (599 $, 7-10 jours ouvrés, max. 10 000 $)</li>
-        <li><strong>Express</strong> passe à 199 $ (hausse) pour protéger le délai de 20-30 jours ouvrés face à la demande</li>
-      </ul>
-      <p><span class="tag conf">CONFIRMÉ</span> <strong>PSA Europe ouvre bien ses portes le 15 septembre à minuit (heure d'Europe centrale)</strong> — nouvelle installation à Francfort, tous les services disponibles localement pour les collectionneurs européens (cartes, autographes, tickets, packs). C'est la 6e installation mondiale de PSA. Les tiers Value restent suspendus (backlog encore à 9,9 millions de cartes).</p>
+      <h3>PSA — Professional Sports Authenticator</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Aucune annonce officielle nouvelle cette semaine. Délais stables depuis la mise à jour de février 2026 : Value Bulk 95 j · Value 75 j · Value Plus 45 j · Value Max 35 j · Regular 25 j · Express 15 j · Super Express / Walk-Through 7 j. Tarifs inchangés (Value Bulk 24,99 $ à Regular 79,99 $).</p>
 
-      <h3>BGS — Beckett</h3>
-      <p><span class="tag conf">CONFIRMÉ</span> Rectificatif sur mon rectificatif : tu avais raison, et l'info a bougé après ma première recherche. Depuis le 9 septembre 19h (heure centrale US), Beckett a mis <strong>l'intégralité de ses plateformes numériques hors ligne</strong> (tous les sites + l'appli mobile) pour une refonte d'infrastructure. Conséquence : plus aucune nouvelle soumission en ligne n'est acceptée, sur aucun tier — ni Base/Standard (déjà en pause depuis août), ni Express/Priority (qui étaient encore ouverts jusque-là). Seuls les dépôts en personne sur certains salons (Dallas Card Show, LA Card Show) restent possibles. Les commandes déjà en cours ne sont pas affectées. Aucune date de retour annoncée à ce stade.</p>
+      <h3>BGS — Beckett Grading Services</h3>
+      <p><span class="tag conf">CONFIRMÉ</span> Beckett a rouvert le 15 septembre 2026 ses soumissions Base et Standard, après six semaines de pause, en tenant l'objectif qu'elle s'était fixé. Le site web et l'application mobile restent toutefois hors ligne — commandes et Marketplace indisponibles — et les soumissions transitent par un formulaire temporaire limité à 100 cartes par envoi le temps que l'infrastructure numérique soit restructurée. Tarifs inchangés : Base (avec sous-notes) 17,95 $, Standard 34,95 $, +3 $ de frais pour toute note 10 avec sous-notes. Délais estimés (non garantis) : 75 j pour Base, 45 j pour Standard.</p>
 
-      <h3>CGC / PCA / HGA &amp; SGC</h3>
-      <p>Aucune annonce officielle cette semaine pour ces quatre entreprises.</p>
+      <h3>CGC — Certified Guaranty Company</h3>
+      <p>Aucune annonce officielle cette semaine.</p>
+
+      <h3>PCA — Pokemon Card Agency</h3>
+      <p>Aucune annonce officielle cette semaine.</p>
+
+      <h3>HGA &amp; SGC</h3>
+      <p>Aucune annonce officielle cette semaine pour ces deux entreprises.</p>
+
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://sports.yahoo.com/articles/beckett-reopens-standard-grading-while-182716576.html" target="_blank">Yahoo Sports</a></td><td>Réouverture Beckett, tarifs, délais, statut du site</td><td>15/09/2026</td></tr>
+          <tr><td>2</td><td><a href="https://www.psacard.com/info/submission-updates" target="_blank">PSA — Submission Updates</a></td><td>Tarifs et délais PSA</td><td>Mise à jour février 2026, stable au 20/09/2026</td></tr>
+        </table>
+        <div class="disclaimer">Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.<br>Article produit pour la communauté KRXO — Discord TCG francophone.</div>
+      </div>
 
       <div class="page-footer">
         <div class="logo-block">
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 6/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 6/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
 
   <!-- ============ PAGE 7 — INNOVATION & TECH ============ -->
-  <section class="page" style="--accent:#9B7FE0;--glow:rgba(155,127,224,0.4);">
+  <section class="page" style="--accent:#E3B23C;--glow:rgba(227,178,60,0.45);">
     <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 7/9 · Semaine S37 · 7–13 septembre 2026</div>
-        <h2><span class="icon">🛠️</span>Innovation &amp; Tech</h2>
+        <div class="page-meta">Page 7/9 · Semaine S38 · 14-20 septembre 2026</div>
+        <h2><span class="icon">💡</span>Innovation &amp; Tech</h2>
       </div>
       <div class="box calm">
         <h4>Semaine calme</h4>
-        <p style="margin-bottom:0">Aucune actualité tech/innovation vérifiée n'a été identifiée sur la fenêtre du 7 au 13 septembre 2026 — cette catégorie n'a pas fait l'objet d'une recherche dédiée dans cette édition. On la couvre en priorité au prochain rapport plutôt que de meubler.</p>
+        <p style="margin-bottom:0;">Aucun lancement d'outil ou de fonctionnalité avec adoption confirmée cette semaine. Plusieurs applications de scan/gradation par IA sont apparues récemment sur les stores mobiles, mais sans annonce officielle ni recul suffisant pour en évaluer la pertinence réelle — à surveiller dans les prochaines éditions plutôt qu'à commenter aujourd'hui sur la seule base d'une fiche App Store.</p>
+      </div>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <div class="disclaimer">Aucune source externe consultée pour cette page — semaine sans actualité confirmée à rapporter.</div>
       </div>
       <div class="page-footer">
         <div class="logo-block">
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 7/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 7/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
@@ -375,93 +479,53 @@
     <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 8/9 · Semaine S37 · 7–13 septembre 2026</div>
-        <h2><span class="icon">⚖️</span>Point Droit &amp; Fiscalité</h2>
+        <div class="page-meta">Page 8/9 · Semaine S38 · 14-20 septembre 2026</div>
+        <h2><span class="icon">⚖️</span>Droit &amp; Fiscalité</h2>
       </div>
       <div class="box calm">
         <h4>Semaine calme</h4>
-        <p style="margin-bottom:0">Pas de changement réglementaire confirmé entre le 7 et le 13 septembre 2026, en France, dans l'UE, aux États-Unis ou au Japon.</p>
+        <p style="margin-bottom:10px;">Aucune nouvelle annonce réglementaire cette semaine en France, dans l'UE, aux États-Unis ou au Japon.</p>
+        <p style="margin-bottom:0;"><span class="tag conf">CONFIRMÉ</span> Pour rappel — cadre en vigueur, non modifié cette semaine : en France, la revente de cartes à collectionner par un particulier reste soumise à la taxe forfaitaire sur les objets précieux (6 % du prix de vente, plus 0,5 % de CRDS) au-delà de 5 000 € par cession, avec option possible pour le régime des plus-values sur biens meubles (19 %, hors prélèvements sociaux, calculé sur la seule marge). Ce cadre, confirmé par Bercy en avril 2026 face aux rumeurs d'un taux de "36,2 %" qui avaient circulé en mars, n'est pas une nouveauté récente.</p>
       </div>
-      <p style="font-size:13px;color:rgba(255,255,255,0.5)">Pour mémoire (contexte déjà en vigueur, rien de nouveau cette semaine) : la taxe française de 2 € sur les petits colis est suspendue depuis le 1er juillet 2026, remplacée par le droit de douane européen de 3 € sur les envois hors UE de moins de 150 € — un point qui concerne directement les achats de singles/scellé hors UE (Japon, US).</p>
+      <div class="sources">
+        <div class="src-title">Sources</div>
+        <table>
+          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
+          <tr><td>1</td><td><a href="https://www.economie.gouv.fr/bercy-decode/les-cartes-pokemon-sont-elles-desormais-dans-le-viseur-du-fisc" target="_blank">economie.gouv.fr — Bercy Décode</a></td><td>Cadre fiscal applicable, seuil, taux</td><td>26/04/2026</td></tr>
+        </table>
+        <div class="disclaimer">Les informations juridiques et fiscales sont données à titre indicatif et ne constituent pas un conseil professionnel.<br>Article produit pour la communauté KRXO — Discord TCG francophone.</div>
+      </div>
       <div class="page-footer">
         <div class="logo-block">
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 8/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 8/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PAGE 9 — MINUTE ARCHIVE + SOURCES ============ -->
-  <section class="page" style="--accent:#E8C46A;--glow:rgba(232,196,106,0.45);">
+  <!-- ============ PAGE 9 — LA MINUTE ARCHIVE ============ -->
+  <section class="page" style="--accent:#9B7FE0;--glow:rgba(155,127,224,0.4);">
     <div class="watermark">KRXO</div>
     <div class="page-content">
       <div class="page-header">
-        <div class="page-meta">Page 9/9 · Semaine S37 · 7–13 septembre 2026</div>
-        <h2><span class="icon">📜</span>La Minute Archive</h2>
+        <div class="page-meta">Page 9/9 · Semaine S38 · 14-20 septembre 2026</div>
+        <h2><span class="icon">🏛️</span>La Minute Archive</h2>
       </div>
-      <p class="lead">À la veille des 30 ans du Charizard de Base Set, un petit retour sur la naissance de la carte la plus célèbre du hobby.</p>
-      <p>Quand Mitsuhiro Arita peint le Charizard qui deviendra la carte la plus recherchée du hobby, en 1996, il n'a encore vu ni l'anime ni le design officiel du Pokémon — le dessin animé n'existe pas encore. Arita s'appuie alors sur les indications du bestiaire du jeu vidéo original et sur ses propres références de reptiles et de dragons pour donner corps à la créature. Le résultat, imprimé dans le tout premier Base Set japonais puis dans la version anglaise de 1999, deviendra l'image la plus reproduite — et la plus copiée — de toute l'histoire du JCC Pokémon, bien avant que la licence ne pense à célébrer ses propres 30 ans avec une carte comme celle-ci en Classic Collection.</p>
-
-      <h3>Salons &amp; vie du hobby — à noter dans vos agendas</h3>
-      <ul class="clean">
-        <li><span class="tag conf">CONFIRMÉ</span> Japan Expo 2027 : 8-11 juillet 2027, Paris Nord Villepinte, 26e édition</li>
-        <li><span class="tag conf">CONFIRMÉ</span> Le Royaume du TCG : 14-15 novembre 2026, Villepinte, 4e édition (20 000 m², 100+ exposants)</li>
-        <li><span class="tag conf">CONFIRMÉ</span> Lille Card Show #4 : 3 octobre 2026, B'Twin Village, gratuit, 1 500 m², ~115 exposants</li>
-        <li><span class="tag conf">CONFIRMÉ</span> Le Coin des Barons ouvre une boutique à Liège (Belgique) — annoncé sur son compte officiel</li>
-        <li><span class="tag conf">CONFIRMÉ</span> Diamond France Card Show : 26 septembre 2026, Vincennes — premier salon 100% baseball en France (pas un salon TCG à proprement parler, mais à noter si le crossover collectionneurs t'intéresse)</li>
-      </ul>
-      <div class="box calm">
-        <h4>Hasbro x Marvel x Magic — précision</h4>
-        <p style="margin-bottom:0"><span class="tag conf">CONFIRMÉ</span>, mais pas une actu de cette semaine : la vague de figurines évoquée est la "Marvel Legends Series x Magic: The Gathering Wave 2", dévoilée au San Diego Comic-Con le 24 juillet 2026 (précommandes ouvertes depuis le 13 août). Quatre figurines, chacune avec une carte Magic exclusive en foil (promos PRM 0001-0004) : Captain America (Avengers: Twilight) avec la carte Captain America, Team Leader ; Black Panther avec T'Challa, the Black Panther ; Doctor Doom 2099 avec Doctor Doom, King of Latveria ; et Malice (Sue Storm) avec Invisible Woman (Malice). Ça s'inscrit dans le partenariat Hasbro/Marvel/Magic en cours depuis 2023 (Spider-Man sept. 2025, Marvel Super Heroes juin 2026). La vidéo que tu as vue relaie donc une annonce de cet été, pas une nouveauté du 7-13 septembre.</p>
-      </div>
-
+      <p class="lead">Le 20 octobre 1996 : le tout premier booster Pokémon sort au Japon, dessiné par un illustrateur alors quasiment inconnu.</p>
+      <p>Trente ans avant que 30th Celebration ne s'offre le luxe d'une sortie mondiale simultanée, Media Factory publiait au Japon le tout premier set du Pocket Monster Card Game — simplement "Expansion Pack" à l'époque, sans autre nom. Sur la boîte : un Charizard cracheur de flammes, peint par Mitsuhiro Arita, un artiste alors relativement peu connu du grand public. Cette image deviendra, sans que personne ne le sache encore, l'une des illustrations les plus reproduites — et les plus copiées — de toute l'histoire du jeu de cartes.</p>
+      <p>Le jeu n'arrivera aux États-Unis que près de trois ans plus tard, en janvier 1999, sous le nom de Base Set — avec ce même Charizard, désormais numéroté 4/102, comme carte la plus recherchée de la collection. Il faudra attendre encore près de trois décennies, et une extension entièrement consacrée à célébrer l'anniversaire de la franchise, pour que Pokémon ose enfin ce que son statut mondial rendait presque inévitable : sortir le même jour, à la même heure, sur les trois continents — quitte à ce que la ferveur collective déborde, comme cette semaine, en pénuries et en scalping.</p>
       <div class="sources">
-        <div class="src-title">Sources &amp; Traçabilité</div>
-        <table>
-          <tr><th>#</th><th>Source</th><th>Données utilisées</th><th>Date</th></tr>
-          <tr><td>1</td><td><a href="https://www.pokemon.com/us/news/check-out-every-pokemon-tcg-product-release-in-september-2026" target="_blank">Pokemon.com</a></td><td>Détail produit 30th Celebration</td><td>07/09/2026</td></tr>
-          <tr><td>2</td><td><a href="https://www.tcgplayer.com/content/article/Buyer-s-Guide-to-Pok%C3%A9mon-TCG-30th-Celebration/0d9be702-6afe-467a-9aeb-d531592d9889/" target="_blank">TCGplayer</a></td><td>Prix booster marché 30th Celebration</td><td>03/09/2026</td></tr>
-          <tr><td>3</td><td><a href="https://cardgrader.ai/blog/30th-celebration-complete-guide" target="_blank">CardGrader</a></td><td>Futuristic Rare, Classic Collection</td><td>12/09/2026</td></tr>
-          <tr><td>4</td><td><a href="https://www.cardmarket.com/en/Pokemon/Products/Singles/Base-Set/Charizard-V1-BS4" target="_blank">Cardmarket</a></td><td>Prix Charizard Base Set</td><td>14/09/2026</td></tr>
-          <tr><td>5</td><td><a href="https://www.cardmarket.com/en/Pokemon/Products/Singles/Celebrations/Charizard-V1-CELBS-4" target="_blank">Cardmarket</a></td><td>Prix Charizard Celebrations</td><td>14/09/2026</td></tr>
-          <tr><td>6</td><td><a href="https://ygorganization.com/announcement-of-the-next-ocg-limit-regulation-announcement" target="_blank">YGOrganization</a></td><td>Date d'annonce banlist OCG</td><td>11/09/2026</td></tr>
-          <tr><td>7</td><td><a href="https://en.onepiece-cardgame.com/events/regional-season2-26-27.html" target="_blank">One Piece Card Game (officiel)</a></td><td>Calendrier Regionals Hampton Roads / Athènes</td><td>14/09/2026</td></tr>
-          <tr><td>8</td><td><a href="https://onepiece.limitlesstcg.com/" target="_blank">Limitless One Piece</a></td><td>Vérification résultats Regionals</td><td>14/09/2026</td></tr>
-          <tr><td>9</td><td><a href="https://articles.starcitygames.com/magic-the-gathering/ingram-mono-green-broodscale-wins-baltimore-regional-championship/" target="_blank">Star City Games</a></td><td>Résultat Regional Championship Baltimore</td><td>13-14/09/2026</td></tr>
-          <tr><td>10</td><td><a href="https://mtgpile.com/tournament/melee-405588" target="_blank">MTGpile</a></td><td>Top 8 &amp; decklists Baltimore</td><td>14/09/2026</td></tr>
-          <tr><td>11</td><td><a href="https://www.pokeinvest.io/psa-turnaround-times" target="_blank">PokeInvest / PSA</a></td><td>Délais PSA en vigueur</td><td>14/09/2026</td></tr>
-          <tr><td>12</td><td><a href="https://www.taxenlight.com/fr/tva-en-france/" target="_blank">Taxenlight</a></td><td>Contexte douane petits colis UE</td><td>30/07/2026</td></tr>
-          <tr><td>13</td><td><a href="https://www.psacard.com/articles/articleview/15763/psa-new-standard-service-level" target="_blank">PSA (officiel)</a></td><td>Réorganisation services, ouverture PSA Europe</td><td>09/09/2026</td></tr>
-          <tr><td>14</td><td><a href="https://pregradecards.com/blog/bgs-pauses-base-standard-august-2026" target="_blank">PreGradeCards</a></td><td>Statut réel de la pause Beckett</td><td>21/08/2026</td></tr>
-          <tr><td>15</td><td><a href="https://93.agendaculturel.fr/festival/japan-expo.html" target="_blank">Agenda Culturel</a></td><td>Dates Japan Expo 2027</td><td>14/09/2026</td></tr>
-          <tr><td>16</td><td><a href="https://dlgaming.fr/le-royaume-du-tcg-2026-plus-de-11-000-passionnes-pour-3e-edition-record-a-paris-idA3704.html" target="_blank">DL Gaming</a></td><td>Dates Royaume du TCG (4e édition)</td><td>09/04/2026</td></tr>
-          <tr><td>17</td><td><a href="https://lillecardshow.fr/" target="_blank">Lille Card Show (officiel)</a></td><td>Dates Lille Card Show #4</td><td>14/09/2026</td></tr>
-          <tr><td>18</td><td><a href="https://www.cartemagic.com/campionato-europeo-one-piece-utrecht/" target="_blank">CarteMagic</a></td><td>Victoire Luka Forjan, Championship Europe Season 1</td><td>~08/09/2026</td></tr>
-          <tr><td>19</td><td><a href="https://magic.wizards.com/en/news/announcements/where-to-find-reality-fracture-previews" target="_blank">Wizards of the Coast (officiel)</a></td><td>Calendrier spoilers Reality Fracture</td><td>14/09/2026</td></tr>
-          <tr><td>20</td><td><a href="https://ygorganization.com/precioustimeglorydays" target="_blank">YGOrganization</a></td><td>Annonce Yu-Gi-Oh! TAG FORCE GX</td><td>09/09/2026</td></tr>
-          <tr><td>21</td><td><a href="https://samuraiswordtokyo.com/blogs/news/op-17-super-rare-cards-guide" target="_blank">Samurai Sword Tokyo</a></td><td>Suivi prix OP-17 pré-vente vs post-sortie</td><td>01/09/2026</td></tr>
-          <tr><td>22</td><td>Beckett (compte Instagram officiel)</td><td>Coupure totale des plateformes numériques</td><td>09/09/2026</td></tr>
-          <tr><td>23</td><td>Le Coin des Barons (compte Instagram officiel)</td><td>Annonce ouverture Liège</td><td>capture 14/09/2026</td></tr>
-          <tr><td>24</td><td>Missplaybros (Instagram/TikTok)</td><td>Confirmation rachat collections Pokémon</td><td>capture 14/09/2026</td></tr>
-          <tr><td>25</td><td>One Piece Card Game Fan Page &amp; win.the.card (Instagram)</td><td>Promo Pack EX V.5, prizes Flagship/Regionals, leak OP-18</td><td>capture 14/09/2026</td></tr>
-          <tr><td>26</td><td><a href="https://www.eventbrite.com/e/billets-diamond-france-card-show-1995687689602" target="_blank">Eventbrite / Diamond France Card</a></td><td>Dates Diamond France Card Show</td><td>14/09/2026</td></tr>
-          <tr><td>27</td><td><a href="https://icv2.com/articles/news/view/62955/hasbro-pulse-announces-marvel-legends-series-magic-the-gathering-crossover-figures" target="_blank">ICv2</a></td><td>Détail figurines/cartes Hasbro x Marvel x Magic Wave 2</td><td>27/07/2026</td></tr>
-        </table>
-        <div class="disclaimer">
-          Prix indicatifs relevés à la date de consultation — ils peuvent fluctuer. Vérifiez sur la plateforme source avant toute décision d'achat ou de vente.<br>
-          Les informations juridiques et fiscales sont données à titre indicatif et ne constituent pas un conseil professionnel.<br>
-          Article produit pour la communauté KRXO — Discord TCG francophone.
-        </div>
+        <div class="src-title">Sources</div>
+        <div class="disclaimer">Contexte historique rédigé à partir de connaissances éditoriales générales sur l'histoire du JCC Pokémon — aucune source externe spécifique consultée pour cette page.</div>
       </div>
-
       <div class="page-footer">
         <div class="logo-block">
           <img class="logo-circle" src="krxo-logo.png" alt="KRXO">
           <div class="logo-text"><div class="brand">KRXO</div><div class="sub">Discord TCG francophone</div></div>
         </div>
-        <div class="page-counter">Page 9/9 · Semaine S37 · Septembre 2026</div>
+        <div class="page-counter">Page 9/9 · Semaine S38 · Septembre 2026</div>
       </div>
     </div>
   </section>
@@ -473,7 +537,7 @@
 </div>
 
 <!-- OBLIGATOIRE : déclarer l'ID de l'édition AVANT de charger le script -->
-<script>const CURRENT_WEEK_ID = "semaine_37_septembre_2026";</script>
+<script>const CURRENT_WEEK_ID = "semaine_38_septembre_2026";</script>
 <script src="archive-nav.js"></script>
 
 </body>
