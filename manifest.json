@@ -5,8 +5,16 @@
     "generator_version": "1.0",
     "schema_version": 1
   },
-  "latest": "semaine_45_novembre_2026",
+  "latest": "semaine_46_novembre_2026",
   "weekly_pulses": [
+    {
+      "id": "semaine_46_novembre_2026",
+      "label": "S46 · Novembre 2026",
+      "date": "2026-11-15",
+      "date_label": "Semaine du 9 au 15 novembre 2026",
+      "file": "archives/semaine_46_novembre_2026.html",
+      "highlight": "PSA confirme : le PSA 10 de Rayquaza Shiny acheté 660 000 $ était dans un faux slab."
+    },
     {
       "id": "semaine_45_novembre_2026",
       "label": "S45 · Novembre 2026",
